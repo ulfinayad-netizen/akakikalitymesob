@@ -1,0 +1,1018 @@
+{
+ "generated": "2026-11-10",
+ "note": "Staff list with Amharic and English names. No salary data.",
+ "employees": [
+  {
+   "name": "ሀብቴ ብርሃኑ",
+   "nameEn": "Habte Birhanu",
+   "position": "ዩኒቨርሳል አገልግሎት ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ሀዊ ባባ",
+   "nameEn": "Hawi Baba",
+   "position": "የህፃናት ድጋፍና እንክብካቤ ሰራተኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሄርሞን ሃ/ስላሴ ሃድጉ",
+   "nameEn": "Hermon Haile/Selassie Hadgu",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሊዲያ ሽኩሩ",
+   "nameEn": "Lidiya Shukuru",
+   "position": "ኢትዮ ኤሌ.",
+   "department": "electric",
+   "employeeType": "federal",
+   "institution": "ኢትዮ ኤሌ."
+  },
+  {
+   "name": "ልዕልተወርቅ ነጸረ",
+   "nameEn": "Lieltewerq Netsere",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "ሐያት ማሙሸት",
+   "nameEn": "Hayat Mamushet",
+   "position": "የቅድመ አገልግሎት ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ሔለን ሃድሽ",
+   "nameEn": "Helen Hadish",
+   "position": "ኢትዮ ቴሌ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮ ቴሌ"
+  },
+  {
+   "name": "መላኩ ይታያው ዳምጤ",
+   "nameEn": "Melaku Yitayew Damte",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "መስከረም በለጠ",
+   "nameEn": "Meskerem Belete",
+   "position": "የህፃናት ድጋፍና እንክብካቤ ሰራተኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "መታደል አስቻለ",
+   "nameEn": "Metadel Aschalew",
+   "position": "ኢትዮፖስታ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮፖስታ"
+  },
+  {
+   "name": "መዓዛ መሃመድ",
+   "nameEn": "Meaza Mohamed",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሙሉ አበበ",
+   "nameEn": "Mulu Abebe",
+   "position": "የስፓሻል ፕላን፣ ኢንቫይሮመንት እና የመሠረተ ልማት ጉዳዮች ምላሽ ሰጪ ባለሙያ IV",
+   "department": "plan_dev",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ማረው እንቆይ ይርታው",
+   "nameEn": "Marew Enkoy Yirtaw",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሜሮን መንግስቴ",
+   "nameEn": "Meron Mengiste",
+   "position": "የቅድመ አገልግሎት ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ሜሮን አድነው",
+   "nameEn": "Meron Adinew",
+   "position": "የህፃናት ማቆያ ፅዳትና መልዕክት አገልግሎት ሰራተኛ",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "II"
+  },
+  {
+   "name": "ሜቲ አበራ",
+   "nameEn": "Meti Abera",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ምህረት ሰቦቃ",
+   "nameEn": "Mihret Seboka",
+   "position": "ዩኒቨርሳል አገልግሎት ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ምካኤል ምስጋና መገርሳ",
+   "nameEn": "Mikael Misgana Megersa",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሞአ ግርማ",
+   "nameEn": "Moa Girma",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "ሣህለማርያም ምህረት",
+   "nameEn": "Sahlemaryam Mihret",
+   "position": "ሳኒተሪ ዳዛይን ምርመራና ፈቃድ ባለሙያ IV",
+   "department": "construction_permit",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ረድኤት መዝሙር",
+   "nameEn": "Rediet Mezmure",
+   "position": "የደንበኞች መስተንግዶ ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ረድኤት ወልዴ",
+   "nameEn": "Rediet Wolde",
+   "position": "የገቢ አገልግሎቶች ደንበኞች መስተንግዶ ባለሙያ I",
+   "department": "revenue",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ሮቤል ጌታሁን አበራ",
+   "nameEn": "Robel Getahun Abera",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሮዛ ተስፋዬ",
+   "nameEn": "Roza Tesfaye",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሰናይት ድሳ",
+   "nameEn": "Senayit Disa",
+   "position": "በጎ ፈቃደኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ሽመልስ ሰለሞን",
+   "nameEn": "Shimeles Solomon",
+   "position": "የደንበኞች አገልግሎት ባለሙያ III",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IX"
+  },
+  {
+   "name": "ቀልቤሳ ተርፌሳ ዲሳሳ",
+   "nameEn": "Kelbesa Terfesa Disasa",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ቀነኒሳ ሀምቢሳ",
+   "nameEn": "Kenenisa Hambisa",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ቃልኪዳን እንግዳው",
+   "nameEn": "Kalkidan Engidaw",
+   "position": "የደንበኞች አገልግሎት ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ቅድስት ግርማ",
+   "nameEn": "Kidist Girma",
+   "position": "የደንበኞች መስተንግዶ ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ቅድስት ኃይልዬ",
+   "nameEn": "Kidist Hayile",
+   "position": "የደንበኞች አገልግሎት ባለሙያ III",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IX"
+  },
+  {
+   "name": "በለጡ ጥላሁን ደሣለኝ",
+   "nameEn": "Beletu Tilahun Desalegn",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "በውቀቱ አድማሱ",
+   "nameEn": "Bewketu Admasu",
+   "position": "የትራፊክ ማኔጅመንት ደንበኞች አገልግሎት ባለሙያ III",
+   "department": "traffic",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ቢረሰው አስቻለ",
+   "nameEn": "Biresew Aschalew",
+   "position": "ኢትዮፖስታ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮፖስታ"
+  },
+  {
+   "name": "ቢኒያም እንዳለ ቤኛ",
+   "nameEn": "Biniyam Endale Begna",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ባገሩ አለሰው",
+   "nameEn": "Bageru Alesew",
+   "position": "የሲቪል ምዝገባና ነዋሪዎች አገልግሎት ባለሙያ I",
+   "department": "civil_registration",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ቤተልሄም ሰዉነት",
+   "nameEn": "Betelhem Sewunet",
+   "position": "በጎ ፈቃደኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ቤተልሄም ዳንኤል",
+   "nameEn": "Betelhem Daniel",
+   "position": "ጤና",
+   "department": "health",
+   "employeeType": "federal",
+   "institution": "ጤና"
+  },
+  {
+   "name": "ቤትልሄም መግራ",
+   "nameEn": "Betelhem Megra",
+   "position": "ኢትዮፖስታ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮፖስታ"
+  },
+  {
+   "name": "ብሩክ ብሩ ጫላ",
+   "nameEn": "Bruk Biru Chala",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ብሩክ አለሙ ግቻሞ",
+   "nameEn": "Bruk Alemu Gichamo",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ብርቱካን ዳኘው ጸጋው",
+   "nameEn": "Birtukan Dagnew Tsegaw",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ቦንቱ አዲሱ አስረስ",
+   "nameEn": "Bontu Addisu Asres",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ተመስገን የኋላው",
+   "nameEn": "Temesgen Yehualaw",
+   "position": "ኢትዮፖስታ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮፖስታ"
+  },
+  {
+   "name": "ተሰማ ጨካ",
+   "nameEn": "Tesema Cheka",
+   "position": "በጎ ፈቃደኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ተስፋዬ ቢሰጥ ዳምጠው",
+   "nameEn": "Tesfaye Bisset Damtew",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ተስፋዬ ባዬ",
+   "nameEn": "Tesfaye Baye",
+   "position": "የካዳስተር ቀያሽ ባለሙያ IV",
+   "department": "plan_dev",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ተስፋይ ሙላው መብራህቶም",
+   "nameEn": "Tesfay Mulaw Mebrahtom",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ተከተል አቡቴ",
+   "nameEn": "Teketel Abute",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ተካ ሞሴ",
+   "nameEn": "Teka Mose",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "ተካበች በላይነህ",
+   "nameEn": "Tekabechi Belayneh",
+   "position": "ኢትዮ ቴሌ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮ ቴሌ"
+  },
+  {
+   "name": "ታምራት በቀለ",
+   "nameEn": "Tamrat Bekele",
+   "position": "የደንበኞች አገልግሎት ባለሙያ III",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IX"
+  },
+  {
+   "name": "ታደላ ፈተንሳ",
+   "nameEn": "Tadela Fetensa",
+   "position": "ስኬት ባንክ",
+   "department": "siket_bank",
+   "employeeType": "federal",
+   "institution": "ስኬት ባንክ"
+  },
+  {
+   "name": "ትብለጥ ወሰን",
+   "nameEn": "Tibelet Wosen",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ነጻነት እንየው",
+   "nameEn": "Netsanet Enyew",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ናቲኦል ጨመዳ",
+   "nameEn": "Natiol Chemeda",
+   "position": "የስራ ስምሪት ኢንተርፕራይዝ ድጋፍ ባለሙያ IV",
+   "department": "labor_skills",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "አለሙ ለሚ ኢሣ",
+   "nameEn": "Alemu Lemi Isa",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "አለምነሽ ታርቆ",
+   "nameEn": "Alemnesh Tariko",
+   "position": "በጎ ፈቃደኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "አልዋን አልይ",
+   "nameEn": "Alwan Ali",
+   "position": "ኢንፎርሜሽን ቴክኖሎጂ ሳፖርት ኦፊሰር I",
+   "department": "digitalization",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "አማኑኤል ታከለ ገብሬ",
+   "nameEn": "Amanuel Takele Gebre",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "አምለሰት አብርሀ በርሄ",
+   "nameEn": "Amleset Abrha Berhe",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "አረጋኸኝ ጉራራ",
+   "nameEn": "Aregagnegn Gurara",
+   "position": "ዩኒቨርሳል አገልግሎት ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "አስራቱ ወርቅአየሁ",
+   "nameEn": "Asratu Workineh",
+   "position": "የንግድ ምዝገባና ፈቃድ ደንበኛ አገልግሎት ባለሙያ III",
+   "department": "trade",
+   "employeeType": "mesob",
+   "grade": "IX"
+  },
+  {
+   "name": "አስቻለው ጉርሙ",
+   "nameEn": "Aschalew Gurmu",
+   "position": "የጂ.አይ.ኤስ ባለሙያ IV/ ቤዝ ማፕ አደራጅ/",
+   "department": "plan_dev",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "አሸናፊ ቀጭኔ",
+   "nameEn": "Ashenafi Kechine",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "አበበ ሞሴ",
+   "nameEn": "Abebe Mose",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "አብርሃም ካሣሁን",
+   "nameEn": "Abraham Kassahun",
+   "position": "የቅድመ አገልግሎት ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "አብዲ ቡልቶ",
+   "nameEn": "Abdi Bulto",
+   "position": "የቅድመ አገልግሎት ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "አታላይ ብርሃኔ",
+   "nameEn": "Atalay Birhane",
+   "position": "የአገልግሎት ጥራት ቁጥጥር ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "አንድነት አድማሱ",
+   "nameEn": "Andinet Admasu",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "አያንቱ ግዛው",
+   "nameEn": "Ayantu Gizaw",
+   "position": "የመብት መዝጋቢ እና የደንበኞች አግልገሎት ባለሙያ I",
+   "department": "land_registration",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "አይተነው በየነ",
+   "nameEn": "Aitenew Beyene",
+   "position": "ጤና",
+   "department": "health",
+   "employeeType": "federal",
+   "institution": "ጤና"
+  },
+  {
+   "name": "አዱኛ አበበ",
+   "nameEn": "Adugna Abebe",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "አዲሱ ሶሪ",
+   "nameEn": "Addisu Sori",
+   "position": "የንግድ ምዝገባና ፈቃድ ደንበኛ አገልግሎት ባለሙያ III",
+   "department": "trade",
+   "employeeType": "mesob",
+   "grade": "IX"
+  },
+  {
+   "name": "አዳነ ደፋር",
+   "nameEn": "Adane Defar",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "ኡልፊና ያደሳ",
+   "nameEn": "Ulfina Yadesa",
+   "position": "ኔትወርክ አስተዳዳሪ I",
+   "department": "digitalization",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ኢፌራ ታምሩ",
+   "nameEn": "Ifera Tamru",
+   "position": "ዩኒቨርሳል አገልግሎት ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ኢፍቱ ዋቅቶላ",
+   "nameEn": "Iftu Waktola",
+   "position": "የቤት አስተዳደር አገልግሎት ባለሙያ III",
+   "department": "housing_bureau",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ኤሊያስ አቢራ ጃራ",
+   "nameEn": "Elias Abira Jara",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ኤልሳቤት ታደሰ",
+   "nameEn": "Elsabet Tadesse",
+   "position": "የደንበኞች መስተንግዶ ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ኤልሳዕ ኤልያስ",
+   "nameEn": "Elsae Elias",
+   "position": "ኢንፎርሜሽን ቴክኖሎጂ ሳፖርት ኦፊሰር I",
+   "department": "digitalization",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ኤሳው ተፈራ ቶራ",
+   "nameEn": "Esaw Tefera Tora",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ኤስሮም ጫንያለው",
+   "nameEn": "Esrom Chanyalew",
+   "position": "የጋራ መኖሪያ ቤትና የንግድ ቤት ማስተላለፍ አገልግሎቶች ባለሙያ I",
+   "department": "housing_corp",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ኤፍራታ መሃመድ",
+   "nameEn": "Efrata Mohamed",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "ኤፍሬም ድሪባ ሰርቤሳ",
+   "nameEn": "Ephrem Driba Serbesa",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ኤፍሬም ጸጋ",
+   "nameEn": "Ephrem Tsega",
+   "position": "የሲቪል ምዝገባና ነዋሪዎች አገልግሎት ባለሙያ I",
+   "department": "civil_registration",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "እሌኒ ማርቆስ",
+   "nameEn": "Eleni Markos",
+   "position": "የቋሚ ንብረት ትመና ባለሙያ IV",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "እንድሪድ ሀሰን ሰይድ",
+   "nameEn": "Endrid Hasen Seyid",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "እያሱ አንጀቶ",
+   "nameEn": "Eyasu Anjeto",
+   "position": "የሲቪል ምዝገባና ነዋሪዎች አገልግሎት ባለሙያ I",
+   "department": "civil_registration",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "እዮሲያስ አሻግሬ",
+   "nameEn": "Eyosias Ashagire",
+   "position": "የቅድመ አገልግሎት ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "እፀህይወት",
+   "nameEn": "Etsehiwot",
+   "position": "ኢትዮ ቴሌ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮ ቴሌ"
+  },
+  {
+   "name": "ኦላንቱ ዳበሳ ጫሉማ",
+   "nameEn": "Olantu Dabesa Chaluma",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ኦልያድ ጉርሜቻ",
+   "nameEn": "Olyad Gurmecha",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ከድር ሁሴን",
+   "nameEn": "Kedir Husein",
+   "position": "ዩኒቨርሳል አገልግሎት ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ከፍያለው አሰፋ",
+   "nameEn": "Kefyalew Assefa",
+   "position": "የጋራ መኖሪያ ቤትና የንግድ ቤት ማስተላለፍ አገልግሎቶች ባለሙያ I",
+   "department": "housing_corp",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ወርቅነሽ አድነው",
+   "nameEn": "Worknesh Adinew",
+   "position": "ኢንቫይሮመንት ጉዳዮች ማብራሪያና ምላሽ ሰጪ ባለሙያ IV",
+   "department": "plan_dev",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ወንደሰን ጠንክር",
+   "nameEn": "Wondesened Tenker",
+   "position": "አርክቴክቸራል ዲዛይን ምርመራና ፈቃድ ባለሙያ IV",
+   "department": "construction_permit",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ወጋየሁ ደመቀ",
+   "nameEn": "Wegayehu Demeke",
+   "position": "ኢትዮ ቴሌ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮ ቴሌ"
+  },
+  {
+   "name": "ዋቅሹም ሀብታሙ",
+   "nameEn": "Wakshum Habtamu",
+   "position": "ኢትዮ ኤሌ.",
+   "department": "electric",
+   "employeeType": "federal",
+   "institution": "ኢትዮ ኤሌ."
+  },
+  {
+   "name": "ዘላለም ለማ",
+   "nameEn": "Zelalem Lema",
+   "position": "የደንበኞች መስተንግዶ ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ዘላለም አስጨነቅ",
+   "nameEn": "Zelalem Ashenek",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ዘመኑ አለማየሁ",
+   "nameEn": "Zemenu Alemayehu",
+   "position": "የጂአይ ኤስ ባለሙያ IV",
+   "department": "plan_dev",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ዘሚካኤል ሀይሌ",
+   "nameEn": "Zemikael Hayile",
+   "position": "ስትራክቸራል ዲዛይን ምርመራና ፈቃድ ባለሙያ IV",
+   "department": "construction_permit",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ዘበናይ እሸቱ",
+   "nameEn": "Zebenay Eshetu",
+   "position": "ንግድ ባንክ",
+   "department": "cbe",
+   "employeeType": "federal",
+   "institution": "ንግድ ባንክ"
+  },
+  {
+   "name": "ዝንታለም አርጋው ው/ዮሀንስ",
+   "nameEn": "Zintalem Argaw W/Yohanes",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "የምስራች መርክነህ",
+   "nameEn": "Yemisrach Merkineh",
+   "position": "ኢትዮፖስታ",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ኢትዮፖስታ"
+  },
+  {
+   "name": "የኋላሸት አለዉ ደረስ",
+   "nameEn": "Yehualashet Alewu Deres",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "የአብስራ ወንድዬ",
+   "nameEn": "Yeabsira Wondiye",
+   "position": "የመብት መዝጋቢ እና የደንበኞች አግልገሎት ባለሙያ I",
+   "department": "land_registration",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ይታየው ደምሴ ታምሩ",
+   "nameEn": "Yitayew Demse Tamiru",
+   "position": "የአገልግሎት ጥራት ቁጥጥር",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ዮርዳኖስ ገዛኸኝ",
+   "nameEn": "Yordanos Gezahegn",
+   "position": "የደንበኞች መስተንግዶ ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ዮርዳኖስ ተስፋዬ",
+   "nameEn": "Yordanos Tesfaye",
+   "position": "የደንበኞች አገልግሎት ባለሙያ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ዮሴፍ ባየልኝ በዳሳ",
+   "nameEn": "Yosef Bayelign Bedasa",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ደምሰው ጌታነህ",
+   "nameEn": "Demsew Getaneh",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "ደምሴ ሚሊዩን ታፈሰ",
+   "nameEn": "Demse Milyun Tafesse",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ደረጄ ፊሪሳ",
+   "nameEn": "Dereje Firisa",
+   "position": "በጎ ፈቃደኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ደስታ ስንታየሁ መልካ",
+   "nameEn": "Desta Sintayehu Melka",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ዲቦራ ገዛኸኝ",
+   "nameEn": "Debora Gezahegn",
+   "position": "የገቢ አገልግሎቶች ደንበኞች መስተንግዶ ባለሙያ I",
+   "department": "revenue",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ዳንኤል ወልዴ",
+   "nameEn": "Daniel Wolde",
+   "position": "የኳንቲቲ ሰርቬየር ባለሙያ IV",
+   "department": "construction_permit",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ዳዊት",
+   "nameEn": "Dawit",
+   "position": "ንግድ ባንክ",
+   "department": "cbe",
+   "employeeType": "federal",
+   "institution": "ንግድ ባንክ"
+  },
+  {
+   "name": "ዳዊት አለሙ",
+   "nameEn": "Dawit Alemu",
+   "position": "የቅድመ አገልግሎት ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ዳግማዊ ሽመልስ",
+   "nameEn": "Dagmawi Shimelis",
+   "position": "የቅድመ አገልግሎት ሰራተኛ I",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IV"
+  },
+  {
+   "name": "ድሪባ ነጋሽ",
+   "nameEn": "Driba Negash",
+   "position": "የገቢ አገልግሎቶች ደንበኞች መስተንግዶ ባለሙያ I",
+   "department": "revenue",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ገመቹ ምትኩ ሸለመ",
+   "nameEn": "Gemechu Mitiku Sheleme",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ገመቺስ አለሙ ጉደታ",
+   "nameEn": "Gemechis Alemu Gudeta",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ገነት በቀለ",
+   "nameEn": "Genet Bekele",
+   "position": "በጎ ፈቃደኛ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ጉታ ታዬ ሶሪ",
+   "nameEn": "Guta Taye Sori",
+   "position": "ኢኮኖሚ እና ማስረጃ",
+   "department": "others",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ጸጋው ከፍያለው",
+   "nameEn": "Tsegaw Kefyalew",
+   "position": "ስኬት ባንክ",
+   "department": "siket_bank",
+   "employeeType": "federal",
+   "institution": "ስኬት ባንክ"
+  },
+  {
+   "name": "ጺዮን መኮንን",
+   "nameEn": "Tsiyon Mekonnen",
+   "position": "የመብት መዝጋቢ እና የደንበኞች አግልገሎት ባለሙያ I",
+   "department": "land_registration",
+   "employeeType": "mesob",
+   "grade": "VI"
+  },
+  {
+   "name": "ጽዮን ሰላመአብ",
+   "nameEn": "Tsiyon Selameab",
+   "position": "ፕላን እና ግንባታ ፈቃድ",
+   "department": "construction_permit",
+   "employeeType": "mesob"
+  },
+  {
+   "name": "ፍሬህይወት ደቅሲሳ",
+   "nameEn": "Firehiwot Deksisa",
+   "position": "የደንበኞች አገልግሎት ባለሙያ III",
+   "department": "others",
+   "employeeType": "mesob",
+   "grade": "IX"
+  },
+  {
+   "name": "ፍስሃ አዱኛ",
+   "nameEn": "Fisseha Adugna",
+   "position": "የመሠረተ ልማት ፕላን ባለሙያ IV",
+   "department": "plan_dev",
+   "employeeType": "mesob",
+   "grade": "X"
+  },
+  {
+   "name": "ፍቅረእየሱስ ፍሬአብ",
+   "nameEn": "Fikreyesus Frieab",
+   "position": "ሰነዶች",
+   "department": "others",
+   "employeeType": "federal",
+   "institution": "ሰነዶች"
+  },
+  {
+   "name": "ፍቅርአዲስ ንጉሴ",
+   "nameEn": "Fikiraddis Nigusse",
+   "position": "የሲቪል ምዝገባና ነዋሪዎች አገልግሎት ባለሙያ I",
+   "department": "civil_registration",
+   "employeeType": "mesob",
+   "grade": "VI"
+  }
+ ]
+}

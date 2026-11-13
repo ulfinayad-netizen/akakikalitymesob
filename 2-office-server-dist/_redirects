@@ -1,0 +1,4 @@
+/chat-server/*  /404.html  404!
+/serve.mjs  /404.html  404!
+/start-with-chat.bat  /404.html  404!
+/*  /index.html  200

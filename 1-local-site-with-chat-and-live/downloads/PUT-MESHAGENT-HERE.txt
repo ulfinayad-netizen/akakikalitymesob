@@ -1,0 +1,6 @@
+Put the MeshCentral agent installers in this folder (once):
+  meshagent64*.exe   (Windows 64-bit)
+  meshagent32*.exe   (Windows 32-bit)
+Use the exact files from MeshCentral -> your device group -> Add Agent (they already carry the group).
+When staff click the IT button on the website, mesh-agent-final.bat downloads the right one silently from this server.
+This folder is never served as plain files - only through the office-network-only download routes.

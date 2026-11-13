@@ -1,0 +1,192 @@
+[
+  {
+    "username": "revenues",
+    "name": "Revenues Bureau",
+    "role": "department",
+    "departmentIds": [
+      "revenues"
+    ]
+  },
+  {
+    "username": "trade",
+    "name": "Trade Bureau",
+    "role": "department",
+    "departmentIds": [
+      "trade"
+    ]
+  },
+  {
+    "username": "driver_vehicle",
+    "name": "Driver & Vehicle Licensing",
+    "role": "department",
+    "departmentIds": [
+      "driver_vehicle"
+    ]
+  },
+  {
+    "username": "traffic",
+    "name": "Traffic Management Authority",
+    "role": "department",
+    "departmentIds": [
+      "traffic"
+    ]
+  },
+  {
+    "username": "civil_registration",
+    "name": "Civil Registration & Residency Service",
+    "role": "department",
+    "departmentIds": [
+      "civil_registration"
+    ]
+  },
+  {
+    "username": "labor_skills",
+    "name": "Labor & Skills",
+    "role": "department",
+    "departmentIds": [
+      "labor_skills"
+    ]
+  },
+  {
+    "username": "housing_admin",
+    "name": "Housing Development & Administration Bureau",
+    "role": "department",
+    "departmentIds": [
+      "housing_admin"
+    ]
+  },
+  {
+    "username": "housing_corp",
+    "name": "Addis Ababa Housing Development Corporation",
+    "role": "department",
+    "departmentIds": [
+      "housing_corp"
+    ]
+  },
+  {
+    "username": "plan_dev",
+    "name": "Plan & Development Bureau",
+    "role": "department",
+    "departmentIds": [
+      "plan_dev"
+    ]
+  },
+  {
+    "username": "construction_permit",
+    "name": "Construction Permit & Control Authority",
+    "role": "department",
+    "departmentIds": [
+      "construction_permit"
+    ]
+  },
+  {
+    "username": "land_dev",
+    "name": "Land Development & Management Bureau",
+    "role": "department",
+    "departmentIds": [
+      "land_dev"
+    ]
+  },
+  {
+    "username": "land_registration",
+    "name": "Land Holding Registration & Information Agency",
+    "role": "department",
+    "departmentIds": [
+      "land_registration"
+    ]
+  },
+  {
+    "username": "ethio_post",
+    "name": "Ethio Post",
+    "role": "department",
+    "departmentIds": [
+      "ethio_post"
+    ]
+  },
+  {
+    "username": "food_drug",
+    "name": "Food & Medicine Control Services",
+    "role": "department",
+    "departmentIds": [
+      "food_drug"
+    ]
+  },
+  {
+    "username": "etqra",
+    "name": "Education & Training Quality Regulation Authority",
+    "role": "department",
+    "departmentIds": [
+      "etqra"
+    ]
+  },
+  {
+    "username": "health",
+    "name": "Health Service",
+    "role": "department",
+    "departmentIds": [
+      "health"
+    ]
+  },
+  {
+    "username": "mesob_fayda",
+    "name": "Mesob Fayda (National ID)",
+    "role": "department",
+    "departmentIds": [
+      "mesob_fayda"
+    ]
+  },
+  {
+    "username": "federal_docs",
+    "name": "Federal Documents Authentication & Registration",
+    "role": "department",
+    "departmentIds": [
+      "federal_docs"
+    ]
+  },
+  {
+    "username": "eeu",
+    "name": "Electric Utility",
+    "role": "department",
+    "departmentIds": [
+      "eeu"
+    ]
+  },
+  {
+    "username": "ethiotelecom",
+    "name": "Ethio Telecom",
+    "role": "department",
+    "departmentIds": [
+      "ethiotelecom"
+    ]
+  },
+  {
+    "username": "cbe",
+    "name": "Commercial Bank of Ethiopia",
+    "role": "department",
+    "departmentIds": [
+      "cbe"
+    ]
+  },
+  {
+    "username": "siket_bank",
+    "name": "Siket Bank",
+    "role": "department",
+    "departmentIds": [
+      "siket_bank"
+    ]
+  },
+  {
+    "username": "universal",
+    "name": "Universal",
+    "role": "department",
+    "departmentIds": [
+      "universal"
+    ]
+  },
+  {
+    "username": "report-coordinator",
+    "name": "Mesob Report Coordinator",
+    "role": "coordinator",
+    "departmentIds": []
+  }
+]

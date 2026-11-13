@@ -1,0 +1,950 @@
+[
+ {
+  "name": "Habte Birhanu",
+  "department": "pre service",
+  "username": "HabteB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Hawi Baba",
+  "department": "others",
+  "username": "HawiB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Hermon Haile/Selassie Hadgu",
+  "department": "others",
+  "username": "HermonH",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Lidiya Shukuru",
+  "department": "electric",
+  "username": "LidiyaS",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Lieltewerq Netsere",
+  "department": "DARS",
+  "username": "LiltewerkN",
+  "reportDepartments": [
+   "federal_docs"
+  ]
+ },
+ {
+  "name": "Hayat Mamushet",
+  "department": "others",
+  "username": "HayatM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Helen Hadish",
+  "department": "Ethio Telecom",
+  "username": "HelenH",
+  "reportDepartments": [
+   "ethiotelecom"
+  ]
+ },
+ {
+  "name": "Melaku Yitayew Damte",
+  "department": "others",
+  "username": "MelakuY",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Meskerem Belete",
+  "department": "others",
+  "username": "MeskeremB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Metadel Aschalew",
+  "department": "Ethio Post",
+  "username": "MetadelA",
+  "reportDepartments": [
+   "ethio_post"
+  ]
+ },
+ {
+  "name": "Meaza Mohamed",
+  "department": "construction_permit",
+  "username": "MeazaM",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Mulu Abebe",
+  "department": "Ethio Post",
+  "username": "MulukenA",
+  "reportDepartments": [
+   "ethio_post"
+  ]
+ },
+ {
+  "name": "Marew Enkoy Yirtaw",
+  "department": "construction_permit",
+  "username": "MarewE",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Meron Mengiste",
+  "department": "others",
+  "username": "MeronM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Meron Adinew",
+  "department": "others",
+  "username": "MeronA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Meti Abera",
+  "department": "others",
+  "username": "MetiA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Mihret Seboka",
+  "department": "pre service",
+  "username": "MihretS",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Mikael Misgana Megersa",
+  "department": "others",
+  "username": "MikaelM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Moa Girma",
+  "department": "DARS",
+  "username": "MoaG",
+  "reportDepartments": [
+   "federal_docs"
+  ]
+ },
+ {
+  "name": "Sahlemaryam Mihret",
+  "department": "Construction Permit",
+  "username": "SahlemariyamM",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Rediet Mezmure",
+  "department": "others",
+  "username": "RedietM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Rediet Wolde",
+  "department": "Revenue",
+  "username": "RedietW",
+  "reportDepartments": [
+   "revenues"
+  ]
+ },
+ {
+  "name": "Robel Getahun Abera",
+  "department": "construction_permit",
+  "username": "RobelG",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Roza Tesfaye",
+  "department": "construction_permit",
+  "username": "RozaT",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Senayit Disa",
+  "department": "Volunteer",
+  "username": "SenaytD",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Shimeles Solomon",
+  "department": "Construction Permit",
+  "username": "ShimelsS",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Kelbesa Terfesa Disasa",
+  "department": "construction_permit",
+  "username": "KelbesaT",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Kenenisa Hambisa",
+  "department": "others",
+  "username": "KenenisaH",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Kalkidan Engidaw",
+  "department": "Driver & Vehicle Licensing",
+  "username": "KalkidanE",
+  "reportDepartments": [
+   "driver_vehicle"
+  ]
+ },
+ {
+  "name": "Kidist Girma",
+  "department": "others",
+  "username": "KidistG",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Kidist Hayile",
+  "department": "Construction Permit",
+  "username": "KidistH",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Beletu Tilahun Desalegn",
+  "department": "others",
+  "username": "BeletuT",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Bewketu Admasu",
+  "department": "Driver & Vehicle Licensing",
+  "username": "BewketuA",
+  "reportDepartments": [
+   "driver_vehicle"
+  ]
+ },
+ {
+  "name": "Biresew Aschalew",
+  "department": "Ethio Post",
+  "username": "BiresawA",
+  "reportDepartments": [
+   "ethio_post"
+  ]
+ },
+ {
+  "name": "Biniyam Endale Begna",
+  "department": "construction_permit",
+  "username": "BiniyamE",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Bageru Alesew",
+  "department": "Civil Registration",
+  "username": "BageruA",
+  "reportDepartments": [
+   "civil_registration"
+  ]
+ },
+ {
+  "name": "Betelhem Sewunet",
+  "department": "Volunteer",
+  "username": "BethelemS",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Betelhem Daniel",
+  "department": "Health",
+  "username": "BethelhemD",
+  "reportDepartments": [
+   "health"
+  ]
+ },
+ {
+  "name": "Betelhem Megra",
+  "department": "others",
+  "username": "BetelhemM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Bruk Biru Chala",
+  "department": "others",
+  "username": "BrukB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Bruk Alemu Gichamo",
+  "department": "construction_permit",
+  "username": "BrukA",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Birtukan Dagnew Tsegaw",
+  "department": "construction_permit",
+  "username": "BirtukanD",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Bontu Addisu Asres",
+  "department": "construction_permit",
+  "username": "BontuA",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Temesgen Yehualaw",
+  "department": "Ethio Post",
+  "username": "TemesgenY",
+  "reportDepartments": [
+   "ethio_post"
+  ]
+ },
+ {
+  "name": "Tesema Cheka",
+  "department": "Volunteer",
+  "username": "TesemaC",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Tesfaye Bisset Damtew",
+  "department": "construction_permit",
+  "username": "TesfayeB",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Tesfaye Baye",
+  "department": "plan_dev",
+  "username": "TesfayeB2",
+  "reportDepartments": [
+   "plan_dev"
+  ]
+ },
+ {
+  "name": "Tesfay Mulaw Mebrahtom",
+  "department": "others",
+  "username": "TesfayM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Teketel Abute",
+  "department": "others",
+  "username": "TeketelA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Teka Mose",
+  "department": "others",
+  "username": "TekaM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Tekabechi Belayneh",
+  "department": "others",
+  "username": "TekabechiB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Tamrat Bekele",
+  "department": "Construction Permit",
+  "username": "TamiratB",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Tadela Fetensa",
+  "department": "Siket Bank",
+  "username": "TadeleF",
+  "reportDepartments": [
+   "siket_bank"
+  ]
+ },
+ {
+  "name": "Tibelet Wosen",
+  "department": "construction_permit",
+  "username": "TibeletW",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Netsanet Enyew",
+  "department": "construction_permit",
+  "username": "NetsanetE",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Natiol Chemeda",
+  "department": "Labor & Skills",
+  "username": "NatiolC",
+  "reportDepartments": [
+   "labor_skills"
+  ]
+ },
+ {
+  "name": "Alemu Lemi Isa",
+  "department": "others",
+  "username": "AlemuL",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Alemnesh Tariko",
+  "department": "Volunteer",
+  "username": "AlemneshT",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Alwan Ali",
+  "department": "Digitalization",
+  "username": "AlwanA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Amanuel Takele Gebre",
+  "department": "construction_permit",
+  "username": "AmanuelT",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Amleset Abrha Berhe",
+  "department": "others",
+  "username": "AmlesetA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Aregagnegn Gurara",
+  "department": "pre service",
+  "username": "AregahegnG",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Asratu Workineh",
+  "department": "Trade",
+  "username": "AsratuW",
+  "reportDepartments": [
+   "trade"
+  ]
+ },
+ {
+  "name": "Aschalew Gurmu",
+  "department": "Land Bureau",
+  "username": "AschalewG",
+  "reportDepartments": [
+   "land_dev"
+  ]
+ },
+ {
+  "name": "Ashenafi Kechine",
+  "department": "DARS",
+  "username": "AshenafiK",
+  "reportDepartments": [
+   "federal_docs"
+  ]
+ },
+ {
+  "name": "Abebe Mose",
+  "department": "construction_permit",
+  "username": "AbebeM",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Abraham Kassahun",
+  "department": "others",
+  "username": "AbrahamK",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Abdi Bulto",
+  "department": "others",
+  "username": "AbdiB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Atalay Birhane",
+  "department": "Quality Control",
+  "username": "AtalayB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Andinet Admasu",
+  "department": "others",
+  "username": "AndinetA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Ayantu Gizaw",
+  "department": "Land Registration",
+  "username": "AyantuG",
+  "reportDepartments": [
+   "land_registration"
+  ]
+ },
+ {
+  "name": "Aitenew Beyene",
+  "department": "Health",
+  "username": "AytenewB",
+  "reportDepartments": [
+   "health"
+  ]
+ },
+ {
+  "name": "Adugna Abebe",
+  "department": "construction_permit",
+  "username": "AdugnaA",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Addisu Sori",
+  "department": "Trade",
+  "username": "AddisuS",
+  "reportDepartments": [
+   "trade"
+  ]
+ },
+ {
+  "name": "Adane Defar",
+  "department": "DARS",
+  "username": "AdaneD",
+  "reportDepartments": [
+   "federal_docs"
+  ]
+ },
+ {
+  "name": "Ulfina Yadesa",
+  "department": "Digitalization",
+  "username": "UlfinaY",
+  "reportDepartments": "all",
+  "role": "coordinator"
+ },
+ {
+  "name": "Ifera Tamru",
+  "department": "pre service",
+  "username": "EferaT",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Iftu Waktola",
+  "department": "housing_bureau",
+  "username": "IftuW",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Elias Abira Jara",
+  "department": "construction_permit",
+  "username": "EliasA",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Elsabet Tadesse",
+  "department": "others",
+  "username": "ElsabetT",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Elsae Elias",
+  "department": "Digitalization",
+  "username": "ElsaiE",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Esaw Tefera Tora",
+  "department": "others",
+  "username": "EsawT",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Esrom Chanyalew",
+  "department": "Housing Development Corp.",
+  "username": "EsromC",
+  "reportDepartments": [
+   "housing_corp"
+  ]
+ },
+ {
+  "name": "Efrata Mohamed",
+  "department": "DARS",
+  "username": "EfrataM",
+  "reportDepartments": [
+   "federal_docs"
+  ]
+ },
+ {
+  "name": "Ephrem Driba Serbesa",
+  "department": "construction_permit",
+  "username": "EphremD",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Ephrem Tsega",
+  "department": "Civil Registration",
+  "username": "EfremT",
+  "reportDepartments": [
+   "civil_registration"
+  ]
+ },
+ {
+  "name": "Eleni Markos",
+  "department": "Land Registration",
+  "username": "EleniM",
+  "reportDepartments": [
+   "land_registration"
+  ]
+ },
+ {
+  "name": "Endrid Hasen Seyid",
+  "department": "construction_permit",
+  "username": "EndridH",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Eyasu Anjeto",
+  "department": "Civil Registration",
+  "username": "EyasuA",
+  "reportDepartments": [
+   "civil_registration"
+  ]
+ },
+ {
+  "name": "Eyosias Ashagire",
+  "department": "others",
+  "username": "EyosiasA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Etsehiwot",
+  "department": "others",
+  "username": "Etsehiwot",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Olantu Dabesa Chaluma",
+  "department": "construction_permit",
+  "username": "OlantuD",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Olyad Gurmecha",
+  "department": "construction_permit",
+  "username": "OlyadG",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Kedir Husein",
+  "department": "pre service",
+  "username": "KedirH",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Kefyalew Assefa",
+  "department": "Housing Development Corp.",
+  "username": "KefyalewA",
+  "reportDepartments": [
+   "housing_corp"
+  ]
+ },
+ {
+  "name": "Worknesh Adinew",
+  "department": "Plan & Development",
+  "username": "WorkneshA",
+  "reportDepartments": [
+   "plan_dev"
+  ]
+ },
+ {
+  "name": "Wondesened Tenker",
+  "department": "Construction Permit",
+  "username": "WendesenT",
+  "reportDepartments": [
+   "construction_permit"
+  ],
+  "role": "coordinator"
+ },
+ {
+  "name": "Wegayehu Demeke",
+  "department": "others",
+  "username": "WegayehuD",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Wakshum Habtamu",
+  "department": "electric",
+  "username": "WakshumH",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Zelalem Lema",
+  "department": "others",
+  "username": "ZelalemL",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Zelalem Ashenek",
+  "department": "others",
+  "username": "ZelalemA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Zemenu Alemayehu",
+  "department": "Plan & Development",
+  "username": "ZemenuA",
+  "reportDepartments": [
+   "plan_dev"
+  ]
+ },
+ {
+  "name": "Zemikael Hayile",
+  "department": "Construction Permit",
+  "username": "ZemichaelH",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Zebenay Eshetu",
+  "department": "Commercial Bank of Ethiopia",
+  "username": "ZemebayE",
+  "reportDepartments": [
+   "cbe"
+  ]
+ },
+ {
+  "name": "Zintalem Argaw W/Yohanes",
+  "department": "construction_permit",
+  "username": "ZintalemA",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Yemisrach Merkineh",
+  "department": "Ethio Post",
+  "username": "YemisrachM",
+  "reportDepartments": [
+   "ethio_post"
+  ]
+ },
+ {
+  "name": "Yehualashet Alewu Deres",
+  "department": "others",
+  "username": "YehualashetA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Yeabsira Wondiye",
+  "department": "Land Registration",
+  "username": "YeabsiraW",
+  "reportDepartments": [
+   "land_registration"
+  ]
+ },
+ {
+  "name": "Yitayew Demse Tamiru",
+  "department": "others",
+  "username": "YitayewD",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Yordanos Gezahegn",
+  "department": "others",
+  "username": "YordanosG",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Yordanos Tesfaye",
+  "department": "Driver & Vehicle Licensing",
+  "username": "YordanosT",
+  "reportDepartments": [
+   "driver_vehicle"
+  ]
+ },
+ {
+  "name": "Yosef Bayelign Bedasa",
+  "department": "construction_permit",
+  "username": "YosefB",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Demsew Getaneh",
+  "department": "DARS",
+  "username": "DemisewG",
+  "reportDepartments": [
+   "federal_docs"
+  ]
+ },
+ {
+  "name": "Demse Milyun Tafesse",
+  "department": "others",
+  "username": "DemseM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Dereje Firisa",
+  "department": "Volunteer",
+  "username": "DerejeF",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Desta Sintayehu Melka",
+  "department": "others",
+  "username": "DestaS",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Debora Gezahegn",
+  "department": "Revenue",
+  "username": "DiboraG",
+  "reportDepartments": [
+   "revenues"
+  ]
+ },
+ {
+  "name": "Daniel Wolde",
+  "department": "Construction Permit",
+  "username": "DanielW",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Dawit",
+  "department": "cbe",
+  "username": "Dawit",
+  "reportDepartments": [
+   "cbe"
+  ]
+ },
+ {
+  "name": "Dawit Alemu",
+  "department": "others",
+  "username": "DawitA",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Dagmawi Shimelis",
+  "department": "others",
+  "username": "DagmawiS",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Driba Negash",
+  "department": "Revenue",
+  "username": "DiribaN",
+  "reportDepartments": [
+   "revenues"
+  ]
+ },
+ {
+  "name": "Gemechu Mitiku Sheleme",
+  "department": "others",
+  "username": "GemechuM",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Gemechis Alemu Gudeta",
+  "department": "construction_permit",
+  "username": "GemechisA",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Genet Bekele",
+  "department": "Volunteer",
+  "username": "GenetB",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Guta Taye Sori",
+  "department": "others",
+  "username": "GutaT",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Tsegaw Kefyalew",
+  "department": "Siket Bank",
+  "username": "TsegaK",
+  "reportDepartments": [
+   "siket_bank"
+  ]
+ },
+ {
+  "name": "Tsiyon Mekonnen",
+  "department": "Land Registration",
+  "username": "TsionM",
+  "reportDepartments": [
+   "land_registration"
+  ]
+ },
+ {
+  "name": "Tsiyon Selameab",
+  "department": "construction_permit",
+  "username": "TsiyonS",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Firehiwot Deksisa",
+  "department": "Construction Permit",
+  "username": "FirehiwotD",
+  "reportDepartments": [
+   "construction_permit"
+  ]
+ },
+ {
+  "name": "Fisseha Adugna",
+  "department": "Plan & Development",
+  "username": "FishaA",
+  "reportDepartments": [
+   "plan_dev"
+  ]
+ },
+ {
+  "name": "Fikreyesus Frieab",
+  "department": "others",
+  "username": "FikreyesusF",
+  "reportDepartments": "all"
+ },
+ {
+  "name": "Fikiraddis Nigusse",
+  "department": "Civil Registration",
+  "username": "FikraddisN",
+  "reportDepartments": [
+   "civil_registration"
+  ]
+ }
+]

@@ -1,0 +1,530 @@
+[
+  {
+    "name": "Adane Defar",
+    "position": "customer service officer",
+    "department": "DARS",
+    "status": "active",
+    "phone": "0974426828",
+    "joined": "2026-02-14"
+  },
+  {
+    "name": "Senayt Dama",
+    "position": "",
+    "department": "Volunteer",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Demisew Getaneh",
+    "position": "",
+    "department": "DARS",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Aytenew Beyene",
+    "position": "",
+    "department": "Health",
+    "status": "active",
+    "phone": "0920152714",
+    "joined": ""
+  },
+  {
+    "name": "Tsion Mekonnen",
+    "position": "",
+    "department": "Land Registration",
+    "status": "active",
+    "phone": "0919721129",
+    "joined": ""
+  },
+  {
+    "name": "Ayantu Gizaw",
+    "position": "",
+    "department": "Land Registration",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Efera Tamiru",
+    "position": "",
+    "department": "pre service",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Esrom Chanyalew",
+    "position": "",
+    "department": "Housing Development Corp.",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Rediet Welde",
+    "position": "",
+    "department": "Revenue",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Ulfina Yadesa",
+    "position": "",
+    "department": "Digitalization",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Kalkidan Engidaw",
+    "position": "",
+    "department": "Driver & Vehicle Licensing",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Daniel Welde",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Aregahegn Gurara",
+    "position": "",
+    "department": "pre service",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Genet Bekele",
+    "position": "",
+    "department": "Volunteer",
+    "status": "active",
+    "phone": "0910564257",
+    "joined": ""
+  },
+  {
+    "name": "Moa Girma",
+    "position": "",
+    "department": "DARS",
+    "status": "active",
+    "phone": "0913865367",
+    "joined": ""
+  },
+  {
+    "name": "Helen Hadosh",
+    "position": "",
+    "department": "Ethio Telecom",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Shimels Solomon",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Liltewerk Netsere",
+    "position": "",
+    "department": "DARS",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Fisha Adugna",
+    "position": "",
+    "department": "Plan & Development",
+    "status": "active",
+    "phone": "0963315684",
+    "joined": ""
+  },
+  {
+    "name": "Alwan Aliyi",
+    "position": "",
+    "department": "Digitalization",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Asratu Werkayehu",
+    "position": "",
+    "department": "Trade",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Ashenafi kechne",
+    "position": "",
+    "department": "DARS",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Sahlemariyam Mihret",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Natiol Chemeda",
+    "position": "",
+    "department": "Labor & Skills",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Bethelem Sewnet",
+    "position": "",
+    "department": "Volunteer",
+    "status": "active",
+    "phone": "0925044796",
+    "joined": ""
+  },
+  {
+    "name": "Marta Alemu",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Bageru Alesew",
+    "position": "",
+    "department": "Civil Registration",
+    "status": "active",
+    "phone": "0941691491",
+    "joined": ""
+  },
+  {
+    "name": "Zemichael Haile",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Mihret Seboka",
+    "position": "",
+    "department": "pre service",
+    "status": "active",
+    "phone": "0912672102",
+    "joined": ""
+  },
+  {
+    "name": "Wendesen Tenkr",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "0913705239",
+    "joined": ""
+  },
+  {
+    "name": "Kidist Hailye",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Dibora Gezahegn",
+    "position": "",
+    "department": "Revenue",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Zemebay Eshetu",
+    "position": "",
+    "department": "Commercial Bank of Ethiopia",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Bewketu Admasu",
+    "position": "",
+    "department": "Driver & Vehicle Licensing",
+    "status": "active",
+    "phone": "0909011565",
+    "joined": ""
+  },
+  {
+    "name": "Tesema Chaka",
+    "position": "",
+    "department": "Volunteer",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Demise Kebede",
+    "position": "",
+    "department": "Other",
+    "status": "active",
+    "phone": "0929153121",
+    "joined": ""
+  },
+  {
+    "name": "Alemnesh Tarko",
+    "position": "",
+    "department": "Volunteer",
+    "status": "active",
+    "phone": "0960334076",
+    "joined": ""
+  },
+  {
+    "name": "Eyasu Anjeto",
+    "position": "",
+    "department": "Civil Registration",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Atalay Birhane",
+    "position": "",
+    "department": "Quality Control",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Eleni Markos",
+    "position": "",
+    "department": "Land Registration",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Yeabsira Wendye",
+    "position": "",
+    "department": "Land Registration",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Efrata Mohammed",
+    "position": "",
+    "department": "DARS",
+    "status": "active",
+    "phone": "0994031230",
+    "joined": ""
+  },
+  {
+    "name": "Kedir Husiene",
+    "position": "",
+    "department": "pre service",
+    "status": "active",
+    "phone": "0930540460",
+    "joined": ""
+  },
+  {
+    "name": "Biresaw Aschale",
+    "position": "",
+    "department": "Ethio Post",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Fikraddis Niguse",
+    "position": "",
+    "department": "Civil Registration",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Temesgen Yehualaw",
+    "position": "",
+    "department": "Ethio Post",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Dereje frisa",
+    "position": "",
+    "department": "Volunteer",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Kefyalew Assefa",
+    "position": "",
+    "department": "Housing Development Corp.",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Muluken Abebaw",
+    "position": "",
+    "department": "Ethio Post",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Aschalew Gurmu",
+    "position": "",
+    "department": "Land Bureau",
+    "status": "active",
+    "phone": "0913300660",
+    "joined": ""
+  },
+  {
+    "name": "Bethelhem daniel",
+    "position": "",
+    "department": "Health",
+    "status": "active",
+    "phone": "0911159299",
+    "joined": ""
+  },
+  {
+    "name": "Yemisrach Merkneh",
+    "position": "",
+    "department": "Ethio Post",
+    "status": "active",
+    "phone": "0949245786",
+    "joined": ""
+  },
+  {
+    "name": "Tamirat Bekele",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Yordanos Tesfaye",
+    "position": "",
+    "department": "Driver & Vehicle Licensing",
+    "status": "active",
+    "phone": "0923930396",
+    "joined": ""
+  },
+  {
+    "name": "Elsai Eliyas",
+    "position": "",
+    "department": "Digitalization",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Mulu Abebe",
+    "position": "",
+    "department": "Plan & Development",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Firehiwot Deksisa",
+    "position": "",
+    "department": "Construction Permit",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Habte Birhanu",
+    "position": "",
+    "department": "pre service",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Addisu Sori",
+    "position": "",
+    "department": "Trade",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Efrem Tsega",
+    "position": "",
+    "department": "Civil Registration",
+    "status": "active",
+    "phone": "0913641420",
+    "joined": ""
+  },
+  {
+    "name": "Tsega Kefyalew",
+    "position": "",
+    "department": "Siket Bank",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Tadele Fenta",
+    "position": "",
+    "department": "Siket Bank",
+    "status": "active",
+    "phone": "0941629869",
+    "joined": ""
+  },
+  {
+    "name": "Worknesh Adnew",
+    "position": "",
+    "department": "Plan & Development",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Zemenu Alemayehu",
+    "position": "",
+    "department": "Plan & Development",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  },
+  {
+    "name": "Metadel Aschale",
+    "position": "",
+    "department": "Ethio Post",
+    "status": "active",
+    "phone": "0935483960",
+    "joined": ""
+  },
+  {
+    "name": "Diriba Negash",
+    "position": "",
+    "department": "Revenue",
+    "status": "active",
+    "phone": "",
+    "joined": ""
+  }
+]

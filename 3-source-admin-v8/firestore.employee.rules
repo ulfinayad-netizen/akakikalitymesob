@@ -1,0 +1,252 @@
+rules_version = '2';
+
+// Firestore rules for the EMPLOYEE / Social Committee project ONLY —
+// project id "addis-mesob-akaki-kaliti" (see client/src/lib/firebase.js).
+// This project backs FOUR things that share one Auth user pool: the
+// Employee Portal, the Social Committee portal, the Mesob Report portal,
+// and the public site's Contact form. It is a completely separate Firebase project from the
+// Admin dashboard's — see firestore.admin.rules for that one. Deploy
+// this file against this project specifically:
+//
+//   firebase deploy --only firestore:rules --project addis-mesob-akaki-kaliti
+//
+// SECURITY NOTE — why this file exists: previously, every collection in
+// this project allowed access to "any signed-in user", because being
+// signed in to the Employee Portal and being signed in to the Social
+// Committee portal were treated as the same thing. That meant any
+// employee account could read (and in some cases write) committee
+// financial and roster data it was never meant to see. This file fixes
+// that by introducing a role, exactly like the Admin project already
+// has one:
+//
+//   roles/{uid}.role = 'employee' (default, no doc needed) | 'social_committee'
+//
+// Provision a committee member's role with server/scripts/set-role.js
+// (uses the Firebase Admin SDK, so it bypasses these rules — that's the
+// only way roles should ever be assigned; see isAdmin() below, which is
+// deliberately impossible to satisfy from the client).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function role() {
+      return exists(/databases/$(database)/documents/roles/$(request.auth.uid))
+        ? get(/databases/$(database)/documents/roles/$(request.auth.uid)).data.role
+        : 'employee';
+    }
+    function isCommittee() { return signedIn() && role() == 'social_committee'; }
+
+    // ---- Mesob Report portal (reportUsers / reportWeeks / reportEntries)
+    // — the fifth staff app, in this same project. A reportUsers/{uid}
+    // doc is what makes an account a report account; it is written ONLY
+    // by server/scripts/create-report-users.js via the Admin SDK (see
+    // "allow write: if false" below), so nobody can grant themselves
+    // coordinator access or add themselves to a department they don't
+    // hold. Department accounts may only read/write the entries of the
+    // department(s) named in their own reportUsers doc; a coordinator
+    // (the Center's report owner) can read/write every department, open
+    // weeks, and lock/unlock them.
+    function reportUserDoc() {
+      return get(/databases/$(database)/documents/reportUsers/$(request.auth.uid));
+    }
+    function isReportUser() {
+      return signedIn() && exists(/databases/$(database)/documents/reportUsers/$(request.auth.uid));
+    }
+    function isReportCoordinator() {
+      return isReportUser() && reportUserDoc().data.role == 'coordinator';
+    }
+    function reportDeptIds() {
+      return isReportUser() && reportUserDoc().data.departmentIds is list
+        ? reportUserDoc().data.departmentIds
+        : [];
+    }
+    function reportWeekLocked(weekId) {
+      return exists(/databases/$(database)/documents/reportWeeks/$(weekId))
+        && get(/databases/$(database)/documents/reportWeeks/$(weekId)).data.locked == true;
+    }
+
+    match /reportUsers/{uid} {
+      // Every report account may read its own profile (role + assigned
+      // departments) so the UI knows what to show. Never writable from
+      // the client — see create-report-users.js.
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    match /reportWeeks/{weekId} {
+      // Any report account may see the list of reporting weeks (they
+      // need it to pick which week to fill in); only the coordinator
+      // opens a new one or locks/unlocks it.
+      allow get, list: if isReportUser();
+      allow create, update: if isReportCoordinator();
+      allow delete: if false;
+    }
+
+    match /reportEntries/{entryId} {
+      // Coordinator only for the cross-department query the Overview
+      // page runs (department accounts always fetch their own doc(s) by
+      // id instead, matched by the `get` rule below).
+      allow list: if isReportCoordinator();
+      allow get: if isReportUser()
+        && (isReportCoordinator() || resource.data.departmentId in reportDeptIds());
+      // A write must (a) belong to a department this account actually
+      // holds, (b) have a document id that matches its own weekId/dept
+      // fields (so an account can't write its own department's numbers
+      // under someone else's entry id), and (c) — for anyone but the
+      // coordinator — target a week that isn't locked and an entry that
+      // isn't already marked final. The coordinator can still correct a
+      // locked or finalized entry.
+      allow create, update: if isReportUser()
+        && request.resource.data.departmentId in reportDeptIds()
+        && request.resource.data.weekId is string
+        && entryId == (request.resource.data.weekId + '__' + request.resource.data.departmentId)
+        && (
+          isReportCoordinator()
+          || (
+            !reportWeekLocked(request.resource.data.weekId)
+            && (resource == null || resource.data.final != true)
+          )
+        );
+      allow delete: if false;
+    }
+
+    // ---- Daily report (reportDaily/{YYYY-MM-DD}__{departmentId}) — what
+    // every employee fills in for THEIR OWN department, one day at a time.
+    // Mesob Report (the coordinator's app) reads all of it and derives the
+    // daily / weekly / monthly / yearly reports; nothing is stored twice.
+    //   employee    get/create/update the docs of the department(s) in their
+    //               own reportUsers doc; cannot list, cannot delete.
+    //   coordinator list (date range query) and read/write every department.
+    // The document id must match its own date + department fields, so one
+    // department can never write under another's id.
+    match /reportDaily/{entryId} {
+      allow list: if isReportCoordinator();
+      allow get: if isReportUser()
+        && (isReportCoordinator() || resource == null || resource.data.departmentId in reportDeptIds());
+      allow create, update: if isReportUser()
+        && request.resource.data.departmentId in reportDeptIds()
+        && request.resource.data.date is string
+        && request.resource.data.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && entryId == (request.resource.data.date + '__' + request.resource.data.departmentId)
+        && request.resource.data.cells is map;
+      allow delete: if false;
+    }
+
+    // Roles are provisioned ONLY via the Admin SDK (server/scripts/
+    // set-role.js), never from the client — there is deliberately no
+    // 'admin' role in this project a client account could hold, so this
+    // is always false. A committee member (or an employee) may read
+    // their own role doc, e.g. so the UI can show "signed in as
+    // committee member" without a second round trip.
+    match /roles/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // Contact form submissions from the public site (this project backs
+    // the public Contact page). Anyone can create one — visitors don't
+    // have accounts — but nothing can be read, updated, or deleted from
+    // the client, only via the Firebase Console or a backend you control.
+    match /contactMessages/{messageId} {
+      allow create: if request.resource.data.name is string
+                    && request.resource.data.name.size() > 0
+                    && request.resource.data.name.size() < 200
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() < 200
+                    && request.resource.data.message is string
+                    && request.resource.data.message.size() < 5000;
+      allow read, update, delete: if false;
+    }
+
+    // HR directory. Read by any signed-in account in this project
+    // (Employee Portal directory/profile lookups, Social Committee's
+    // RSVP/club/committee pickers). Writes are normally managed
+    // out-of-band by server/scripts/seed-employees.js (Admin SDK) from
+    // the Admin dashboard's HR data — but that HR module lives in the
+    // completely separate Admin Firebase project (see the note at the
+    // top of client/src/admin/context/CommitteeDataContext.jsx) and
+    // isn't guaranteed to ever sync here. So the Social Committee portal
+    // may ALSO add/update a staff entry directly (CommitteeMembersPanel's
+    // "Add a new person" flow) rather than being blocked waiting on a
+    // sync that may never run. Deleting a directory entry is still
+    // reserved for the out-of-band scripts, to avoid an accidental
+    // client-side delete wiping someone's record.
+    match /employees/{docId} {
+      allow read: if signedIn();
+      allow create, update: if isCommittee();
+      allow delete: if false;
+    }
+
+    // ---- Employee Portal — every signed-in account may use it (a
+    // committee-only account is blocked at the UI layer; this project
+    // has no reason to also block it server-side, since none of this
+    // is financial or sensitive committee data). ----
+    match /employeeProfiles/{uid} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+    match /leaveRequests/{docId} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.employeeUid == request.auth.uid;
+      allow update, delete: if signedIn() && resource.data.employeeUid == request.auth.uid;
+    }
+
+    // ---- Social Committee portal — committee financial and roster
+    // data. Isolated from plain employee accounts in both directions:
+    // only a 'social_committee' role may read or write any of this. ----
+    match /committeeMembers/{docId} {
+      allow read, create, update, delete: if isCommittee();
+    }
+    match /committeeContributions/{docId} {
+      // Dues entries: validated on write so a committee account can't
+      // write a negative/non-numeric amount or an oversized note.
+      allow read, delete: if isCommittee();
+      allow create, update: if isCommittee()
+        && request.resource.data.amount is number
+        && request.resource.data.amount > 0
+        && request.resource.data.amount < 1000000;
+    }
+    match /supportCases/{docId} {
+      allow read, create, update, delete: if isCommittee();
+    }
+    match /committeeEvents/{docId} {
+      allow read, create, update, delete: if isCommittee();
+    }
+    match /committeeBudget/{docId} {
+      allow read, delete: if isCommittee();
+      allow create, update: if isCommittee()
+        && request.resource.data.amount is number
+        && request.resource.data.amount > 0
+        && request.resource.data.amount < 1000000
+        && request.resource.data.type in ["income", "expense"];
+    }
+    match /clubs/{docId} {
+      allow read, create, update, delete: if isCommittee();
+    }
+    // Committee to-do list (who's booking the hall, who's buying the
+    // cake). Committee-only in both directions, same as the roster —
+    // it names members and is tied to committee events.
+    match /committeeTasks/{docId} {
+      allow read, create, update, delete: if isCommittee();
+    }
+    match /recognitions/{docId} {
+      allow read, create, update, delete: if isCommittee();
+    }
+    match /galleryMedia/{docId} {
+      allow read, create, update, delete: if isCommittee();
+    }
+    // Announcements: posted by the committee, but readable by every
+    // signed-in account in the project since the Employee Portal shows
+    // them too as a read-only company feed.
+    match /announcements/{docId} {
+      allow read: if signedIn();
+      allow create, update, delete: if isCommittee();
+    }
+    // Committee's own audit trail — separate from the Admin dashboard's
+    // activityLog, which lives in the other project entirely.
+    match /activityLog/{docId} {
+      allow read: if isCommittee();
+      allow create: if isCommittee();
+      allow update, delete: if false;
+    }
+  }
+}

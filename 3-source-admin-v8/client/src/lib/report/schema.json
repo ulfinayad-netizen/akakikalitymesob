@@ -1,0 +1,918 @@
+{
+ "departments": [
+  {
+   "id": "revenues",
+   "am": "ገቢዎች",
+   "en": "Revenues Bureau",
+   "logo": "/images/logos/revenues.png",
+   "services": [
+    {
+     "id": "revenues_01",
+     "name": "ቲን ሬጅስትሬሽን",
+     "kind": "count"
+    },
+    {
+     "id": "revenues_02",
+     "name": "ኢ ፋይሊንግ እና ኢ ፔይመንት ፓስወርድ ክርኤት ማድረግ",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "trade",
+   "am": "ንግድ ቢሮ",
+   "en": "Trade Bureau",
+   "logo": "/images/logos/trade.png",
+   "services": [
+    {
+     "id": "trade_01",
+     "name": "የግለሰብ ቅድመ አካውንት ማፅደቅ፣",
+     "kind": "count"
+    },
+    {
+     "id": "trade_02",
+     "name": "የማህበራት ቅድመ አካውንት ማፅደቅ፣",
+     "kind": "count"
+    },
+    {
+     "id": "trade_03",
+     "name": "አዲስ የንግድ ምዝገባ፣",
+     "kind": "count"
+    },
+    {
+     "id": "trade_04",
+     "name": "አዲስ የንግድ ሥራ ፈቃድ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_05",
+     "name": "የንግድ ስም ምዝገባና ማጣሪያ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_06",
+     "name": "አዲስ ንግድ ምዝገባና አዲስ ንግድ ፈቃድ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_07",
+     "name": "አዲስ ንግድ ምዝገባ ንግድ ፈቃድ እና ንግድ ስም ምዝገባ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_08",
+     "name": "አዲስ የድርጅት ስም",
+     "kind": "count"
+    },
+    {
+     "id": "trade_09",
+     "name": "የንግድ ፍቃድ እድሳት",
+     "kind": "count"
+    },
+    {
+     "id": "trade_10",
+     "name": "ንግድ ምዝገባ ማሻሻያ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_11",
+     "name": "ንግድ ፍቃድ ማሻሻያ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_12",
+     "name": "የንግድ ስም ማሻሻያ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_13",
+     "name": "የንግድ ምዝገባ ምትክ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_14",
+     "name": "የንግድ ሥራ ፈቃድ ምትክ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_15",
+     "name": "የንግድ ስም ምትክ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_16",
+     "name": "የንግድ ምዝገባ ስረዛ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_17",
+     "name": "የንግድ ሥራ ፈቃድ ስረዛ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_18",
+     "name": "የንግድ ስም ስረዛ",
+     "kind": "count"
+    },
+    {
+     "id": "trade_19",
+     "name": "ሌሎች",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "driver_vehicle",
+   "am": "አሽ/ተሽ",
+   "en": "Driver & Vehicle Licensing",
+   "logo": "/images/logos/driver-vehicle.jpg",
+   "services": [
+    {
+     "id": "driver_vehicle_01",
+     "name": "የአሽከርካሪ ብቃት ማረጋገጥ ፈቃድዕድሳት /መንጃ ፈቃድ ዕድሳትመስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_02",
+     "name": "የተበላሸ መንጃ ፈቃድ ምትክ መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_03",
+     "name": "የውጭ መንጃፈቃድ በአዲስ አበባመንጃ ፈቃድ መቀየር/መንጃፈቃድ ቅያሪ",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_04",
+     "name": "ወደውጭ የሚሄዱ አሽከርካሪዎች የአሽከርካሪነት ብቃት ማረጋገጫ ትክክለኛነት ማረጋገጥ/ኢንተርናሽናል አገልግሎት መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_05",
+     "name": "ዓመታዊ የተሽከርካሪ የቴክንክ ምርመራ /ቦሎ መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_06",
+     "name": "በተበላሸ ቦሎ ምትክ መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_07",
+     "name": "በጠፋ ቦሎ ምትክ መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_08",
+     "name": "የጠፋቦሎ ምትክለመስጠት ለፖሊስ ደብዳቤ መጻፍ",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_09",
+     "name": "ዕዳ ዕገዳ አገልግሎት መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_10",
+     "name": "ዕግድ ማንሳት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "driver_vehicle_11",
+     "name": "ቀረጥ ማንሳት አገልግሎት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "traffic",
+   "am": "ትራፊክ ማኔጅንት ባለስልጣን",
+   "en": "Traffic Management Authority",
+   "logo": null,
+   "services": [
+    {
+     "id": "traffic_01",
+     "name": "የተሃድሶ ስልጠና የሚወስዱ አሽከርካሪዎችን ማስተላለፍ",
+     "kind": "count"
+    },
+    {
+     "id": "traffic_02",
+     "name": "የጠፋ ሰሌዳ እና የአሽከርካሪነት ብቃት ማረጋገጫ /መንጃ ፈቃድ/ ወይም ለአሽከርካሪነት ብቃት ማረጋገጫ /መንጃ ፈቃድ/ እድሳት ከአደጋ ነፃ መረጃ መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "traffic_03",
+     "name": "የትራፊክ ደንብ ተላላፊዎች የአሽከርካሪነት ብቃት ማረጋገጫ ሪከርድ ማጣራት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "traffic_04",
+     "name": "ለውጪ ሃገር/ለኤምባሲ የአደጋ ረከርድ ማረጋገጫ መስጠት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "civil_registration",
+   "am": "ሲቪል ምዝገባና ነዋሪነት አገልግሎት",
+   "en": "Civil Registration & Residency Service",
+   "logo": "/images/logos/crrsa.png",
+   "services": [
+    {
+     "id": "civil_registration_01",
+     "name": "የልደት ምዝገባና ማስረጃ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_02",
+     "name": "ፍቺ ምዝገባና ማስረጃ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_03",
+     "name": "የጉዱፈቻ ምዝገባና ማስረጃ አገልግሎት፣",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_04",
+     "name": "የሞት ምዝገባና ማስረጃ አገልግሎት፣",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_05",
+     "name": "የልደት ምዝገባ ማስረጃ ግልባጭ ፣እርማት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_06",
+     "name": "የጋብቻ ምዝገባ ማስረጃ ፣ግልባጭ፣እርማት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_07",
+     "name": "የፍቺ ምዝገባ ማስረጃ ፣ግልባጭ፣እርማት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_08",
+     "name": "የሞት ምዝገባ ማስረጃ ፣ግልባጭ፣እርማት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_09",
+     "name": "የጉዱፈቻ ምዝገባ ማስረጃ ፣ግልባጭ፣እርማት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_10",
+     "name": "የወሳኝ ኩነት ምዝገባ ማስረጃ ማረጋገጥ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_11",
+     "name": "ያላገባ ማስረጃ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_12",
+     "name": "ያላገባ ማስረጃ እርማት እና እድሳት፣አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_13",
+     "name": "የነዋሪነት መታወቂያ እርማት፣እድሳትና ግልባጭ/ምትክ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_14",
+     "name": "ያላገባ ማስረጃ የማመሳከር አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_15",
+     "name": "የነዋሪነት መታወቂያ የማመሳከር አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "civil_registration_16",
+     "name": "የብሄራዊ መታውቂያ ፋይዳ ምዝገባ",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "labor_skills",
+   "am": "የስራና ክህሎት",
+   "en": "Labor & Skills",
+   "logo": "/images/logos/labor-skills.png",
+   "services": [
+    {
+     "id": "labor_skills_01",
+     "name": "የመረጃ ምክርና ግንዛቤ አገልግሎት መስጠት፣",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_02",
+     "name": "ስራ ፈላጊዎችን መመዝገብ",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_03",
+     "name": "በኢንተርፕራይዝ ማደራጀት እና ወደ ስራ የማስገባት፣",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_04",
+     "name": "የተደራጁ ኢንተርፕራይዞችን ወደ ስራ ማስገባት",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_05",
+     "name": "የአገር ውስጥ ሥራና ሠራተኛ ለሚያገናኙ ኤጀንሲዎች የብቃት ማረጋገጫ ፈቃድ መስጠት፣",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_06",
+     "name": "የአገር ውስጥ ሥራና ሠራተኛ ለሚያገናኙ ኤጀንሲዎች የብቃት ማረጋገጫ ዕድሳት መስጠት፣",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_07",
+     "name": "የኮንስትራክሽን፣ የተለማማጅ የሙያ መልመጃ እና የአገር ውስጥ የወቅት ሰራተኛ ውል አገልግሎት ማፅደቅ፣",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_08",
+     "name": "የፋይናንስ ድጋፍ እንዲያገኙ የማመቻቸት፤",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_09",
+     "name": "የካፒታል ሊዝ ድጋፍ እንዲያገኙ ማመቻቸት",
+     "kind": "count"
+    },
+    {
+     "id": "labor_skills_10",
+     "name": "የዘርፍ ማህበራትን ማደራጀት፤",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "housing_admin",
+   "am": "የቤቶች ልማትና አስተዳደር ቢሮ",
+   "en": "Housing Development & Administration Bureau",
+   "logo": "/images/logos/housing-dev-admin.jpg",
+   "services": [
+    {
+     "id": "housing_admin_01",
+     "name": "የአከራይ ተከራይ የምዝገባ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_02",
+     "name": "የአከራይ ተከራይ ውል ማደስ ወይም ማቋረጥ አገልግሎት፣",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_03",
+     "name": "በኪራይ ቤት ለተመደበላቸው አዲስ ውል የማዋዋል አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_04",
+     "name": "የቤት ቅይይር ጥያቄን ምሊሽ የመስጠት አገልግሎት፣",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_05",
+     "name": "ተነሺዎች ምትክ ቤት የመመደብ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_06",
+     "name": "አምስት አመት የሞሊቸዉ የጋራ መኖሪያ ቤቶች ማስረጃ የመስጠት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_07",
+     "name": "የዉሃና የመብራት ማስገባት የፍቃድ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_08",
+     "name": "የመንግስት ቤት የኪራይ ውሌ ማደስ ወይም ማቋረጥ አገልግሎት፣",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_09",
+     "name": "የስም ዝውውር አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_10",
+     "name": "የቤት እድሳትና ጥገና ጥያቄ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_11",
+     "name": "የመንግስት ቤት አገልግሎት ለውጥ ስለማድረግ",
+     "kind": "count"
+    },
+    {
+     "id": "housing_admin_12",
+     "name": "የመንግስት መኖሪያ እና ንግድ ቤትን ስለማካፈል",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "housing_corp",
+   "am": "የአዲስ አበባ ቤቶች ልማት ኮርፕሬሽን",
+   "en": "Addis Ababa Housing Development Corporation",
+   "logo": "/images/logos/housing-dev-corp.png",
+   "services": [
+    {
+     "id": "housing_corp_01",
+     "name": "የጋራ መኖሪያ ቤቶችን በሽያጭ ማስተላለፍ፤",
+     "kind": "count"
+    },
+    {
+     "id": "housing_corp_02",
+     "name": "የንግድ ቤቶች በጨረታ በሽያጭ ማስተላለፍ፤",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "plan_dev",
+   "am": "የፕላንና ልማት ቢሮ",
+   "en": "Plan & Development Bureau",
+   "logo": "/images/logos/plan-dev.png",
+   "services": [
+    {
+     "id": "plan_dev_01",
+     "name": "የፕላን ማብራሪያ/አስተያየት መስጠት",
+     "kind": "count"
+    },
+    {
+     "id": "plan_dev_02",
+     "name": "የውስጥ ለውስጥ መንገድ ጥናት",
+     "kind": "count"
+    },
+    {
+     "id": "plan_dev_03",
+     "name": "የፕላን መረጃዎች ማሰራጨት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "construction_permit",
+   "am": "የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",
+   "en": "Construction Permit & Control Authority",
+   "logo": "/images/logos/construction-permit.jpg",
+   "services": [
+    {
+     "id": "construction_permit_01",
+     "name": "የፕላን ስምምነት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "construction_permit_02",
+     "name": "አዲስ ግንባታ ፈቃድ",
+     "kind": "count"
+    },
+    {
+     "id": "construction_permit_03",
+     "name": "የፕላን ማሻሻያ ፈቃድ",
+     "kind": "count"
+    },
+    {
+     "id": "construction_permit_04",
+     "name": "የነባር ግንባታ ፈቃድ (As-Built)",
+     "kind": "count"
+    },
+    {
+     "id": "construction_permit_05",
+     "name": "የስም ወይም የአገልግሎት ለውጥ ፈቃድ",
+     "kind": "count"
+    },
+    {
+     "id": "construction_permit_06",
+     "name": "የህንፃ መጠቀሚያ ፈቃድ",
+     "kind": "count"
+    },
+    {
+     "id": "construction_permit_07",
+     "name": "የውጭ ማስታወቂያ ፈቃድ",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "land_dev",
+   "am": "የመሬት ልማትና ማኔጅመንት ቢሮ",
+   "en": "Land Development & Management Bureau",
+   "logo": "/images/logos/land-dev.png",
+   "services": [
+    {
+     "id": "land_dev_01",
+     "name": "የባለቤትነት ስመ ንብረት ዝውውር አገልግሎት መስጠት ለአፓርትሜነት፣ ኮንደሚንየም እና ሪል ስቴት የተነጥል ካርታ ስም ዝውውር አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_dev_02",
+     "name": "የሊዝ ይዞታ መብት ማስተላለፍ ባዶ ቦታ ኢ ሰርትፍኬት ያለው",
+     "kind": "count"
+    },
+    {
+     "id": "land_dev_03",
+     "name": "ዋስትና ዕዳና ዕገዳ ምዝገባ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_dev_04",
+     "name": "የሊዝ ውል አገልግሎት ኢ ኮንትራት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_dev_05",
+     "name": "የዋስት ዕዳ እገዳ የመሰረዝ አገልግሎት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "land_registration",
+   "am": "የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",
+   "en": "Land Holding Registration & Information Agency",
+   "logo": "/images/logos/landholding.png",
+   "services": [
+    {
+     "id": "land_registration_01",
+     "name": "የቋሚ ንብረት እዳ መያዣ ዋስትና ምዝገባ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_registration_02",
+     "name": "የሪል ስቴት የጋራ ህንጻ ፤ የማሕበር ቤት እና የግል አልሚ የጋራ ሕንጻ ንብረት እዳ ስረዛ ምዝገባ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_registration_03",
+     "name": "የቁራሽ መሬት ይዞታ የፍትህ ተቋማት የፍርድ ቤት ዕግድ ምዝገባ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_registration_04",
+     "name": "የቋሚ ንብረት እዳ ምዝገባ ዕድሳት ምዝገባ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_registration_05",
+     "name": "የሪል እስቴት፣ የማህበራት የጋራ ህንፃ እና የግል አልሚ የጋራ ህንጻ የተናጠል ሰርተፍኬት ካርታ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_registration_06",
+     "name": "የግል አልሚ የጋራ ህንጻ (Mixed Use)",
+     "kind": "count"
+    },
+    {
+     "id": "land_registration_07",
+     "name": "ጋራ ህንጻ፣ የማህበር፣ የሪል እስቴት እና የግል የጋራ ህንጻ አለሚ (Mixed Use) የስመ-ንብረት የስም ዝውውር አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "land_registration_08",
+     "name": "የሪል እስቴት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "ethio_post",
+   "am": "ኢትዮ ፖስት",
+   "en": "Ethio Post",
+   "logo": null,
+   "services": [
+    {
+     "id": "ethio_post_01",
+     "name": "ናሸናል አይዲ ቀጠሮ ማስያዝ",
+     "kind": "count"
+    },
+    {
+     "id": "ethio_post_02",
+     "name": "ናሸናል አይዲ ህትመት",
+     "kind": "count"
+    },
+    {
+     "id": "ethio_post_03",
+     "name": "ናሽናል አይዲ ማደል",
+     "kind": "count"
+    },
+    {
+     "id": "ethio_post_04",
+     "name": "መንገድ ፈንድ",
+     "kind": "count"
+    },
+    {
+     "id": "ethio_post_05",
+     "name": "የሰነዶች ጽፈት አገልግሎት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "food_drug",
+   "am": "የምግብና መድሃኒት ቁጥጥር አገልግሎቶች",
+   "en": "Food & Medicine Control Services",
+   "logo": "/images/logos/aafda.jpg",
+   "services": [
+    {
+     "id": "food_drug_01",
+     "name": "የጤና ባለሙያዎች አዲስ የሙያ ፈቃድ ማውጣት",
+     "kind": "count"
+    },
+    {
+     "id": "food_drug_02",
+     "name": "የጤና ባለሙያዎች የሙያ ፈቃድ ዕድሳት",
+     "kind": "count"
+    },
+    {
+     "id": "food_drug_03",
+     "name": "Old License (Old license Digitalization)",
+     "kind": "count"
+    },
+    {
+     "id": "food_drug_04",
+     "name": "የጤና ባለሙያዎች የሙያ ፈቃድ ማሻሻያ",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "etqra",
+   "am": "ትምህርትና ስልጠና ጥራት ቁጥጥር ባለስልጣን",
+   "en": "Education & Training Quality Regulation Authority",
+   "logo": "/images/logos/etqra.png",
+   "services": [
+    {
+     "id": "etqra_01",
+     "name": "የትምህርት ማስረጃ ማረጋገጥ አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "etqra_02",
+     "name": "የአዲስ እውቅ እና የእውቅና እድሳት ሰርተፊኬት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "etqra_03",
+     "name": "የደረጃ ፍረጃ ሰርተፊኬት አገልግሎት",
+     "kind": "count"
+    },
+    {
+     "id": "etqra_04",
+     "name": "የመምህራን እና የትምህርት አመራር ሙያ ፈቃድ ሰርተፊኬት አገልግሎት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "am": "የጤና አገልግሎት",
+   "en": "Health Service",
+   "logo": "/images/logos/health.png",
+   "services": [
+    {
+     "id": "health_01",
+     "name": "የመንጃ ፈቃድ ጤና ምርመራ ሜዲካል ሰርተፊኬት መስጠት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "mesob_fayda",
+   "am": "መሶብ ፋይዳ",
+   "en": "Mesob Fayda (National ID)",
+   "logo": null,
+   "services": [
+    {
+     "id": "mesob_fayda_01",
+     "name": "ናሽናል አይዲ ማስተካከያ",
+     "kind": "count"
+    },
+    {
+     "id": "mesob_fayda_02",
+     "name": "ናሽናል አይዲ ምዝገባ",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "federal_docs",
+   "am": "የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",
+   "en": "Federal Documents Authentication & Registration",
+   "logo": null,
+   "services": [
+    {
+     "id": "federal_docs_01",
+     "name": "ውክልና",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_02",
+     "name": "የመኖሪያ ቤት ሽያጭ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_03",
+     "name": "የመኪና ሽያጭ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_04",
+     "name": "ትርጉም",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_05",
+     "name": "ከሰነድ አረጋጋጭ ተቀም የሚመጡ ሰነዶች ማረጋገጥ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_06",
+     "name": "የኪራይ ውል",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_07",
+     "name": "የብድር ውል",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_08",
+     "name": "መሻሪያ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_09",
+     "name": "ውል ቀሪ ማድረጊያ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_10",
+     "name": "ኑዛዜ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_11",
+     "name": "መመስረቻ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_12",
+     "name": "ቃለ ጉባኤ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_13",
+     "name": "ኮፒ ማመሳከሪያ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_14",
+     "name": "በስጦታ የማስተላለፍ ውል",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_15",
+     "name": "ቃለ መሃላ ማረጋገጫ",
+     "kind": "count"
+    },
+    {
+     "id": "federal_docs_16",
+     "name": "ጠቅላላ የተሰበሰበ የ ገንዘብ መጠን",
+     "kind": "money"
+    }
+   ]
+  },
+  {
+   "id": "eeu",
+   "am": "መብራት ሃይል",
+   "en": "Electric Utility",
+   "logo": "/images/logos/eeu.jpg",
+   "services": [
+    {
+     "id": "eeu_01",
+     "name": "የቅድመ ክፍያ ካርድ ብዛት",
+     "kind": "count"
+    }
+   ]
+  },
+  {
+   "id": "ethiotelecom",
+   "am": "Ethiotelecom",
+   "en": "Ethio Telecom",
+   "logo": null,
+   "services": [
+    {
+     "id": "ethiotelecom_01",
+     "name": "Sim replacement",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_02",
+     "name": "New sim sold",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_03",
+     "name": "Mobile hand set",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_04",
+     "name": "Cash in and out",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_05",
+     "name": "Transfer ownership",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_06",
+     "name": "New tele birr activation and payment",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_07",
+     "name": "Yearly package",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_08",
+     "name": "Tele birr pin reset",
+     "kind": "count"
+    },
+    {
+     "id": "ethiotelecom_09",
+     "name": "ጠቅላላ የተሰበሰበ የ ገንዘብ መጠን",
+     "kind": "money"
+    }
+   ]
+  },
+  {
+   "id": "cbe",
+   "am": "ንግድ ባንክ",
+   "en": "Commercial Bank of Ethiopia",
+   "logo": null,
+   "services": [
+    {
+     "id": "cbe_01",
+     "name": "የትራንዛክሽን ብዛት",
+     "kind": "count"
+    },
+    {
+     "id": "cbe_02",
+     "name": "የተሰበሰበ ገንዘብ መጠን",
+     "kind": "money"
+    }
+   ]
+  },
+  {
+   "id": "siket_bank",
+   "am": "ስኬት ባንክ",
+   "en": "Siket Bank",
+   "logo": null,
+   "services": [
+    {
+     "id": "siket_bank_01",
+     "name": "የትራንዛክሽን ብዛት",
+     "kind": "count"
+    },
+    {
+     "id": "siket_bank_02",
+     "name": "የተሰበሰበ ገንዘብ መጠን",
+     "kind": "money"
+    }
+   ]
+  },
+  {
+   "id": "universal",
+   "am": "ዩኒቨርሳል",
+   "en": "Universal",
+   "logo": null,
+   "services": [
+    {
+     "id": "universal_01",
+     "name": "ቅድመ አገልግሎት",
+     "kind": "count"
+    }
+   ]
+  }
+ ]
+}

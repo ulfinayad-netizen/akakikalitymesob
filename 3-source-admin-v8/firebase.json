@@ -1,0 +1,26 @@
+{
+  "firestore": [
+    {
+      "target": "admin",
+      "rules": "firestore.admin.rules"
+    },
+    {
+      "target": "employee",
+      "rules": "firestore.employee.rules"
+    },
+    {
+      "target": "chat",
+      "rules": "firestore.chat.rules"
+    }
+  ],
+  "storage": [
+    {
+      "target": "admin",
+      "rules": "storage.admin.rules"
+    },
+    {
+      "target": "chat",
+      "rules": "storage.chat.rules"
+    }
+  ]
+}

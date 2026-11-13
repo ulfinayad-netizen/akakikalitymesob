@@ -1,0 +1,155 @@
+﻿Institution,Institution (Amharic),Row ID,Service,Source
+"Revenues Bureau","ገቢዎች",revenues_01,"የግብር ከፋይ ቲን የግብር ከፋይ መለያ ቁጥር መስጠት",QMS catalogue
+"Revenues Bureau","ገቢዎች",revenues_02,"የኢ ፋይሊንግ እና ኢ ፔይመንት የይለፍ ቃል ለመውሰድ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_02,"የማህበራት ቅድመ አካውንት ማፅደቅ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_01,"የግለሰብ ቅድመ አካውንት ማፅደቅ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_08,"የንግድ ማህበራት የንግድ ድርጅት ስም ማስመዝገብ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_03,"የንግድ ምዝገባ ምስክር ወረቀት መስጠት",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_04,"የንግድ ሥራ ፈቃድ ምስክር ወረቀት መሰጠት",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_09,"የንግድ ሥራ ፈቃድ እድሳት",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_q7,"አድስ ንግድ ፍቃድ ማዉጣት",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_17,"ንግድ ፍቃድ መሰረዝ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_q1,"የድርጅት አኳንት ማጽደቅ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_q2,"ሰርትፍከት መጫን",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_05,"የቅድመ ንግድ ስም ምዝገባና ማጣርያ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_q3,"የግለሰብ ቅድመ ንግድ ስም ስልክና መታወቂያ እርማት",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_q4,"የማህበር ቅድመ ንግድ ስም ስልክና መታወቂያ እርማት",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_q5,"የድርጅት ዝግ የባንክ አኳንት ማስከፈት",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_q6,"የድርጅት በዝግ የተያዘ ገንዘብ ማስለቀቅ",QMS catalogue
+"Trade Bureau","ንግድ ቢሮ",trade_06,"አዲስ ንግድ ምዝገባና አዲስ ንግድ ፈቃድ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_07,"አዲስ ንግድ ምዝገባ ንግድ ፈቃድ እና ንግድ ስም ምዝገባ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_10,"ንግድ ምዝገባ ማሻሻያ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_11,"ንግድ ፍቃድ ማሻሻያ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_12,"የንግድ ስም ማሻሻያ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_13,"የንግድ ምዝገባ ምትክ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_14,"የንግድ ሥራ ፈቃድ ምትክ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_15,"የንግድ ስም ምትክ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_16,"የንግድ ምዝገባ ስረዛ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_18,"የንግድ ስም ስረዛ",manual (kept)
+"Trade Bureau","ንግድ ቢሮ",trade_19,"ሌሎች",manual (kept)
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_09,"የተሽከርካሪ ዕዳና ዕገዳ ማከናወን አገልግሎት",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_05,"የተሽከርካሪ አመታዊ ብቃት ማረጋገጫ ቦሎ መስጠት",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_08,"ለጠፋ ቦሎ ተለጣፊ ምትክ ለመስጠት ለፖሊስ መረጃ መጠየቅ",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_07,"ለጠፋ ቦሎ ተለጣፊ ምትክ መስጠት",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_11,"የቀረጥ ነፃ ማንሳት አገልግሎት",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_01,"የአሽከርካሪ ብቃት ማረጋገጫ ፈቃድ እድሳት አገልግሎት መስጠት",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_03,"በውጪ ሃገር የአሽከርካሪ ብቃት ማረጋገጫ ፈቃድ ምትክ የአዲስ አበባ የአሽከርካሪ ብቃት ማረጋገጫ ፈቃድ መስጠ",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_04,"ወደ ውጪ ሃገር ለሚሄዱ አሽከርካሪዎች የአሽከርካሪ ብቃት ማረጋገጫ ፈቃድ ትክክለኛነት ማረጋገጫ መስጠት ኢንተርናሽናል",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_06,"ለተበላሸ ቦሎ ተለጣፊ ምትክ መስጠት",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_02,"በተበላሸ የአሽከርካሪ ብቃት ማረጋገጫ ፈቃድ ምትክ መስጠት",QMS catalogue
+"Driver & Vehicle Licensing","አሽ/ተሽ",driver_vehicle_10,"ዕግድ ማንሳት አገልግሎት",manual (kept)
+"Traffic Management Authority","ትራፊክ ማኔጅንት ባለስልጣን",traffic_01,"የተሃድሶ ስልጠና አሽከርካሪዎችን ማስተላለፍ",QMS catalogue
+"Traffic Management Authority","ትራፊክ ማኔጅንት ባለስልጣን",traffic_02,"የጠፋ ሰሌዳ ምትክ መስጠት",QMS catalogue
+"Traffic Management Authority","ትራፊክ ማኔጅንት ባለስልጣን",traffic_03,"የአሽከርካሪነት ብቃት ማረጋገጫ ማደስ",QMS catalogue
+"Traffic Management Authority","ትራፊክ ማኔጅንት ባለስልጣን",traffic_04,"የአደጋ ረከርድ ማረጋገጫ",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_01,"የልደት ምዝገባና ማስረጃ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_03,"የጉዲፈቻ ምዝገባና ማስረጃ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_02,"የፍቺ ምዝገባና ማስረጃ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_04,"የሞት ምዝገባና ማስረጃ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_06,"የጋብቻ ምዝገባ ማስረጃ እድሳት፤ ግልባጭ እና እርማት አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_13,"የነዋሪነት መታወቂያ እርማት፣ እድሳት ግልባጭ/ምትክ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_q1,"የዲጂታል መታወቂያ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_11,"የያላገባ ማስረጃ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_14,"ያላገባ ማስረጃ የማመሳከር አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_15,"የነዋሪነት መታወቂያ የማመሳከር አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_12,"ያላገባ ማስረጃ እርማት እና እድሳት አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_05,"የልደት ምዝገባ ማስረጃ እድሳት፣ ግልባጭ እና እርማት አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_10,"የወሳኝ ኩነት ምዝገባ ማስረጃ ማረጋገጥ አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_07,"የፍቺ ምዝገባ ማስረጃ እድሳት፤ ግልባጭ እና እርማት አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_08,"የሞት ምዝገባ ማስረጃ እድሳት፤ ግልባጭ እና እርማት አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_09,"የጉዲፈቻ ምዝገባ ማስረጃ እድሳት፣ ግልባጭ እና እርማት አገልግሎት",QMS catalogue
+"Civil Registration & Residency Service","ሲቪል ምዝገባና ነዋሪነት አገልግሎት",civil_registration_16,"የብሄራዊ መታውቂያ ፋይዳ ምዝገባ",manual (kept)
+"Labor & Skills","የስራና ክህሎት",labor_skills_01,"የመረጃ ምክርና ግንዛቤ አገልግሎት",QMS catalogue
+"Labor & Skills","የስራና ክህሎት",labor_skills_02,"ስራ ፈላጊዎችን እና ኢንተርፕራይዞችን መመዝገብ",QMS catalogue
+"Labor & Skills","የስራና ክህሎት",labor_skills_03,"በኢንተርፕራይዝ ማደራጀት",QMS catalogue
+"Labor & Skills","የስራና ክህሎት",labor_skills_q1,"የአገር ውስጥ ሥራና ሠራተኛ ማገናኘት",QMS catalogue
+"Labor & Skills","የስራና ክህሎት",labor_skills_08,"የፋይናንስ ድጋፍ ማመቻቸት",QMS catalogue
+"Labor & Skills","የስራና ክህሎት",labor_skills_04,"የተደራጁ ኢንተርፕራይዞችን ወደ ስራ ማስገባት",manual (kept)
+"Labor & Skills","የስራና ክህሎት",labor_skills_05,"የአገር ውስጥ ሥራና ሠራተኛ ለሚያገናኙ ኤጀንሲዎች የብቃት ማረጋገጫ ፈቃድ መስጠት፣",manual (kept)
+"Labor & Skills","የስራና ክህሎት",labor_skills_06,"የአገር ውስጥ ሥራና ሠራተኛ ለሚያገናኙ ኤጀንሲዎች የብቃት ማረጋገጫ ዕድሳት መስጠት፣",manual (kept)
+"Labor & Skills","የስራና ክህሎት",labor_skills_07,"የኮንስትራክሽን፣ የተለማማጅ የሙያ መልመጃ እና የአገር ውስጥ የወቅት ሰራተኛ ውል አገልግሎት ማፅደቅ፣",manual (kept)
+"Labor & Skills","የስራና ክህሎት",labor_skills_09,"የካፒታል ሊዝ ድጋፍ እንዲያገኙ ማመቻቸት",manual (kept)
+"Labor & Skills","የስራና ክህሎት",labor_skills_10,"የዘርፍ ማህበራትን ማደራጀት፤",manual (kept)
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_01,"የአከራይ ተከራይ የምዝገባ አገልግሎት",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_02,"የአከራይ ተከራይ ውል ማደስ ወይም ማቋረጥ",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_03,"በኪራይ ቤት አዲስ ውል የማዋዋል አገልግሎት",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_04,"የቤት ቅይይር ጥያቄን ምሊሽ የመስጠት",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_05,"ተነሺዎች ምትክ ቤት የመመደብ",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_06,"አምስት አመት የሞሊቸዉ የጋራ መኖሪያ ቤቶች ማስረጃ",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_07,"የዉሃና የመብራት ማስገባት የፍቃድ",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_08,"የመንግስት ቤት የኪራይ ውሌ ማደስ ወይም ማቋረጥ",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_09,"የስም ዝውውር አገልግሎት",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_10,"የቤት እድሳትና ጥገና ጥያቄ",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_11,"የመንግስት ቤት አገልግሎት ለውጥ",QMS catalogue
+"Housing Development & Administration Bureau","የቤቶች ልማትና አስተዳደር ቢሮ",housing_admin_12,"የመንግስት መኖሪያ እና ንግድ ቤትን ስለማካፈል",manual (kept)
+"Addis Ababa Housing Development Corporation","የአዲስ አበባ ቤቶች ልማት ኮርፕሬሽን",housing_corp_01,"የጋራ መኖሪያ ቤቶችን ለተጠቃሚዎች የማስተላለፍ ስራዎች መስራት",QMS catalogue
+"Addis Ababa Housing Development Corporation","የአዲስ አበባ ቤቶች ልማት ኮርፕሬሽን",housing_corp_02,"የጋራ መኖሪያና ንግድ ቤቶችን በሽያጭ በጨረታ ማስተላለፍ",QMS catalogue
+"Plan & Development Bureau","የፕላንና ልማት ቢሮ",plan_dev_01,"የፕላን ማብራሪያ አስተያየት",QMS catalogue
+"Plan & Development Bureau","የፕላንና ልማት ቢሮ",plan_dev_02,"የውስጥ ለውስጥ መንገድ ጥናት",QMS catalogue
+"Plan & Development Bureau","የፕላንና ልማት ቢሮ",plan_dev_03,"የፕላን መረጃዎችን ማሰራጨት",QMS catalogue
+"Construction Permit & Control Authority","የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",construction_permit_01,"ፕላን ስምምነት መረጃ መስጠት",QMS catalogue
+"Construction Permit & Control Authority","የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",construction_permit_02,"አዲስ ግንባታ ፈቃድ",QMS catalogue
+"Construction Permit & Control Authority","የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",construction_permit_03,"የህንፃ ማሻሻያ ፈቃድ",QMS catalogue
+"Construction Permit & Control Authority","የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",construction_permit_06,"የህንፃ መጠቀሚያ ፈቃድ",QMS catalogue
+"Construction Permit & Control Authority","የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",construction_permit_04,"የነባር ግንባታ ፈቃድ (As-Built)",manual (kept)
+"Construction Permit & Control Authority","የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",construction_permit_05,"የስም ወይም የአገልግሎት ለውጥ ፈቃድ",manual (kept)
+"Construction Permit & Control Authority","የግንባታ ፈቃድና ቁጥጥር ባለሥልጣን",construction_permit_07,"የውጭ ማስታወቂያ ፈቃድ",manual (kept)
+"Land Development & Management Bureau","የመሬት ልማትና ማኔጅመንት ቢሮ",land_dev_01,"የባለቤትነት ስመ ንብረት ዝውውር አገልግሎት",QMS catalogue
+"Land Development & Management Bureau","የመሬት ልማትና ማኔጅመንት ቢሮ",land_dev_02,"የሊዝ ይዞታ መብት ማስተላለፍ",QMS catalogue
+"Land Development & Management Bureau","የመሬት ልማትና ማኔጅመንት ቢሮ",land_dev_03,"ዋስትና ዕዳና ዕገዳ ምዝገባ አገልግሎት",QMS catalogue
+"Land Development & Management Bureau","የመሬት ልማትና ማኔጅመንት ቢሮ",land_dev_05,"የዋስት ዕዳ እገዳ የመሰረዝ አገልግሎት",QMS catalogue
+"Land Development & Management Bureau","የመሬት ልማትና ማኔጅመንት ቢሮ",land_dev_04,"የሊዝ ውል አገልግሎት",QMS catalogue
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_01,"የቋሚ ንብረት እዳ መያዣ ዋስትና ምዝገባ",QMS catalogue
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_02,"የሪል ስቴት የጋራ ህንጻ ንብረት እዳ ስረዛ",QMS catalogue
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_03,"የቁራሽ መሬት ይዞታ የፍርድ ቤት ዕግድ ምዝገባ",QMS catalogue
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_04,"የቋሚ ንብረት እዳ ምዝገባ ዕድሳት",QMS catalogue
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_08,"የሪል እስቴት የተናጠል ሰርተፍኬት ካርታ",QMS catalogue
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_q1,"የሪል እስቴት የስም ዝውውር",QMS catalogue
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_05,"የሪል እስቴት፣ የማህበራት የጋራ ህንፃ እና የግል አልሚ የጋራ ህንጻ የተናጠል ሰርተፍኬት ካርታ አገልግሎት",manual (kept)
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_06,"የግል አልሚ የጋራ ህንጻ (Mixed Use)",manual (kept)
+"Land Holding Registration & Information Agency","የመሬት ይዞታ ምዝገባና መረጃ ኤጀንሲ",land_registration_07,"ጋራ ህንጻ፣ የማህበር፣ የሪል እስቴት እና የግል የጋራ ህንጻ አለሚ (Mixed Use) የስመ-ንብረት የስም ዝውውር አገልግሎት",manual (kept)
+"Ethio Post","ኢትዮ ፖስት",ethio_post_01,"የፋይዳ መታወቂያ ቀጠሮ ማስያዝ",QMS catalogue
+"Ethio Post","ኢትዮ ፖስት",ethio_post_02,"የፋይዳ መታወቂያ ህትመት",QMS catalogue
+"Ethio Post","ኢትዮ ፖስት",ethio_post_q1,"የፋይዳ መታወቂያ ምዝገባ",QMS catalogue
+"Ethio Post","ኢትዮ ፖስት",ethio_post_05,"ውል ና ማስረጃ መጻፍ",QMS catalogue
+"Ethio Post","ኢትዮ ፖስት",ethio_post_04,"የመንገድ ፈንድ አገልግሎት",QMS catalogue
+"Ethio Post","ኢትዮ ፖስት",ethio_post_03,"ናሽናል አይዲ ማደል",manual (kept)
+"Food & Medicine Control Services","የምግብና መድሃኒት ቁጥጥር አገልግሎቶች",food_drug_01,"አዲስ የጤና ባለሙያዎች የሙያ ምዝገባና ፈቃድ መስጠት",QMS catalogue
+"Food & Medicine Control Services","የምግብና መድሃኒት ቁጥጥር አገልግሎቶች",food_drug_03,"Old License (Old license Digitalization)",QMS catalogue
+"Food & Medicine Control Services","የምግብና መድሃኒት ቁጥጥር አገልግሎቶች",food_drug_04,"የነባር ጤና ባለሙያዎች የሙያ ምዝገባና ፈቃድ ማደስ",QMS catalogue
+"Food & Medicine Control Services","የምግብና መድሃኒት ቁጥጥር አገልግሎቶች",food_drug_02,"ማሻሻያ ያደረጉ የጤና ባለሙያዎች የሙያ ምዝገባና ፈቃድ ማደስ",QMS catalogue
+"Education & Training Quality Regulation Authority","ትምህርትና ስልጠና ጥራት ቁጥጥር ባለስልጣን",etqra_01,"የትምህርት ማስረጃ ማረጋገጥ አገልግሎት",QMS catalogue
+"Education & Training Quality Regulation Authority","ትምህርትና ስልጠና ጥራት ቁጥጥር ባለስልጣን",etqra_02,"የአዲስ እውቅ እና የእውቅና እድሳት ሰርተፊኬት አገልግሎት",QMS catalogue
+"Education & Training Quality Regulation Authority","ትምህርትና ስልጠና ጥራት ቁጥጥር ባለስልጣን",etqra_03,"የደረጃ ፍረጃ ሰርተፊኬት አገልግሎት",QMS catalogue
+"Education & Training Quality Regulation Authority","ትምህርትና ስልጠና ጥራት ቁጥጥር ባለስልጣን",etqra_04,"የመምህራን እና የትምህርት አመራር ሙያ ፈቃድ ሰርተፊኬት አገልግሎት",manual (kept)
+"Health Service","የጤና አገልግሎት",health_01,"የጤና አገልግሎት",QMS catalogue
+"Mesob Fayda (National ID)","መሶብ ፋይዳ",mesob_fayda_02,"የፋይዳ መታወቂያ ምዝገባ",QMS catalogue
+"Mesob Fayda (National ID)","መሶብ ፋይዳ",mesob_fayda_01,"የፋይዳ መታወቂያ ማስተካከያ",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_01,"ውክልና አገልግሎት",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_q1,"ንብረት ሽያጭ ውል",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_14,"ስጦታ አገልግሎት",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_07,"ብድር ውል",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_06,"ኪራይ አገልግሎት",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_04,"ትርጉም አገልግሎት",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_10,"ኑዛዜ አገልግሎት",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_09,"ዉል ማፍረሻ",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_11,"ዉል መመስረቻ",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_15,"ቃለ መሀላ",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_12,"ቃለ-ጉባኤ",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_q2,"የትርጉም አገልግሎት ማጣራት",QMS catalogue
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_02,"የመኖሪያ ቤት ሽያጭ",manual (kept)
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_03,"የመኪና ሽያጭ",manual (kept)
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_05,"ከሰነድ አረጋጋጭ ተቀም የሚመጡ ሰነዶች ማረጋገጥ",manual (kept)
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_08,"መሻሪያ",manual (kept)
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_13,"ኮፒ ማመሳከሪያ",manual (kept)
+"Federal Documents Authentication & Registration","የፌዴራል ሰነዶች ማረጋገጫና ምዝገባ አገልግሎት",federal_docs_16,"ጠቅላላ የተሰበሰበ የ ገንዘብ መጠን",money row
+"Electric Utility","መብራት ሃይል",eeu_01,"የካርድ አገልግሎት",QMS catalogue
+"Ethio Telecom","Ethiotelecom",ethiotelecom_q1,"በቴሌብር ለመክፈል",QMS catalogue
+"Ethio Telecom","Ethiotelecom",ethiotelecom_q2,"ቴሌብር ለመክፈት",QMS catalogue
+"Ethio Telecom","Ethiotelecom",ethiotelecom_q3,"ሲም ለማውጣት",QMS catalogue
+"Ethio Telecom","Ethiotelecom",ethiotelecom_09,"ጠቅላላ የተሰበሰበ የ ገንዘብ መጠን",money row
+"Commercial Bank of Ethiopia","ንግድ ባንክ",cbe_01,"የባንክ አገልግሎት",QMS catalogue
+"Commercial Bank of Ethiopia","ንግድ ባንክ",cbe_02,"የተሰበሰበ ገንዘብ መጠን",money row
+"Siket Bank","ስኬት ባንክ",siket_bank_01,"የባንክ አገልግሎት",QMS catalogue
+"Siket Bank","ስኬት ባንክ",siket_bank_02,"የተሰበሰበ ገንዘብ መጠን",money row
+"Universal","ዩኒቨርሳል",universal_01,"ጠቅላላ አገልግሎት",QMS catalogue

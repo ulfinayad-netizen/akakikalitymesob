@@ -1,0 +1,79 @@
+rules_version = '2';
+
+// Firestore rules for the internal chat's OWN Firebase project
+// ("mesob-chat" — see client/src/lib/firebase.chat.js). This project has
+// nothing in it except chat data; every user account here was created by
+// server/routes/chat-token.js minting a custom token for an already-
+// verified Employee Portal account, using that account's uid from the
+// Employee project — so request.auth.uid here is always trustworthy the
+// same way it would be in firestore.employee.rules.
+//
+// Deploy against this project specifically:
+//
+//   firebase deploy --only firestore:chat --project mesob-chat
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+
+    // A message may be edited only by whoever sent it, and only its
+    // text + editedAt — sender, attachment, and timestamp fields are
+    // fixed at creation and can't be rewritten after the fact.
+    function isOwnTextEdit() {
+      return request.auth.uid == resource.data.senderUid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(["text", "editedAt"]);
+    }
+
+    // Channels: open to every signed-in (bridged) employee — nothing in
+    // this project is department- or role-restricted, that logic all
+    // lives on the Employee project's side, before a token is ever
+    // minted. Anyone may post and delete/edit their own message.
+    match /chatChannels/{channelId} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.createdBy == request.auth.uid;
+      // The channel doc's lastMessage/lastMessageAt is bumped by
+      // whoever just posted in it, not only by its creator.
+      allow update: if signedIn();
+      allow delete: if false;
+
+      match /messages/{messageId} {
+        allow read: if signedIn();
+        allow create: if signedIn() && request.resource.data.senderUid == request.auth.uid;
+        allow update: if signedIn() && isOwnTextEdit();
+        allow delete: if signedIn() && resource.data.senderUid == request.auth.uid;
+      }
+    }
+
+    // Direct messages: dmId is the two participants' uids, sorted and
+    // joined with "_" (see dmIdFor() in EmployeeChatContext.jsx), so
+    // membership can be checked without a lookup — but the request's OWN
+    // members array is also validated on create so a client can't forge
+    // a DM naming someone else without including itself.
+    match /chatDMs/{dmId} {
+      allow read, update: if signedIn() && request.auth.uid in resource.data.members;
+      allow create: if signedIn()
+        && request.auth.uid in request.resource.data.members
+        && request.resource.data.members.size() == 2;
+      allow delete: if false;
+
+      match /messages/{messageId} {
+        allow read: if signedIn() && request.auth.uid in get(/databases/$(database)/documents/chatDMs/$(dmId)).data.members;
+        allow create: if signedIn()
+          && request.resource.data.senderUid == request.auth.uid
+          && request.auth.uid in get(/databases/$(database)/documents/chatDMs/$(dmId)).data.members;
+        allow update: if signedIn() && isOwnTextEdit();
+        allow delete: if signedIn() && resource.data.senderUid == request.auth.uid;
+      }
+    }
+
+    // Presence: one doc per signed-in employee — online/offline state,
+    // last-seen time, and which conversation (if any) they're currently
+    // typing in. Anyone signed in can read everyone's presence (this
+    // project holds nothing but chat data); each employee can only
+    // write their own doc.
+    match /chatPresence/{uid} {
+      allow read: if signedIn();
+      allow write: if signedIn() && request.auth.uid == uid;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# ---- secrets: NEVER upload these ----
+qms.env
+.env
+*.env
+serviceAccountKey.json
+**/serviceAccountKey.json
+report-credentials.csv
+jwt-secret.txt
+
+# ---- data made on the office computer ----
+chat-server/data/
+**/chat-server/data/
+tools/qms-cache/
+**/qms-cache/
+*.db
+*.db-wal
+*.db-shm
+*.db.before-restore
+*.log
+
+# ---- installed packages (run "npm install" again after cloning) ----
+node_modules/
+**/node_modules/
+
+# ---- misc ----
+.DS_Store
+Thumbs.db
+*.zip

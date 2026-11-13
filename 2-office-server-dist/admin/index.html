@@ -1,0 +1,3576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akaki Kality Mesob Center</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16224a">
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Abyssinica+SIL&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<style id="mesobExtraStyles">
+
+/* ==========================================================================
+   Added features: collapsible sidebar, government security banner,
+   forgot-password + contact/help modals, contact rows.
+   NOTE: styles.css in this project is a prebuilt/minified Tailwind output.
+   Since the build tools aren't reachable in this environment, these rules
+   are duplicated as an inline <style id="mesobExtraStyles"> block in
+   index.html's <head> so they take effect immediately. Run
+   `npm run build:css` after editing input.css to fold them in properly,
+   then the inline block in index.html can be deleted.
+   ========================================================================== */
+
+/* ---- Collapsible sidebar ---- */
+.shell.shell-collapsed{ grid-template-columns:78px 1fr; }
+.sidebar{ position:relative; }
+.sidebar.collapsed{ padding:26px 12px; align-items:center; }
+.sidebar.collapsed .brand{ justify-content:center; margin-bottom:18px; }
+.sidebar.collapsed .nav-item{ justify-content:center; padding:12px; }
+.sidebar.collapsed .nav-item span{ display:none; }
+.sidebar.collapsed .logout-btn,
+.sidebar.collapsed .contact-btn{ padding:12px; justify-content:center; display:flex; align-items:center; }
+.sidebar-collapse-btn{
+  position:absolute; top:22px; right:-13px; z-index:2;
+  width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  background:var(--gold); color:var(--primary-dark); border:2px solid var(--primary-dark);
+  cursor:pointer; box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+.sidebar-collapse-btn:hover{ background:#E08F0E; }
+.contact-btn{
+  margin-top:12px; width:100%; background:rgba(51,240,216,0.08); color:var(--cyan);
+  border:1px solid rgba(51,240,216,0.22);
+}
+.contact-btn:hover{ background:rgba(51,240,216,0.16); }
+@media (max-width:860px){
+  .sidebar-collapse-btn{ display:none; }
+  .shell.shell-collapsed{ grid-template-columns:1fr; }
+}
+
+/* ---- Government security banner on the login screen ---- */
+.sec-banner{
+  position:relative; z-index:1; display:flex; gap:10px; align-items:flex-start;
+  margin:18px 0; padding:12px 14px; border-radius:10px;
+  background:rgba(245,185,61,0.08); border:1px solid rgba(245,185,61,0.28);
+}
+.sec-banner-icon{ color:var(--gold); flex:none; margin-top:1px; }
+.sec-banner-title{ font-size:12px; font-weight:700; color:var(--gold-soft); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:3px; }
+.sec-banner-text{ font-size:12px; line-height:1.55; color:#B9C4E8; }
+
+/* ---- Text-style link button (forgot password / contact office) ---- */
+.link-btn{
+  background:none; border:none; padding:0; margin:0; cursor:pointer;
+  color:var(--cyan); font-size:12.5px; font-weight:600; text-decoration:underline;
+  text-underline-offset:2px; font-family:inherit;
+}
+.link-btn:hover{ color:var(--gold); }
+
+.info-msg{
+  background:var(--cyan-soft); color:var(--cyan); font-size:13px; padding:9px 12px;
+  border-radius:8px; margin-bottom:14px; display:none;
+  border:1px solid rgba(51,240,216,0.25);
+}
+.login-contact-hint{
+  font-size:12px; color:var(--ink-soft); margin-top:16px; text-align:center;
+}
+
+/* ---- Contact & Help modal ---- */
+.contact-block{
+  border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:14px;
+  background:var(--primary-tint);
+}
+.contact-office-name{ font-weight:700; font-size:14px; margin-bottom:10px; }
+.contact-row{ display:flex; gap:11px; align-items:flex-start; padding:7px 0; }
+.contact-row svg{ flex:none; color:var(--cyan); margin-top:2px; }
+.contact-row-label{ font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); margin-bottom:1px; }
+.contact-row-value{ font-size:13.5px; color:var(--ink); }
+a.contact-row-value{ color:var(--cyan); text-decoration:none; }
+a.contact-row-value:hover{ text-decoration:underline; }
+.contact-help-block{
+  border:1px dashed var(--border); border-radius:12px; padding:14px 16px;
+}
+
+/* ---- Slightly larger type across the app ---- */
+#app{ zoom:1.09; }
+
+/* ---- Links back to the public site (Home / Services) ---- */
+.site-links{ display:flex; align-items:center; gap:8px; }
+.site-link-btn{
+  display:inline-flex; align-items:center; gap:6px; text-decoration:none;
+  font-size:12.5px; font-weight:700; color:var(--ink-soft); background:var(--paper-2);
+  border:1px solid var(--border); border-radius:100px; padding:8px 14px;
+  transition:all .15s ease; white-space:nowrap;
+}
+.site-link-btn:hover{ color:var(--primary); border-color:var(--primary); background:var(--primary-tint); }
+.site-link-btn svg{ flex:none; }
+@media (max-width:640px){
+  .site-link-btn span{ display:none; }
+  .site-link-btn{ padding:8px; }
+}
+
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<div class="toast" id="toast"></div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalBody"></div>
+</div>
+
+<script type="module">
+/* ============================================================
+   Akaki Kality Mesob — Akaki Kality admin dashboard
+   Backend: secure hosted database and authentication.
+   Bilingual: English / Amharic.
+   ============================================================ */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import {
+  getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import {
+  getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, updateDoc,
+  query, orderBy, limit, enableIndexedDbPersistence, getDoc
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBr_c7SiYN2aTsV8yagq8Iwpj5ORraxPSE",
+  authDomain: "addismesob-akaki-Kality.firebaseapp.com",
+  projectId: "addismesob-akaki-Kality",
+  storageBucket: "addismesob-akaki-Kality.firebasestorage.app",
+  messagingSenderId: "350216223074",
+  appId: "1:350216223074:web:4e035220d73190b468143b"
+};
+
+const fbApp = initializeApp(firebaseConfig);
+const auth = getAuth(fbApp);
+const db = getFirestore(fbApp);
+try{
+  enableIndexedDbPersistence(db).catch((err)=>{
+    // multiple tabs open, or browser doesn't support it — app still works online-only
+    console.warn('Offline persistence not enabled:', err.code);
+  });
+}catch(e){ console.warn('Offline persistence not available:', e); }
+
+if ('serviceWorker' in navigator){
+  window.addEventListener('load', ()=>{
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+
+let unsubscribers = [];
+
+/* ---------------- i18n ---------------- */
+const I18N = {
+  en: {
+    connecting: 'Connecting to Akaki Kality Mesob…',
+    navBackHome: 'Home',
+    navServicesLink: 'Services',
+    loginTagline1: 'Akaki Kality Mesob One Center Digital',
+    loginTagline2: 'Government Service',
+    loginBranch: 'Akaki Kality Branch',
+    loginPrompt: 'Sign in to manage staff, office property and discussion records for this center.',
+    loginFooter: 'Akaki Kality Mesob Center',
+    loginHeading: 'Admin sign in',
+    loginSub: 'Enter your administrator account to continue.',
+    emailLabel: 'Admin email',
+    passwordLabel: 'Password',
+    signIn: 'Sign in to dashboard',
+    signingIn: 'Signing in…',
+    loginHint: 'Sign-in is securely verified and all records are stored centrally — real accounts, real data, shared across every admin who signs in.',
+    errBoth: 'Please enter both email and password.',
+    errIncorrect: 'Incorrect email or password.',
+    errTooMany: 'Too many attempts — please wait a moment and try again.',
+    errGeneric: 'Sign-in failed. Please check your email and password.',
+
+    branchName: 'Akaki Kality',
+    navDashboard: 'Dashboard',
+    navHR: 'Human Resources',
+    navProperty: 'Property Management',
+    navDiscussion: 'Record of Discussion',
+    liveStatus: 'Live · signed in as administrator',
+    signOut: 'Sign out',
+
+    crumbHR: 'Human Resources Management',
+    titleHR: 'Akaki Kality Employees',
+    subHR: 'Keep the office roster up to date across every unit of the Akaki Kality MESOB center.',
+    tabAllEmployees: 'All Employees',
+    tabAddEmployee: 'Add Employee',
+    tabRemoveEmployee: 'Remove Employee',
+    statTotalEmployees: 'Total employees',
+    statDistinctRoles: 'Distinct roles',
+    statHRDiscussions: 'HR discussions logged',
+
+    hrListTitle: 'All Akaki Kality employees',
+    hrListDesc: 'Full staff roster for this MESOB center.',
+    emptyNoEmployeesTitle: 'No employees yet',
+    emptyNoEmployeesAddDesc: 'Add the first employee from the "Add Employee" tab to build the roster.',
+    colName: 'Name', colPosition: 'Position', colPhone: 'Phone', colEmail: 'Email', colJoined: 'Joined',
+    removeEmployeeTitle: 'Remove employee?',
+    removeEmployeeDesc: (n)=>`This will permanently remove ${n} from the roster.`,
+    toastEmployeeRemoved: 'Employee removed.',
+    toastEmployeeRemoveFail: 'Could not remove employee.',
+
+    hrAddTitle: 'Add a new employee',
+    hrAddDesc: 'Register a staff member to the Akaki Kality MESOB roster.',
+    labelFullName: 'Full name', phFullName: 'e.g. Selamawit Bekele',
+    labelPosition: 'Position / role', phPosition: 'e.g. Customer Service Officer',
+    labelPhone: 'Phone number', phPhone: 'e.g. 0911 234 567',
+    labelEmailOpt: 'Email (optional)', phEmail: 'name@mesob.et',
+    labelJoinDate: 'Join date',
+    btnAddEmployee: 'Add employee',
+    errEmployeeNameReq: 'Employee name is required.',
+    toastEmployeeAdded: 'Employee added.',
+    toastEmployeeSaveFail: 'Could not save employee.',
+    btnEdit: 'Edit',
+    hrEditTitle: 'Edit employee',
+    hrEditDesc: 'Update the details for this employee.',
+    btnSaveChanges: 'Save changes',
+    toastEmployeeUpdated: 'Employee updated.',
+    toastEmployeeUpdateFail: 'Could not update employee.',
+
+    hrRemoveTitle: 'Remove an employee',
+    hrRemoveDesc: 'Select an employee to remove them from the Akaki Kality roster.',
+    emptyNothingRemoveTitle: 'Nothing to remove',
+    emptyNoEmployeesRecordDesc: 'There are no employees on record yet.',
+    btnRemove: 'Remove',
+
+    crumbProperty: 'Property Management',
+    titleProperty: 'Akaki Kality Property',
+    subProperty: 'Track office equipment and supplies with quantities on hand.',
+    tabAllProperty: 'All Property',
+    tabAddProperty: 'Add New Property',
+    tabRemoveProperty: 'Remove Property',
+    statItemTypes: 'Item types',
+    statTotalUnits: 'Total units in stock',
+    statPropertyDiscussions: 'Property discussions logged',
+
+    propListTitle: 'All Akaki Kality property',
+    propListDesc: 'Equipment and supplies currently registered to this center.',
+    emptyNoPropertyTitle: 'No property yet',
+    emptyNoPropertyAddDesc: 'Add the first item from the "Add New Property" tab.',
+    colItem: 'Item', colCategory: 'Category', colQuantity: 'Quantity', colAdded: 'Added',
+    removePropertyTitle: 'Remove property?',
+    removePropertyDesc: (n)=>`This will permanently remove ${n} from inventory.`,
+    toastPropertyRemoved: 'Property removed.',
+    toastPropertyRemoveFail: 'Could not remove property.',
+
+    propAddTitle: 'Add new property',
+    propAddDesc: 'Register office equipment or supplies with a starting quantity.',
+    labelItemName: 'Item name', phItemName: 'e.g. Office desk',
+    labelCategory: 'Category', phCategory: 'e.g. Furniture, IT equipment',
+    labelQuantity: 'Quantity', phQuantity: 'e.g. 12',
+    labelDateAdded: 'Date added',
+    btnAddProperty: 'Add property',
+    errPropertyNameReq: 'Property name is required.',
+    propEditTitle: 'Edit property',
+    propEditDesc: 'Update the details for this item.',
+    toastPropertyUpdated: 'Property updated.',
+    toastPropertyUpdateFail: 'Could not update property.',
+    errValidQty: 'Enter a valid quantity.',
+    toastPropertyAdded: 'Property added.',
+    toastPropertySaveFail: 'Could not save property.',
+
+    propRemoveTitle: 'Remove property',
+    propRemoveDesc: 'Select an item to remove it from the inventory.',
+    emptyNoPropertyRecordDesc: 'There is no property on record yet.',
+    qtyLabel: (q,c)=>`Qty: ${q} · ${c}`,
+    generalCategory: 'General',
+
+    tabAssignProperty: 'Assign to Staff',
+    colTotal: 'Total',
+    colAvailable: 'Available',
+    colAssignedQty: 'Assigned',
+
+    assignTitle: 'Assign property to a staff member',
+    assignDesc: 'Move a quantity out of the store and assign it to an employee — it is deducted from the store automatically.',
+    labelSelectProperty: 'Property item',
+    selectPropertyPlaceholder: 'Select an item…',
+    labelSelectEmployee: 'Employee',
+    labelAssignQty: 'Quantity to assign',
+    phAssignQty: 'e.g. 2',
+    btnAssignProperty: 'Assign property',
+    errSelectPropertyReq: 'Please select a property item.',
+    errSelectEmployeeReq: 'Please select an employee.',
+    errAssignQtyInvalid: 'Enter a valid quantity.',
+    errNotEnoughInStore: (n)=>`Only ${n} unit(s) available in the store.`,
+    toastPropertyAssigned: 'Property assigned to employee.',
+    toastPropertyAssignFail: 'Could not assign property.',
+    noPropertyForAssign: 'No property available to assign — add property first, or everything is already checked out from the store.',
+    noEmployeesForAssign: 'No employees registered yet — add employees under Human Resources first.',
+    availableSuffix: (n)=>`${n} available`,
+
+    assignedListTitle: 'Currently assigned to staff',
+    assignedListDesc: 'Property checked out to employees. Returning an item adds it back to the unassigned store.',
+    emptyNoAssignmentsTitle: 'Nothing assigned yet',
+    emptyNoAssignmentsDesc: 'Assign property to a staff member using the form above.',
+    btnReturnToStore: 'Return to store',
+    returnAssignmentTitle: 'Return to store?',
+    returnAssignmentDesc: (n)=>`This will return ${n} to the unassigned store.`,
+    toastAssignmentReturned: 'Item returned to store.',
+    toastAssignmentReturnFail: 'Could not return item to store.',
+    errQtyBelowAssigned: (n)=>`Cannot set total below ${n} — that many units are already assigned to staff. Return them to the store first.`,
+    errCannotRemoveAssigned: 'This item still has units assigned to staff — return them to the store before removing it.',
+
+    crumbDiscussion: 'Record of Discussion',
+    titleDiscussion: 'Akaki Kality Discussion Log',
+    subDiscussion: 'Import meeting and discussion records, tag the department and participants involved, and attach supporting files.',
+    tabImportDiscussion: 'Import Discussion',
+    tabAllDiscussions: 'All Discussions / Delete',
+
+    discImportTitle: 'Import a discussion',
+    discImportDesc: 'Log the main point of a discussion, its department and participants.',
+    labelMainPoint: 'Main point of discussion',
+    phMainPoint: 'Summarize what was discussed and any decisions made...',
+    labelWhichDept: 'Which department',
+    labelParticipants: 'Insert participant employee(s)',
+    noEmployeesForParticipants: 'No employees registered yet — add employees under Human Resources to tag participants.',
+    labelAttachFile: 'Attach file (bottom of form)',
+    fileDropDefault: 'Click to attach a file (optional, under 700KB) — meeting notes, agenda, or minutes',
+    fileAttachedPrefix: 'Attached: ',
+    btnImportDiscussion: 'Import discussion',
+    errFileTooLarge: 'File is too large — please attach a file under 700KB.',
+    errFileReadFail: 'Could not read the file.',
+    errMainPointReq: 'Please enter the main point of discussion.',
+    toastDiscussionImported: 'Discussion imported.',
+    toastDiscussionSaveFail: 'Could not save discussion — the file may be too large.',
+
+    discListTitle: 'All discussions',
+    discListDesc: 'Every discussion imported for the Akaki Kality MESOB center.',
+    emptyNoDiscussionsTitle: 'No discussions yet',
+    emptyNoDiscussionsDesc: 'Import your first discussion record from the "Import Discussion" tab.',
+    deleteDiscussionTitle: 'Delete discussion?',
+    deleteDiscussionDesc: 'This discussion record will be permanently removed.',
+    toastDiscussionDeleted: 'Discussion deleted.',
+    toastDiscussionDeleteFail: 'Could not delete discussion.',
+    noParticipantsTagged: 'No participants tagged',
+
+    modalCancel: 'Cancel',
+    modalRemove: 'Remove',
+    btnClose: 'Close',
+
+    labelAssignEmployee: 'Assign to employee (optional)',
+    unassignedOption: 'Unassigned',
+    colAssignedTo: 'Assigned To',
+    colEquipment: 'Equipment',
+    statEquipmentAssigned: 'Equipment assigned',
+    statAssignedToStaff: 'Assigned to staff',
+
+    btnManageEquipment: 'Equipment',
+    btnAssignMaterials: 'Assign materials',
+    materialsClearanceNote: 'Keep this list current — it is used to verify all materials have been returned when this employee clears.',
+    employeeEquipmentTitle: (n)=>`${n}'s equipment`,
+    employeeEquipmentDesc: 'Property checked out to this employee from the store. This is the same assignment list as Property Management \u2192 Assign to Staff.',
+    noEquipmentYet: 'No equipment assigned yet.',
+    labelEquipmentQty: 'Quantity',
+    closePanel: 'Close',
+
+    dept_civil_registration: 'Civil Registration',
+    dept_construction_permit: 'Construction Permit',
+    dept_education: 'Education Bureau',
+    dept_electric: 'Electric Service',
+    dept_health: 'Health Bureau',
+    dept_housing_bureau: 'Housing Bureau',
+    dept_housing_corp: 'Housing Corporation',
+    dept_investment: 'Investment Commission',
+    dept_labor_skills: 'Labor & Skills Bureau',
+    dept_land_bureau: 'Land Bureau',
+    dept_land_registration: 'Land Registration',
+    dept_plan_dev: 'Plan & Development Bureau',
+    dept_revenue: 'Revenue Bureau',
+    dept_trade: 'Trade Bureau',
+    dept_traffic: 'Traffic Management Authority',
+    dept_industry: 'Industry Development Bureau (AAID)',
+    dept_food_drug: 'Food, Drug and Health Care Center Control Authority (AAFDA)',
+    dept_dvlca: 'Driver and Vehicle Licensing and Control Authority (DVLCA)',
+    dept_digitalization: 'Digitalization',
+    dept_others: 'Others',
+
+    hrAddDeptBtn: 'Add department',
+    addDeptModalTitle: 'Add a new department',
+    addDeptModalDesc: 'Add a partner office, bank, or unit that isn\u2019t in the standard list (e.g. a new bank branch or unit).',
+    labelDeptName: 'Department name',
+    phDeptName: 'e.g. Zemen Bank',
+    btnSaveDepartment: 'Save department',
+    errDeptNameReq: 'Department name is required.',
+    toastDeptAdded: 'Department added.',
+    toastDeptSaveFail: 'Could not save department.',
+    removeDeptTitle: 'Remove department?',
+    removeDeptDesc: (n)=>`This will remove ${n} from the department list.`,
+    toastDeptRemoved: 'Department removed.',
+    toastDeptRemoveFail: 'Could not remove department.',
+
+    themeLight: 'Light',
+    themeDark: 'Dark',
+    toggleTheme: 'Toggle dark mode',
+
+    quickAddEmployee: 'Add employee',
+    quickAddProperty: 'Add property',
+    quickImportDiscussion: 'Import discussion',
+    dashDeptCountLabel: 'Departments',
+    empByDeptTitle: 'Employees by department',
+    empByDeptDesc: 'Headcount across the busiest departments.',
+    empByDeptEmpty: 'Add employees to see the breakdown here.',
+    recentEmployeesTitle: 'Recently added employees',
+    recentEmployeesDesc: 'The latest staff registered to the roster.',
+    recentEmployeesEmpty: 'No employees yet — added staff will show up here.',
+
+    dashboardCrumb: 'Dashboard',
+    dashboardTitle: 'Overview',
+    dashboardSub: 'A quick snapshot of the Akaki Kality MESOB center.',
+    kpiEmployees: 'Employees',
+    kpiPropertyUnits: 'Property units',
+    kpiDiscussions: 'Discussions logged',
+    kpiEquipmentAssigned: 'Equipment assigned',
+    chartTitle: 'Property by category',
+    chartDesc: 'Distribution of registered items across categories.',
+    chartEmpty: 'Add property to see the breakdown here.',
+    recentTitle: 'Recent discussions',
+    recentDesc: 'The latest discussion records imported.',
+    recentEmpty: 'No discussions yet — imported records will show up here.',
+    searchEmployeesPh: 'Search employees…',
+    searchPropertyPh: 'Search property…',
+    searchDiscussionsPh: 'Search discussions…',
+    noSearchResultsTitle: 'No matches',
+    noSearchResultsDesc: 'Try a different search term.',
+
+    hrTabDepartments: 'Departments',
+    hrDeptGridTitle: 'Departments',
+    hrDeptGridDesc: 'Browse staff grouped by department. Select a department to view or add employees within it.',
+    employeesCountLabel: 'employees',
+    labelDepartment: 'Department',
+    labelEducation: 'Educational background',
+    phEducation: 'e.g. BA in Accounting, Addis Ababa University (2016)',
+    btnSaveEducation: 'Save',
+    toastEducationSaved: 'Educational background saved.',
+    toastEducationSaveFail: 'Could not save educational background.',
+    noneOption: 'Not specified',
+
+    labelDiscussionRelatesTo: 'This discussion relates to (optional)',
+    deptTypeNone: 'None',
+    deptTypeDepartment: 'Department',
+    deptTypeSiketBank: 'Siket Bank',
+    deptTypeCBE: 'Commercial Bank of Ethiopia',
+    dept_siket_bank: 'Siket Bank',
+    dept_cbe: 'Commercial Bank of Ethiopia',
+
+    selectEmployeePlaceholder: 'Select an employee…',
+    btnAddParticipant: 'Add',
+    noParticipantsAddedYet: 'No participants added yet.',
+
+    labelBrand: 'Brand', phBrand: 'e.g. HP, Dell, Toyota', colBrand: 'Brand',
+    labelCondition: 'Condition',
+    condNew: 'New', condGood: 'Good', condFair: 'Fair', condDamaged: 'Damaged',
+    colCondition: 'Condition',
+    labelLowStockThreshold: 'Low-stock alert threshold', phLowStockThreshold: 'e.g. 5 (0 = off)',
+    tagLowStock: 'Low stock',
+    labelUniqueFeatures: 'Unique features / notes', phUniqueFeatures: 'e.g. Serial XJ2291, scratch on lid',
+    colNotes: 'Notes', noNotes: '—',
+    labelEmployeeStatus: 'Status',
+    statusActive: 'Active', statusOnLeave: 'On Leave', statusResigned: 'Resigned',
+    colStatus: 'Status',
+    newBadge: 'New',
+
+    btnExportCSV: 'Export CSV',
+    toastExportEmpty: 'Nothing to export yet.',
+
+    colId: 'ID',
+    btnCopy: 'Copy', toastCopied: 'Copied to clipboard.', toastCopyFail: 'Could not copy.',
+
+    btnAssignToStaff: 'Assign to Staff',
+    btnPrint: 'Print',
+    printClearanceTitle: (n)=>`${n} — Equipment Clearance List`,
+    printGeneratedOn: 'Generated on',
+    labelCategoryFilter: 'All categories',
+    labelStatusFilter: 'All statuses',
+
+    btnTranslate: 'Translate to Amharic',
+    translating: 'Translating…',
+    translateFail: 'Translation failed — check connection and try again.',
+    amharicPreviewLabel: 'Amharic translation (auto)',
+    translateHint: 'Machine translated — please review before relying on it.',
+
+    exportPDF: 'Export PDF',
+
+    navActivity: 'Activity Log',
+    crumbActivity: 'Activity Log',
+    titleActivity: 'Activity Log',
+    subActivity: 'A running record of who added, edited, or removed records across this center.',
+    activityListTitle: 'Recent activity',
+    activityListDesc: 'Most recent actions first.',
+    emptyNoActivityTitle: 'No activity yet',
+    emptyNoActivityDesc: 'Actions like adding staff or property will appear here.',
+    actAddEmployee: (n)=>`Added employee "${n}"`,
+    actUpdateEmployee: (n)=>`Updated employee "${n}"`,
+    actRemoveEmployee: (n)=>`Removed employee "${n}"`,
+    actAddProperty: (n)=>`Added property "${n}"`,
+    actUpdateProperty: (n)=>`Updated property "${n}"`,
+    actRemoveProperty: (n)=>`Removed property "${n}"`,
+    actAssignProperty: (n,e)=>`Assigned "${n}" to ${e}`,
+    actReturnProperty: (n,e)=>`Returned "${n}" from ${e}`,
+    actAddDiscussion: 'Logged a new discussion',
+    actRemoveDiscussion: 'Removed a discussion',
+    actBulkImport: (n,type)=>`Bulk imported ${n} ${type}`,
+
+    notifBellTitle: 'Low-stock alerts',
+    notifNone: 'No low-stock alerts right now.',
+    notifLowStockLine: (n,q)=>`${n} — only ${q} left`,
+    notifSeeAll: 'View property',
+
+    labelViewerBadge: 'Viewer (read-only)',
+    viewerNotice: 'You are signed in as a viewer. Contact an admin to make changes.',
+
+    tabBulkImport: 'Bulk Import',
+    bulkImportTitle: 'Bulk import from CSV',
+    bulkImportDescEmployees: 'Upload a CSV with columns: name, position, phone, email, joinDate. The first row is treated as a header and skipped.',
+    bulkImportDescProperty: 'Upload a CSV with columns: name, category, quantity. The first row is treated as a header and skipped.',
+    bulkImportChoose: 'Choose CSV file',
+    bulkImportPreviewTitle: (n)=>`${n} row(s) ready to import`,
+    bulkImportConfirm: 'Import rows',
+    bulkImportEmpty: 'No valid rows found in that file.',
+    bulkImportSuccess: (n)=>`Imported ${n} record(s).`,
+    bulkImportFail: 'Some rows could not be imported.',
+    bulkImportParseFail: 'Could not read that file as CSV.',
+
+    labelEmployeePhoto: 'Photo (optional)',
+    photoChoose: 'Choose photo',
+    photoRemove: 'Remove photo',
+    photoTooLarge: 'Please choose an image under 3 MB.',
+
+    empStatusChartTitle: 'Employees by status',
+    empStatusChartDesc: 'Current status breakdown across the roster.',
+
+    offlineBadge: 'Offline — showing last synced data',
+
+    escHint: '',
+
+    btnCollapseSidebar: 'Collapse menu',
+    btnExpandSidebar: 'Expand menu',
+
+    secBannerTitle: 'Restricted government system',
+    secBannerText: 'Authorized personnel only. Unauthorized access is prohibited and all activity on this system is logged.',
+
+    
+    forgotPasswordTitle: 'Reset your password',
+    forgotPasswordDesc: 'Enter the email address on your admin account. We will send a link to reset your password.',
+    forgotPasswordSend: 'Send reset link',
+    forgotPasswordSent: 'If that email has an account, a reset link has been sent.',
+    forgotPasswordFail: 'Could not send the reset email. Check the address and try again.',
+    forgotPasswordBack: 'Back to sign in',
+
+    loginContactHint: 'Need an account or having trouble signing in?',
+    loginContactLink: 'Contact the office',
+
+    navContact: 'Contact & Help',
+    contactTitle: 'Contact & Help',
+    contactSub: 'Reach the Akaki Kality MESOB One Center office, or get help using this dashboard.',
+    contactOfficeName: 'Akaki Kality Mesob Center — MESOB One Center',
+    contactAddressLabel: 'Office address',
+    contactAddress: 'Akaki Kality Mesob, Addis Ababa, Ethiopia',
+    contactPhoneLabel: 'Office phone',
+    contactPhone: '+251 11 XXX XXXX',
+    contactEmailLabel: 'Office email',
+    contactEmail: 'info@akakiKality.gov.et',
+    contactHoursLabel: 'Working hours',
+    contactHours: 'Monday–Friday, 8:30 AM – 5:30 PM',
+    contactHelpTitle: 'Using this dashboard',
+    contactHelpText: 'For access issues, incorrect records, or technical problems, contact your system administrator using the details above rather than sharing your password with anyone.',
+    contactEditNote: 'Admins: update the office address, phone and email above by editing the CONTACT keys near the top of the I18N section in index.html.',
+    btnClose: 'Close',
+  },
+  am: {
+    connecting: 'ከአዲስ መሶብ ጋር በመገናኘት ላይ…',
+    navBackHome: 'መነሻ ገጽ',
+    navServicesLink: 'አገልግሎቶች',
+    loginTagline1: 'አዲስ መሶብ አንድ ማዕከል ዲጂታል',
+    loginTagline2: 'የመንግስት አገልግሎት',
+    loginBranch: 'የአቃቂ ቃሊቲ ቅርንጫፍ',
+    loginPrompt: 'ለዚህ ማዕከል የሰራተኞች፣ የንብረት እና የውይይት መዝገቦችን ለማስተዳደር ይግቡ።',
+    loginFooter: 'የአቃቂ ቃሊቲ ክፍለ ከተማ አስተዳደር',
+    loginHeading: 'የአስተዳዳሪ መግቢያ',
+    loginSub: 'ለመቀጠል የአስተዳዳሪ መለያዎን ያስገቡ።',
+    emailLabel: 'የአስተዳዳሪ ኢሜይል',
+    passwordLabel: 'የይለፍ ቃል',
+    signIn: 'ወደ ዳሽቦርድ ግባ',
+    signingIn: 'በመግባት ላይ…',
+    loginHint: 'መግቢያ በጥንቃቄ የተረጋገጠ ሲሆን ሁሉም መዝገቦች በማዕከላዊነት ይቀመጣሉ — እውነተኛ መለያዎች፣ እውነተኛ ውሂብ፣ ለሚገቡ አስተዳዳሪዎች ሁሉ የተጋራ።',
+    errBoth: 'እባክዎ ኢሜይል እና የይለፍ ቃል ሁለቱንም ያስገቡ።',
+    errIncorrect: 'ኢሜይል ወይም የይለፍ ቃል ትክክል አይደለም።',
+    errTooMany: 'በጣም ብዙ ሙከራዎች — እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ።',
+    errGeneric: 'መግባት አልተሳካም። እባክዎ ኢሜይልዎን እና የይለፍ ቃልዎን ያረጋግጡ።',
+
+    branchName: 'አቃቂ ቃሊቲ',
+    navDashboard: 'ዳሽቦርድ',
+    navHR: 'የሰው ኃይል',
+    navProperty: 'የንብረት አስተዳደር',
+    navDiscussion: 'የውይይት መዝገብ',
+    liveStatus: 'ቀጥታ · እንደ አስተዳዳሪ ገብተዋል',
+    signOut: 'ውጣ',
+
+    crumbHR: 'የሰው ኃይል አስተዳደር',
+    titleHR: 'የአቃቂ ቃሊቲ ሰራተኞች',
+    subHR: 'በአቃቂ ቃሊቲ መሶብ ማዕከል ውስጥ ያለውን የሰራተኞች ዝርዝር ወቅታዊ ያድርጉ።',
+    tabAllEmployees: 'ሁሉም ሰራተኞች',
+    tabAddEmployee: 'ሰራተኛ ጨምር',
+    tabRemoveEmployee: 'ሰራተኛ አስወግድ',
+    statTotalEmployees: 'ጠቅላላ ሰራተኞች',
+    statDistinctRoles: 'የተለያዩ ሚናዎች',
+    statHRDiscussions: 'የተመዘገቡ የHR ውይይቶች',
+
+    hrListTitle: 'ሁሉም የአቃቂ ቃሊቲ ሰራተኞች',
+    hrListDesc: 'ለዚህ መሶብ ማዕከል ሙሉ የሰራተኞች ዝርዝር።',
+    emptyNoEmployeesTitle: 'እስካሁን ሰራተኞች የሉም',
+    emptyNoEmployeesAddDesc: 'ዝርዝሩን ለመገንባት ከ"ሰራተኛ ጨምር" ትር የመጀመሪያውን ሰራተኛ ያክሉ።',
+    colName: 'ስም', colPosition: 'ስራ መደብ', colPhone: 'ስልክ', colEmail: 'ኢሜይል', colJoined: 'የገባበት ቀን',
+    removeEmployeeTitle: 'ሰራተኛ ይወገድ?',
+    removeEmployeeDesc: (n)=>`${n} ከዝርዝሩ ላይ በቋሚነት ይወገዳል።`,
+    toastEmployeeRemoved: 'ሰራተኛ ተወግዷል።',
+    toastEmployeeRemoveFail: 'ሰራተኛውን ማስወገድ አልተቻለም።',
+
+    hrAddTitle: 'አዲስ ሰራተኛ ጨምር',
+    hrAddDesc: 'ሰራተኛን ወደ አቃቂ ቃሊቲ መሶብ ዝርዝር ይመዝግቡ።',
+    labelFullName: 'ሙሉ ስም', phFullName: 'ለምሳሌ ሰላማዊት በቀለ',
+    labelPosition: 'ስራ መደብ / ሚና', phPosition: 'ለምሳሌ የደንበኞች አገልግሎት ኦፊሰር',
+    labelPhone: 'ስልክ ቁጥር', phPhone: 'ለምሳሌ 0911 234 567',
+    labelEmailOpt: 'ኢሜይል (አማራጭ)', phEmail: 'name@mesob.et',
+    labelJoinDate: 'የገባበት ቀን',
+    btnAddEmployee: 'ሰራተኛ ጨምር',
+    errEmployeeNameReq: 'የሰራተኛ ስም ያስፈልጋል።',
+    toastEmployeeAdded: 'ሰራተኛ ታክሏል።',
+    toastEmployeeSaveFail: 'ሰራተኛውን ማስቀመጥ አልተቻለም።',
+    btnEdit: 'አርትዕ',
+    hrEditTitle: 'ሰራተኛ አርትዕ',
+    hrEditDesc: 'የዚህን ሰራተኛ ዝርዝሮች ያዘምኑ።',
+    btnSaveChanges: 'ለውጦችን አስቀምጥ',
+    toastEmployeeUpdated: 'ሰራተኛ ዘምኗል።',
+    toastEmployeeUpdateFail: 'ሰራተኛውን ማዘመን አልተቻለም።',
+
+    hrRemoveTitle: 'ሰራተኛ አስወግድ',
+    hrRemoveDesc: 'ከአቃቂ ቃሊቲ ዝርዝር ውስጥ ለማስወገድ ሰራተኛ ይምረጡ።',
+    emptyNothingRemoveTitle: 'የሚወገድ ነገር የለም',
+    emptyNoEmployeesRecordDesc: 'እስካሁን የተመዘገበ ሰራተኛ የለም።',
+    btnRemove: 'አስወግድ',
+
+    crumbProperty: 'የንብረት አስተዳደር',
+    titleProperty: 'የአቃቂ ቃሊቲ ንብረት',
+    subProperty: 'የቢሮ እቃዎችን እና አቅርቦቶችን ከብዛታቸው ጋር ይከታተሉ።',
+    tabAllProperty: 'ሁሉም ንብረት',
+    tabAddProperty: 'አዲስ ንብረት ጨምር',
+    tabRemoveProperty: 'ንብረት አስወግድ',
+    statItemTypes: 'የእቃ ዓይነቶች',
+    statTotalUnits: 'ጠቅላላ ክምችት',
+    statPropertyDiscussions: 'የተመዘገቡ የንብረት ውይይቶች',
+
+    propListTitle: 'ሁሉም የአቃቂ ቃሊቲ ንብረት',
+    propListDesc: 'በዚህ ማዕከል የተመዘገቡ እቃዎች እና አቅርቦቶች።',
+    emptyNoPropertyTitle: 'እስካሁን ንብረት የለም',
+    emptyNoPropertyAddDesc: 'ከ"አዲስ ንብረት ጨምር" ትር የመጀመሪያውን እቃ ያክሉ።',
+    colItem: 'እቃ', colCategory: 'ምድብ', colQuantity: 'ብዛት', colAdded: 'የተጨመረበት',
+    removePropertyTitle: 'ንብረት ይወገድ?',
+    removePropertyDesc: (n)=>`${n} ከክምችት ውስጥ በቋሚነት ይወገዳል።`,
+    toastPropertyRemoved: 'ንብረት ተወግዷል።',
+    toastPropertyRemoveFail: 'ንብረቱን ማስወገድ አልተቻለም።',
+
+    propAddTitle: 'አዲስ ንብረት ጨምር',
+    propAddDesc: 'የቢሮ እቃ ወይም አቅርቦት ከመነሻ ብዛት ጋር ይመዝግቡ።',
+    labelItemName: 'የእቃ ስም', phItemName: 'ለምሳሌ የቢሮ ጠረጴዛ',
+    labelCategory: 'ምድብ', phCategory: 'ለምሳሌ የቤት እቃ፣ የIT ዕቃ',
+    labelQuantity: 'ብዛት', phQuantity: 'ለምሳሌ 12',
+    labelDateAdded: 'የተጨመረበት ቀን',
+    btnAddProperty: 'ንብረት ጨምር',
+    errPropertyNameReq: 'የንብረት ስም ያስፈልጋል።',
+    propEditTitle: 'ንብረት አርትዕ',
+    propEditDesc: 'የዚህን እቃ ዝርዝሮች ያዘምኑ።',
+    toastPropertyUpdated: 'ንብረት ዘምኗል።',
+    toastPropertyUpdateFail: 'ንብረቱን ማዘመን አልተቻለም።',
+    errValidQty: 'ትክክለኛ ብዛት ያስገቡ።',
+    toastPropertyAdded: 'ንብረት ታክሏል።',
+    toastPropertySaveFail: 'ንብረቱን ማስቀመጥ አልተቻለም።',
+
+    propRemoveTitle: 'ንብረት አስወግድ',
+    propRemoveDesc: 'ከክምችት ውስጥ ለማስወገድ እቃ ይምረጡ።',
+    emptyNoPropertyRecordDesc: 'እስካሁን የተመዘገበ ንብረት የለም።',
+    qtyLabel: (q,c)=>`ብዛት: ${q} · ${c}`,
+    generalCategory: 'አጠቃላይ',
+
+    tabAssignProperty: 'ለሰራተኛ መድብ',
+    colTotal: 'ጠቅላላ',
+    colAvailable: 'ያለ',
+    colAssignedQty: 'የተመደበ',
+
+    assignTitle: 'ንብረት ለሰራተኛ መድብ',
+    assignDesc: 'ከመጋዘን ውስጥ ብዛት አውጥተው ለሰራተኛ ይመድቡ — በራስ-ሰር ከመጋዘን ይቀነሳል።',
+    labelSelectProperty: 'የንብረት እቃ',
+    selectPropertyPlaceholder: 'እቃ ይምረጡ…',
+    labelSelectEmployee: 'ሰራተኛ',
+    labelAssignQty: 'የሚመደብ ብዛት',
+    phAssignQty: 'ለምሳሌ 2',
+    btnAssignProperty: 'ንብረት መድብ',
+    errSelectPropertyReq: 'እባክዎ የንብረት እቃ ይምረጡ።',
+    errSelectEmployeeReq: 'እባክዎ ሰራተኛ ይምረጡ።',
+    errAssignQtyInvalid: 'ትክክለኛ ብዛት ያስገቡ።',
+    errNotEnoughInStore: (n)=>`በመጋዘን ውስጥ ${n} ብቻ አለ።`,
+    toastPropertyAssigned: 'ንብረት ለሰራተኛ ተመድቧል።',
+    toastPropertyAssignFail: 'ንብረቱን መመደብ አልተቻለም።',
+    noPropertyForAssign: 'ለመመደብ ንብረት የለም — መጀመሪያ ንብረት ያክሉ፣ ወይም ሁሉም ከመጋዘን ወጥቷል።',
+    noEmployeesForAssign: 'እስካሁን የተመዘገበ ሰራተኛ የለም — መጀመሪያ በሰው ሀብት ስር ሰራተኛ ያክሉ።',
+    availableSuffix: (n)=>`${n} ይገኛል`,
+
+    assignedListTitle: 'አሁን ለሰራተኞች የተመደበ',
+    assignedListDesc: 'ለሰራተኞች የተመደበ ንብረት። እቃ መመለስ ወደ ያልተመደበው መጋዘን ይመልሰዋል።',
+    emptyNoAssignmentsTitle: 'እስካሁን የተመደበ የለም',
+    emptyNoAssignmentsDesc: 'ከላይ ባለው ቅጽ በመጠቀም ንብረት ለሰራተኛ ይመድቡ።',
+    btnReturnToStore: 'ወደ መጋዘን መልስ',
+    returnAssignmentTitle: 'ወደ መጋዘን ይመለስ?',
+    returnAssignmentDesc: (n)=>`ይህ ${n} ን ወደ ያልተመደበው መጋዘን ይመልሰዋል።`,
+    toastAssignmentReturned: 'እቃው ወደ መጋዘን ተመልሷል።',
+    toastAssignmentReturnFail: 'እቃውን መመለስ አልተቻለም።',
+    errQtyBelowAssigned: (n)=>`ጠቅላላውን ከ${n} በታች ማድረግ አይቻልም — ያ ያህል ብዛት አስቀድሞ ለሰራተኞች ተመድቧል። መጀመሪያ ወደ መጋዘን ይመልሱ።`,
+    errCannotRemoveAssigned: 'ይህ እቃ አሁንም ለሰራተኞች የተመደበ ብዛት አለው — ከማስወገድዎ በፊት ወደ መጋዘን ይመልሱ።',
+
+    crumbDiscussion: 'የውይይት መዝገብ',
+    titleDiscussion: 'የአቃቂ ቃሊቲ የውይይት መዝገብ',
+    subDiscussion: 'የስብሰባ እና የውይይት መዝገቦችን ያስመጡ፣ ክፍሉን እና ተሳታፊዎችን ይለዩ፣ ደጋፊ ፋይሎችን ያያይዙ።',
+    tabImportDiscussion: 'ውይይት አስመጣ',
+    tabAllDiscussions: 'ሁሉም ውይይቶች / ሰርዝ',
+
+    discImportTitle: 'ውይይት አስመጣ',
+    discImportDesc: 'የውይይቱን ዋና ነጥብ፣ ክፍል እና ተሳታፊዎችን ይመዝግቡ።',
+    labelMainPoint: 'የውይይቱ ዋና ነጥብ',
+    phMainPoint: 'የተወያዩበትን እና የተወሰኑ ውሳኔዎችን ያጠቃልሉ...',
+    labelWhichDept: 'የትኛው ክፍል',
+    labelParticipants: 'ተሳታፊ ሰራተኞችን ያክሉ',
+    noEmployeesForParticipants: 'እስካሁን ሰራተኛ አልተመዘገበም — ተሳታፊዎችን ለመለየት በሰው ኃይል ስር ሰራተኞችን ያክሉ።',
+    labelAttachFile: 'ፋይል አያይዝ (ከቅጹ ግርጌ)',
+    fileDropDefault: 'ፋይል ለማያያዝ ይጫኑ (አማራጭ፣ ከ700KB በታች) — የስብሰባ ማስታወሻ፣ አጀንዳ ወይም ቃለ ጉባኤ',
+    fileAttachedPrefix: 'ተያይዟል: ',
+    btnImportDiscussion: 'ውይይት አስመጣ',
+    errFileTooLarge: 'ፋይሉ በጣም ትልቅ ነው — እባክዎ ከ700KB በታች የሆነ ፋይል ያያይዙ።',
+    errFileReadFail: 'ፋይሉን ማንበብ አልተቻለም።',
+    errMainPointReq: 'እባክዎ የውይይቱን ዋና ነጥብ ያስገቡ።',
+    toastDiscussionImported: 'ውይይት ገብቷል።',
+    toastDiscussionSaveFail: 'ውይይቱን ማስቀመጥ አልተቻለም — ፋይሉ በጣም ትልቅ ሊሆን ይችላል።',
+
+    discListTitle: 'ሁሉም ውይይቶች',
+    discListDesc: 'ለአቃቂ ቃሊቲ መሶብ ማዕከል የገቡ ሁሉም ውይይቶች።',
+    emptyNoDiscussionsTitle: 'እስካሁን ውይይቶች የሉም',
+    emptyNoDiscussionsDesc: 'የመጀመሪያውን የውይይት መዝገብ ከ"ውይይት አስመጣ" ትር ያስመጡ።',
+    deleteDiscussionTitle: 'ውይይት ይሰረዝ?',
+    deleteDiscussionDesc: 'ይህ የውይይት መዝገብ በቋሚነት ይሰረዛል።',
+    toastDiscussionDeleted: 'ውይይት ተሰርዟል።',
+    toastDiscussionDeleteFail: 'ውይይቱን መሰረዝ አልተቻለም።',
+    noParticipantsTagged: 'ምንም ተሳታፊ አልተመዘገበም',
+
+    modalCancel: 'ይቅር',
+    modalRemove: 'አስወግድ',
+    btnClose: 'ዝጋ',
+
+    labelAssignEmployee: 'ለሰራተኛ መድብ (አማራጭ)',
+    unassignedOption: 'ያልተመደበ',
+    colAssignedTo: 'የተመደበለት',
+    colEquipment: 'እቃዎች',
+    statEquipmentAssigned: 'የተመደበ እቃ',
+    statAssignedToStaff: 'ለሰራተኞች የተመደበ',
+
+    btnManageEquipment: 'እቃዎች',
+    btnAssignMaterials: 'እቃ መድብ',
+    materialsClearanceNote: 'ይህ ዝርዝር ወቅታዊ ሆኖ ይቆይ — ይህ ሰራተኛ ሲወጣ ሁሉም እቃዎች መመለሳቸውን ለማረጋገጥ ይጠቅማል።',
+    employeeEquipmentTitle: (n)=>`የ${n} እቃዎች`,
+    employeeEquipmentDesc: 'ለዚህ ሰራተኛ ከመጋዘን የተመደበ ንብረት። ይህ ከንብረት አስተዳደር → ለሰራተኛ መድብ ጋር አንድ ዓይነት ዝርዝር ነው።',
+    noEquipmentYet: 'እስካሁን የተመደበ እቃ የለም።',
+    labelEquipmentQty: 'ብዛት',
+    closePanel: 'ዝጋ',
+
+    dept_civil_registration: 'የሲቪል ምዝገባ',
+    dept_construction_permit: 'የግንባታ ፈቃድ',
+    dept_education: 'የትምህርት ቢሮ',
+    dept_electric: 'የኤሌክትሪክ አገልግሎት',
+    dept_health: 'የጤና ቢሮ',
+    dept_housing_bureau: 'የቤቶች ቢሮ',
+    dept_housing_corp: 'የቤቶች ልማት ኮርፖሬሽን',
+    dept_investment: 'የኢንቨስትመንት ኮሚሽን',
+    dept_labor_skills: 'የሠራተኛና ክህሎት ቢሮ',
+    dept_land_bureau: 'የመሬት ቢሮ',
+    dept_land_registration: 'የመሬት ምዝገባ',
+    dept_plan_dev: 'የፕላንና ልማት ቢሮ',
+    dept_revenue: 'የገቢዎች ቢሮ',
+    dept_trade: 'የንግድ ቢሮ',
+    dept_traffic: 'የትራፊክ ማኔጅመንት ባለስልጣን',
+    dept_industry: 'የኢንዱስትሪ ልማት ቢሮ (AAID)',
+    dept_food_drug: 'የምግብ፣ መድሃኒት እና ጤና ክብካቤ አስተዳደር ቁጥጥር ባለስልጣን (AAFDA)',
+    dept_dvlca: 'የአሽከርካሪና ተሽከርካሪ ፈቃድና ቁጥጥር ባለስልጣን (DVLCA)',
+    dept_digitalization: 'ዲጂታላይዜሽን',
+    dept_others: 'ሌሎች',
+
+    hrAddDeptBtn: 'ክፍል ጨምር',
+    addDeptModalTitle: 'አዲስ ክፍል ጨምር',
+    addDeptModalDesc: 'በመደበኛው ዝርዝር ውስጥ የሌለ አጋር መስሪያ ቤት፣ ባንክ ወይም ክፍል ያክሉ።',
+    labelDeptName: 'የክፍል ስም',
+    phDeptName: 'ለምሳሌ ዘመን ባንክ',
+    btnSaveDepartment: 'ክፍል አስቀምጥ',
+    errDeptNameReq: 'የክፍል ስም ያስፈልጋል።',
+    toastDeptAdded: 'ክፍል ታክሏል።',
+    toastDeptSaveFail: 'ክፍሉን ማስቀመጥ አልተቻለም።',
+    removeDeptTitle: 'ክፍል ይወገድ?',
+    removeDeptDesc: (n)=>`${n} ከክፍሎች ዝርዝር ውስጥ ይወገዳል።`,
+    toastDeptRemoved: 'ክፍል ተወግዷል።',
+    toastDeptRemoveFail: 'ክፍሉን ማስወገድ አልተቻለም።',
+
+    themeLight: 'ብሩህ',
+    themeDark: 'ጨለማ',
+    toggleTheme: 'የጨለማ ገፅታ ቀይር',
+
+    quickAddEmployee: 'ሰራተኛ ጨምር',
+    quickAddProperty: 'ንብረት ጨምር',
+    quickImportDiscussion: 'ውይይት አስመጣ',
+    dashDeptCountLabel: 'ክፍሎች',
+    empByDeptTitle: 'ሰራተኞች በክፍል',
+    empByDeptDesc: 'በስራ የበዙ ክፍሎች የሰራተኞች ብዛት።',
+    empByDeptEmpty: 'ስርጭቱን ለማየት ሰራተኞችን ያክሉ።',
+    recentEmployeesTitle: 'በቅርቡ የተጨመሩ ሰራተኞች',
+    recentEmployeesDesc: 'በቅርቡ ወደ ዝርዝሩ የገቡ ሰራተኞች።',
+    recentEmployeesEmpty: 'እስካሁን ሰራተኞች የሉም — የገቡ ሰራተኞች እዚህ ይታያሉ።',
+
+    dashboardCrumb: 'ዳሽቦርድ',
+    dashboardTitle: 'አጠቃላይ እይታ',
+    dashboardSub: 'የአቃቂ ቃሊቲ መሶብ ማዕከል ፈጣን እይታ።',
+    kpiEmployees: 'ሰራተኞች',
+    kpiPropertyUnits: 'የንብረት ክፍሎች',
+    kpiDiscussions: 'የተመዘገቡ ውይይቶች',
+    kpiEquipmentAssigned: 'የተመደበ እቃ',
+    chartTitle: 'ንብረት በምድብ',
+    chartDesc: 'የተመዘገቡ እቃዎች በምድብ ስርጭት።',
+    chartEmpty: 'ስርጭቱን ለማየት ንብረት ያክሉ።',
+    recentTitle: 'የቅርብ ጊዜ ውይይቶች',
+    recentDesc: 'በቅርቡ የገቡ የውይይት መዝገቦች።',
+    recentEmpty: 'እስካሁን ውይይቶች የሉም — የገቡ መዝገቦች እዚህ ይታያሉ።',
+    searchEmployeesPh: 'ሰራተኞችን ፈልግ…',
+    searchPropertyPh: 'ንብረት ፈልግ…',
+    searchDiscussionsPh: 'ውይይቶችን ፈልግ…',
+    noSearchResultsTitle: 'ምንም አልተገኘም',
+    noSearchResultsDesc: 'የተለየ የፍለጋ ቃል ይሞክሩ።',
+
+    hrTabDepartments: 'ክፍሎች',
+    hrDeptGridTitle: 'ክፍሎች',
+    hrDeptGridDesc: 'ሰራተኞችን በክፍል ተከፋፍለው ይመልከቱ። ውስጡ ሰራተኞችን ለማየት ወይም ለመጨመር ክፍል ይምረጡ።',
+    employeesCountLabel: 'ሰራተኞች',
+    labelDepartment: 'ክፍል',
+    labelEducation: 'የትምህርት ደረጃ',
+    phEducation: 'ለምሳሌ በአካውንቲንግ ዲግሪ፣ አዲስ አበባ ዩኒቨርሲቲ (2016)',
+    btnSaveEducation: 'አስቀምጥ',
+    toastEducationSaved: 'የትምህርት መረጃ ተቀምጧል።',
+    toastEducationSaveFail: 'የትምህርት መረጃውን ማስቀመጥ አልተቻለም።',
+    noneOption: 'ያልተገለጸ',
+
+    labelDiscussionRelatesTo: 'ይህ ውይይት የሚመለከተው (አማራጭ)',
+    deptTypeNone: 'የለም',
+    deptTypeDepartment: 'ክፍል',
+    deptTypeSiketBank: 'ስኬት ባንክ',
+    deptTypeCBE: 'የኢትዮጵያ ንግድ ባንክ',
+    dept_siket_bank: 'ስኬት ባንክ',
+    dept_cbe: 'የኢትዮጵያ ንግድ ባንክ',
+
+    selectEmployeePlaceholder: 'ሰራተኛ ይምረጡ…',
+    btnAddParticipant: 'ጨምር',
+    noParticipantsAddedYet: 'እስካሁን ተሳታፊ አልታከለም።',
+
+    labelBrand: 'የምርት ስም', phBrand: 'ለምሳሌ HP, Dell, Toyota', colBrand: 'የምርት ስም',
+    labelCondition: 'ሁኔታ',
+    condNew: 'አዲስ', condGood: 'ጥሩ', condFair: 'መካከለኛ', condDamaged: 'የተበላሸ',
+    colCondition: 'ሁኔታ',
+    labelLowStockThreshold: 'የዝቅተኛ ክምችት ገደብ', phLowStockThreshold: 'ለምሳሌ 5 (0 = ጠፍቷል)',
+    tagLowStock: 'ዝቅተኛ ክምችት',
+    labelUniqueFeatures: 'ልዩ ባህሪያት / ማስታወሻ', phUniqueFeatures: 'ለምሳሌ ተከታታይ ቁጥር XJ2291, ክዳን ላይ ጭረት',
+    colNotes: 'ማስታወሻ', noNotes: '—',
+    labelEmployeeStatus: 'ሁኔታ',
+    statusActive: 'ንቁ', statusOnLeave: 'በፈቃድ ላይ', statusResigned: 'ስራ የለቀቀ',
+    colStatus: 'ሁኔታ',
+    newBadge: 'አዲስ',
+
+    btnExportCSV: 'CSV ላክ',
+    toastExportEmpty: 'ገና የሚላክ ነገር የለም።',
+
+    colId: 'መለያ',
+    btnCopy: 'ቅዳ', toastCopied: 'ወደ ቅንጥብ ሰሌዳ ተቀድቷል።', toastCopyFail: 'መቅዳት አልተቻለም።',
+
+    btnAssignToStaff: 'ለሰራተኛ መድብ',
+    btnPrint: 'አትም',
+    printClearanceTitle: (n)=>`${n} — የእቃ መልቀቂያ ዝርዝር`,
+    printGeneratedOn: 'የተዘጋጀበት ቀን',
+    labelCategoryFilter: 'ሁሉም ምድቦች',
+    labelStatusFilter: 'ሁሉም ሁኔታዎች',
+
+    btnTranslate: 'ወደ አማርኛ ተርጉም',
+    translating: 'በመተርጎም ላይ…',
+    translateFail: 'ትርጉም አልተሳካም — ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።',
+    amharicPreviewLabel: 'የአማርኛ ትርጉም (ራስ-ሰር)',
+    translateHint: 'በማሽን የተተረጎመ — ከመታመንዎ በፊት እባክዎ ያረጋግጡ።',
+
+    exportPDF: 'PDF ላክ',
+
+    navActivity: 'የእንቅስቃሴ መዝገብ',
+    crumbActivity: 'የእንቅስቃሴ መዝገብ',
+    titleActivity: 'የእንቅስቃሴ መዝገብ',
+    subActivity: 'በዚህ ማዕከል ውስጥ ማን ምን እንደጨመረ፣ እንዳስተካከለ ወይም እንዳስወገደ የሚያሳይ መዝገብ።',
+    activityListTitle: 'የቅርብ ጊዜ እንቅስቃሴ',
+    activityListDesc: 'የቅርብ ጊዜ ድርጊቶች መጀመሪያ ይታያሉ።',
+    emptyNoActivityTitle: 'እስካሁን እንቅስቃሴ የለም',
+    emptyNoActivityDesc: 'እንደ ሰራተኛ ወይም ንብረት መጨመር ያሉ ድርጊቶች እዚህ ይታያሉ።',
+    actAddEmployee: (n)=>`ሰራተኛ "${n}" ተጨምሯል`,
+    actUpdateEmployee: (n)=>`ሰራተኛ "${n}" ተስተካክሏል`,
+    actRemoveEmployee: (n)=>`ሰራተኛ "${n}" ተወግዷል`,
+    actAddProperty: (n)=>`ንብረት "${n}" ተጨምሯል`,
+    actUpdateProperty: (n)=>`ንብረት "${n}" ተስተካክሏል`,
+    actRemoveProperty: (n)=>`ንብረት "${n}" ተወግዷል`,
+    actAssignProperty: (n,e)=>`"${n}" ለ${e} ተመድቧል`,
+    actReturnProperty: (n,e)=>`"${n}" ከ${e} ተመልሷል`,
+    actAddDiscussion: 'አዲስ ውይይት ተመዝግቧል',
+    actRemoveDiscussion: 'ውይይት ተወግዷል',
+    actBulkImport: (n,type)=>`${n} ${type} በጅምላ ገብተዋል`,
+
+    notifBellTitle: 'የዝቅተኛ ክምችት ማንቂያዎች',
+    notifNone: 'በአሁኑ ጊዜ የዝቅተኛ ክምችት ማንቂያ የለም።',
+    notifLowStockLine: (n,q)=>`${n} — ${q} ብቻ ቀርቷል`,
+    notifSeeAll: 'ንብረት ይመልከቱ',
+
+    labelViewerBadge: 'ተመልካች (ለንባብ ብቻ)',
+    viewerNotice: 'እንደ ተመልካች ገብተዋል። ለውጦችን ለማድረግ አስተዳዳሪን ያነጋግሩ።',
+
+    tabBulkImport: 'በጅምላ አስገባ',
+    bulkImportTitle: 'ከ CSV በጅምላ ማስገባት',
+    bulkImportDescEmployees: 'እነዚህን አምዶች የያዘ CSV ይስቀሉ፡ name, position, phone, email, joinDate። የመጀመሪያው ረድፍ እንደ ራስጌ ተቆጥሮ ይታለፋል።',
+    bulkImportDescProperty: 'እነዚህን አምዶች የያዘ CSV ይስቀሉ፡ name, category, quantity። የመጀመሪያው ረድፍ እንደ ራስጌ ተቆጥሮ ይታለፋል።',
+    bulkImportChoose: 'CSV ፋይል ይምረጡ',
+    bulkImportPreviewTitle: (n)=>`${n} ረድፍ(ዎች) ለማስገባት ዝግጁ ናቸው`,
+    bulkImportConfirm: 'ረድፎችን አስገባ',
+    bulkImportEmpty: 'በዚህ ፋይል ውስጥ ትክክለኛ ረድፍ አልተገኘም።',
+    bulkImportSuccess: (n)=>`${n} መዝገብ(ዎች) ገብተዋል።`,
+    bulkImportFail: 'አንዳንድ ረድፎች ማስገባት አልተቻለም።',
+    bulkImportParseFail: 'ያንን ፋይል እንደ CSV ማንበብ አልተቻለም።',
+
+    labelEmployeePhoto: 'ፎቶ (አማራጭ)',
+    photoChoose: 'ፎቶ ይምረጡ',
+    photoRemove: 'ፎቶ አስወግድ',
+    photoTooLarge: 'እባክዎ ከ3 ሜባ በታች የሆነ ምስል ይምረጡ።',
+
+    empStatusChartTitle: 'ሰራተኞች በሁኔታ',
+    empStatusChartDesc: 'በዝርዝሩ ውስጥ ያለው የአሁኑ የሁኔታ ስርጭት።',
+
+    offlineBadge: 'ከመስመር ውጭ — መጨረሻ የተመሳሰለ ውሂብ እየታየ ነው',
+
+    escHint: '',
+
+    btnCollapseSidebar: 'ዝርዝር ሰብስብ',
+    btnExpandSidebar: 'ዝርዝር ዘርጋ',
+
+    secBannerTitle: 'የተገደበ የመንግስት ስርዓት',
+    secBannerText: 'ለተፈቀደላቸው ሰራተኞች ብቻ። ያልተፈቀደ መዳረሻ የተከለከለ ሲሆን በዚህ ስርዓት ላይ ያለው ሁሉም እንቅስቃሴ ይመዘገባል።',
+
+    forgotPasswordLink: 'የይለፍ ቃል ረሱ?',
+    forgotPasswordTitle: 'የይለፍ ቃልዎን ዳግም ያስጀምሩ',
+    forgotPasswordDesc: 'በአስተዳዳሪ መለያዎ ላይ ያለውን የኢሜይል አድራሻ ያስገቡ። የይለፍ ቃል ዳግም ማስጀመሪያ ማገናኛ እንልክልዎታለን።',
+    forgotPasswordSend: 'ዳግም ማስጀመሪያ ላክ',
+    forgotPasswordSent: 'ያ ኢሜይል መለያ ካለው፣ ዳግም ማስጀመሪያ ማገናኛ ተልኳል።',
+    forgotPasswordFail: 'ዳግም ማስጀመሪያ ኢሜይል መላክ አልተቻለም። አድራሻውን ያረጋግጡ እና እንደገና ይሞክሩ።',
+    forgotPasswordBack: 'ወደ መግቢያ ተመለስ',
+
+    loginContactHint: 'መለያ ያስፈልግዎታል ወይስ ለመግባት ችግር አለብዎት?',
+    loginContactLink: 'ቢሮውን ያግኙ',
+
+    navContact: 'ማግኛ እና እገዛ',
+    contactTitle: 'ማግኛ እና እገዛ',
+    contactSub: 'የአቃቂ ቃሊቲ አዲስ መሶብ አንድ ማዕከል ቢሮን ያግኙ፣ ወይም ይህን ዳሽቦርድ ስለመጠቀም እገዛ ያግኙ።',
+    contactOfficeName: 'የአቃቂ ቃሊቲ ክፍለ ከተማ አስተዳደር — አዲስ መሶብ አንድ ማዕከል',
+    contactAddressLabel: 'የቢሮ አድራሻ',
+    contactAddress: 'አቃቂ ቃሊቲ ክፍለ ከተማ፣ አዲስ አበባ፣ ኢትዮጵያ',
+    contactPhoneLabel: 'የቢሮ ስልክ',
+    contactPhone: '+251 11 XXX XXXX',
+    contactEmailLabel: 'የቢሮ ኢሜይል',
+    contactEmail: 'info@akakiKality.gov.et',
+    contactHoursLabel: 'የስራ ሰዓት',
+    contactHours: 'ሰኞ–አርብ፣ ጥዋት 2:30 – ምሽት 11:30',
+    contactHelpTitle: 'ይህን ዳሽቦርድ መጠቀም',
+    contactHelpText: 'ለመዳረሻ ችግሮች፣ ትክክል ላልሆኑ መዝገቦች ወይም ቴክኒካዊ ችግሮች፣ የይለፍ ቃልዎን ለማንም ከማጋራት ይልቅ ከላይ ያሉትን ዝርዝሮች በመጠቀም የስርዓት አስተዳዳሪዎን ያግኙ።',
+    contactEditNote: '',
+    btnClose: 'ዝጋ',
+  }
+};
+function t(key, ...args){
+  const dict = I18N[state.lang] || I18N.en;
+  const val = dict[key] !== undefined ? dict[key] : I18N.en[key];
+  return typeof val === 'function' ? val(...args) : val;
+}
+function deptLabel(key){
+  if (!key) return t('noneOption');
+  if (typeof key === 'string' && key.startsWith('custom:')){
+    const id = key.slice(7);
+    const d = state.departments.find(x=>x.id===id);
+    return d ? d.name : key;
+  }
+  return t('dept_'+key);
+}
+/* All 22 departments: 18 government bureaus/agencies + Siket Bank + Commercial
+   Bank of Ethiopia + Digitalization + Others. Additional ad-hoc departments can
+   be added at runtime and are stored in Firestore under 'custom:<id>' keys. */
+const DEPT_KEYS = [
+  'industry','food_drug','health','education','electric','land_bureau','investment','land_registration','plan_dev',
+  'housing_corp','traffic','trade','labor_skills','civil_registration','housing_bureau','revenue','construction_permit','dvlca',
+  'siket_bank','cbe','digitalization','others'
+];
+function allDeptOptions(){
+  return DEPT_KEYS.map(k=>({ value:k, label:deptLabel(k) }))
+    .concat(state.departments.map(d=>({ value:'custom:'+d.id, label:d.name })));
+}
+
+const state = {
+  loggedIn:false,
+  currentUser:null,
+  lang:'en',
+  theme:'dark',
+  view:'dashboard',
+  tab:{ hr:'list', property:'list', discussion:'import' },
+  employees:[],
+  properties:[],
+  propertyAssignments:[],
+  discussions:[],
+  departments:[],
+  participantsDraft:[],
+  fileDraft:null,
+  discDraft:{ point:'', dept:'' },
+  assignDraft:{ propertyId:'', employeeId:'', quantity:'' },
+  hrSearch:'',
+  propSearch:'',
+  expandedEmployeeId:null,
+  hrDeptFilter:null,
+  hrStatusFilter:'',
+  propCategoryFilter:'',
+  hrSort:{ col:null, dir:1 },
+  propSort:{ col:null, dir:1 },
+  assignModalDraft:{ propertyId:'', employeeId:'', quantity:'', notes:'' },
+  role:'admin',
+  activityLog:[],
+  discSearch:'',
+  notifOpen:false,
+  bulkPreview:null,
+  bulkType:null,
+  photoDraft:null,
+  editPhotoDraft:undefined,
+  isOffline:false,
+  sidebarCollapsed:false,
+};
+try{
+  const savedTheme = localStorage.getItem('mesobTheme');
+  if (savedTheme === 'dark' || savedTheme === 'light') state.theme = savedTheme;
+  const savedCollapsed = localStorage.getItem('mesobSidebarCollapsed');
+  if (savedCollapsed === '1') state.sidebarCollapsed = true;
+}catch(e){}
+applyThemeEarly();
+function applyThemeEarly(){ document.documentElement.setAttribute('data-theme', state.theme); }
+
+const el = (tag, attrs={}, ...children) => {
+  const node = document.createElement(tag);
+  for (const k in attrs){
+    if (k === 'class') node.className = attrs[k];
+    else if (k === 'html') node.innerHTML = attrs[k];
+    else if (k.startsWith('on') && typeof attrs[k] === 'function') node.addEventListener(k.slice(2), attrs[k]);
+    else node.setAttribute(k, attrs[k]);
+  }
+  children.flat().forEach(c=>{
+    if (c === null || c === undefined) return;
+    if (typeof c === 'string') node.appendChild(document.createTextNode(c));
+    else node.appendChild(c);
+  });
+  return node;
+};
+
+function uid(prefix){ return prefix + '_' + Math.random().toString(36).slice(2,9); }
+
+function showToast(msg){
+  const tEl = document.getElementById('toast');
+  tEl.textContent = msg;
+  tEl.classList.add('show');
+  clearTimeout(tEl._timer);
+  tEl._timer = setTimeout(()=> tEl.classList.remove('show'), 2800);
+}
+
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('show');
+  document.getElementById('modalBody').innerHTML='';
+}
+
+/* ---------------- CSV export ---------------- */
+function csvEscape(val){
+  const s = (val===undefined || val===null) ? '' : String(val);
+  if (/[",\n]/.test(s)) return '"' + s.replace(/"/g,'""') + '"';
+  return s;
+}
+function exportRowsToCSV(filename, headers, rows){
+  if (!rows || rows.length===0){ showToast(t('toastExportEmpty')); return; }
+  const lines = [headers.map(csvEscape).join(',')];
+  rows.forEach(r=> lines.push(r.map(csvEscape).join(',')));
+  const blob = new Blob(['\ufeff'+lines.join('\r\n')], { type:'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+function exportBtn(onClick){
+  const btn = el('button',{class:'btn btn-outline btn-sm', onclick:onClick});
+  btn.appendChild(document.createTextNode('⤓ ' + t('btnExportCSV')));
+  return btn;
+}
+
+/* ---------------- PDF export (print-to-PDF, no external library) ---------------- */
+function exportRowsToPDF(title, headers, rows){
+  if (!rows || rows.length===0){ showToast(t('toastExportEmpty')); return; }
+  const win = window.open('', '_blank');
+  if (!win) return;
+  const head = '<tr>' + headers.map(h=>`<th>${escapeHtml(h)}</th>`).join('') + '</tr>';
+  const body = rows.map(r=>'<tr>' + r.map(c=>`<td>${escapeHtml(c===undefined||c===null?'':String(c))}</td>`).join('') + '</tr>').join('');
+  win.document.write(`<!DOCTYPE html><html><head><title>${escapeHtml(title)}</title>
+    <style>
+      body{font-family:Arial,sans-serif;padding:32px;color:#111;}
+      h1{font-size:18px;margin-bottom:4px;}
+      p{color:#555;font-size:12px;margin-top:0;}
+      table{width:100%;border-collapse:collapse;margin-top:16px;}
+      th,td{border:1px solid #ccc;padding:8px 10px;text-align:left;font-size:12.5px;}
+      th{background:#f2f2f2;}
+      @media print{ body{padding:0 16px;} }
+    </style></head><body>
+    <h1>${escapeHtml(title)}</h1>
+    <p>A-MESOB Akaki Kality · Generated on ${new Date().toISOString().slice(0,10)}</p>
+    <table><thead>${head}</thead><tbody>${body}</tbody></table>
+    </body></html>`);
+  win.document.close();
+  win.focus();
+  setTimeout(()=>{ win.print(); }, 250);
+}
+function exportPdfBtn(onClick){
+  const btn = el('button',{class:'btn btn-outline btn-sm', onclick:onClick});
+  btn.appendChild(document.createTextNode('🖨 ' + t('exportPDF')));
+  return btn;
+}
+
+/* ---------------- Auto-translate EN -> AM (MyMemory free API) ---------------- */
+async function translateToAmharic(text){
+  const clean = (text||'').trim();
+  if (!clean) return '';
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=en|am`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('translate failed');
+  const data = await res.json();
+  const out = data && data.responseData && data.responseData.translatedText;
+  if (!out) throw new Error('no translation');
+  return out;
+}
+/* Builds a "Translate to Amharic" button + inline preview box wired to a
+   textarea. Stores the result on `holder[key]` so callers can read it at
+   save time. Call render() again is not needed — this is a self-contained
+   DOM fragment appended right after the field. */
+function translateAssist(sourceTextareaId, holder, key, previewId){
+  const wrap = el('div',{style:'margin-top:8px;'});
+  const btn = el('button',{class:'btn btn-outline btn-sm', type:'button', onclick: async ()=>{
+    const srcEl = document.getElementById(sourceTextareaId);
+    const text = srcEl ? srcEl.value : '';
+    if (!text.trim()) return;
+    btn.disabled = true;
+    const origLabel = btn.textContent;
+    btn.textContent = t('translating');
+    try{
+      const translated = await translateToAmharic(text);
+      holder[key] = translated;
+      const prev = document.getElementById(previewId);
+      if (prev){
+        prev.style.display = 'block';
+        prev.querySelector('.am-text').textContent = translated;
+      }
+    }catch(e){
+      console.error(e);
+      showToast(t('translateFail'));
+    }finally{
+      btn.disabled = false;
+      btn.textContent = origLabel;
+    }
+  }});
+  btn.appendChild(document.createTextNode('🌐 ' + t('btnTranslate')));
+  wrap.appendChild(btn);
+  const preview = el('div',{id:previewId, style:'display:none;margin-top:10px;padding:10px 12px;border-radius:9px;background:var(--paper-2);border:1px solid var(--border);'},
+    el('div',{style:'font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:4px;font-family:\'IBM Plex Mono\',monospace;'}, t('amharicPreviewLabel')),
+    el('div',{class:'am-text', style:'font-size:14px;'}, holder[key]||''),
+    el('div',{style:'font-size:11px;color:var(--ink-soft);margin-top:6px;'}, t('translateHint'))
+  );
+  if (holder[key]) preview.style.display = 'block';
+  wrap.appendChild(preview);
+  return wrap;
+}
+
+/* ---------------- Activity log ---------------- */
+async function logActivity(text){
+  try{
+    await addDoc(collection(db,'activityLog'), {
+      text,
+      user: state.currentUser || 'unknown',
+      at: new Date().toISOString(),
+    });
+  }catch(e){ console.error('activity log failed', e); }
+}
+
+/* ---------------- CSV bulk import ---------------- */
+function parseCSV(text){
+  const rows = [];
+  let row = [], field = '', inQuotes = false;
+  for (let i=0; i<text.length; i++){
+    const c = text[i];
+    if (inQuotes){
+      if (c === '"'){
+        if (text[i+1] === '"'){ field += '"'; i++; }
+        else inQuotes = false;
+      } else field += c;
+    } else {
+      if (c === '"') inQuotes = true;
+      else if (c === ','){ row.push(field); field=''; }
+      else if (c === '\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+      else if (c === '\r'){ /* skip */ }
+      else field += c;
+    }
+  }
+  if (field.length || row.length){ row.push(field); rows.push(row); }
+  return rows.filter(r => r.some(c => c.trim()!==''));
+}
+
+/* ---------------- copy to clipboard ---------------- */
+function copyToClipboard(value){
+  if (!value){ return; }
+  const done = ()=> showToast(t('toastCopied'));
+  const fail = ()=> showToast(t('toastCopyFail'));
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(value).then(done).catch(fail);
+  } else {
+    try{
+      const ta = document.createElement('textarea');
+      ta.value = value; ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      done();
+    }catch(e){ fail(); }
+  }
+}
+function copyBtn(value){
+  const btn = el('button',{class:'copy-inline-btn', title:t('btnCopy'), onclick:(e)=>{ e.stopPropagation(); copyToClipboard(value); }});
+  btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="1.5"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+  return btn;
+}
+
+/* ---------------- generic table sorting ---------------- */
+function sortRows(rows, sortState, getters){
+  if (!sortState.col || !getters[sortState.col]) return rows;
+  const getter = getters[sortState.col];
+  const copy = rows.slice();
+  copy.sort((a,b)=>{
+    const av = getter(a), bv = getter(b);
+    if (typeof av === 'number' && typeof bv === 'number') return (av-bv)*sortState.dir;
+    return String(av||'').localeCompare(String(bv||''))*sortState.dir;
+  });
+  return copy;
+}
+function sortableTh(label, colKey, sortState, onSort){
+  const th = el('th',{class:'th-sort', onclick:()=>{
+    if (sortState.col===colKey) sortState.dir = -sortState.dir;
+    else { sortState.col = colKey; sortState.dir = 1; }
+    onSort();
+  }}, label);
+  if (sortState.col===colKey){
+    th.appendChild(el('span',{class:'sort-arrow'}, sortState.dir===1 ? '▲' : '▼'));
+  }
+  return th;
+}
+
+/* ---------------- Escape key closes any open modal ---------------- */
+document.addEventListener('keydown', (e)=>{
+  if (e.key !== 'Escape') return;
+  const overlay = document.getElementById('modalOverlay');
+  if (overlay && overlay.classList.contains('show')){
+    const modal = document.getElementById('modalBody');
+    if (modal) modal.classList.remove('modal-wide');
+    closeModal();
+  }
+});
+
+function confirmModal(title, desc, onConfirm){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const overlay = document.getElementById('modalOverlay');
+  const body = document.getElementById('modalBody');
+  body.innerHTML='';
+  body.appendChild(el('h3',{},title));
+  body.appendChild(el('p',{},desc));
+  const actions = el('div',{class:'modal-actions'});
+  const cancel = el('button',{class:'btn btn-outline btn-sm', onclick:closeModal},t('modalCancel'));
+  const ok = el('button',{class:'btn btn-danger btn-sm', onclick:()=>{ onConfirm(); closeModal(); }},t('modalRemove'));
+  actions.appendChild(cancel); actions.appendChild(ok);
+  body.appendChild(actions);
+  overlay.classList.add('show');
+}
+
+function langToggle(light){
+  const sel = el('select',{class:'lang-select'});
+  sel.appendChild(el('option',{value:'en'},'EN — English'));
+  sel.appendChild(el('option',{value:'am'},'አማ — አማርኛ'));
+  sel.value = state.lang;
+  sel.addEventListener('change', (e)=>{ state.lang = e.target.value; document.documentElement.lang = state.lang; render(); });
+  return sel;
+}
+
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', state.theme);
+}
+function themeToggleBtn(){
+  const btn = el('button',{class:'theme-toggle', title:t('toggleTheme'), onclick:()=>{
+    state.theme = state.theme==='dark' ? 'light' : 'dark';
+    try{ localStorage.setItem('mesobTheme', state.theme); }catch(e){}
+    applyTheme();
+    render();
+  }});
+  btn.innerHTML = state.theme==='dark' ? ICONS.sun : ICONS.moon;
+  return btn;
+}
+function topbarControls(light){
+  const controls = el('div',{class:'topbar-controls'});
+  if (state.loggedIn) controls.appendChild(notificationsBell());
+  controls.appendChild(themeToggleBtn());
+  controls.appendChild(langToggle(light));
+  return controls;
+}
+
+/* ---------------- Links back to the public site ---------------- */
+function siteLinkBtn(iconName, label, href){
+  const a = el('a',{class:'site-link-btn', href});
+  a.appendChild(iconEl(iconName));
+  a.appendChild(el('span',{},label));
+  return a;
+}
+function siteLinks(includeServices){
+  const wrap = el('div',{class:'site-links'});
+  wrap.appendChild(siteLinkBtn('home', t('navBackHome'), '../index.html'));
+  if (includeServices) wrap.appendChild(siteLinkBtn('grid', t('navServicesLink'), '../services.html'));
+  return wrap;
+}
+
+/* ---------------- Role gating (client-side visibility only —
+   real enforcement must also be set in Firestore Security Rules,
+   see firestore.rules.txt shipped alongside this app) ---------------- */
+function canEdit(){ return state.role !== 'viewer'; }
+
+/* ---------------- Low-stock notifications bell ---------------- */
+function getLowStockItems(){
+  return state.properties.filter(p=>{
+    const th = Number(p.lowStockThreshold||0);
+    return th > 0 && Number(p.quantity||0) <= th;
+  });
+}
+function notificationsBell(){
+  const items = getLowStockItems();
+  const wrap = el('div',{style:'position:relative;'});
+  const btn = el('button',{class:'theme-toggle', title:t('notifBellTitle'), onclick:(e)=>{
+    e.stopPropagation();
+    state.notifOpen = !state.notifOpen;
+    renderNotifDropdown();
+  }});
+  btn.innerHTML = ICONS.bell;
+  wrap.appendChild(btn);
+  if (items.length>0){
+    wrap.appendChild(el('span',{style:'position:absolute;top:-3px;right:-3px;min-width:16px;height:16px;padding:0 3px;border-radius:100px;background:var(--red);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:\'IBM Plex Mono\',monospace;'}, String(items.length)));
+  }
+  const dd = el('div',{id:'notifDropdown', style:'display:none;position:absolute;top:calc(100% + 8px);right:0;width:260px;background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:12px;z-index:50;'});
+  wrap.appendChild(dd);
+  function renderNotifDropdown(){
+    dd.style.display = state.notifOpen ? 'block' : 'none';
+    dd.innerHTML = '';
+    dd.appendChild(el('div',{style:'font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:8px;font-family:\'IBM Plex Mono\',monospace;'}, t('notifBellTitle')));
+    if (items.length===0){
+      dd.appendChild(el('div',{class:'card-desc', style:'margin:0;'}, t('notifNone')));
+    } else {
+      items.forEach(p=>{
+        dd.appendChild(el('div',{style:'padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;'}, t('notifLowStockLine', p.name, p.quantity)));
+      });
+      const link = el('button',{class:'btn btn-outline btn-sm', style:'margin-top:10px;width:100%;', onclick:()=>{
+        state.notifOpen=false; state.view='property'; state.tab.property='list'; renderShell();
+      }}, t('notifSeeAll'));
+      dd.appendChild(link);
+    }
+  }
+  renderNotifDropdown();
+  return wrap;
+}
+document.addEventListener('click', (e)=>{
+  const dd = document.getElementById('notifDropdown');
+  if (dd && state.notifOpen && !dd.parentElement.contains(e.target)){
+    state.notifOpen = false;
+    dd.style.display = 'none';
+  }
+});
+
+/* ---------------- Firestore live sync ---------------- */
+function shouldAutoRerender(){
+  if (state.view==='discussion' && state.tab.discussion==='import') return false;
+  return true;
+}
+
+function startFirestoreSync(){
+  stopFirestoreSync();
+  unsubscribers.push(onSnapshot(collection(db,'employees'), (snap)=>{
+    const arr = [];
+    snap.forEach(d=> arr.push({ id:d.id, ...d.data() }));
+    arr.sort((a,b)=> (a.name||'').localeCompare(b.name||''));
+    state.employees = arr;
+    if (state.loggedIn && shouldAutoRerender()) renderMain();
+  }, (err)=>{ console.error(err); showToast('Could not load employees. Please try again.'); }));
+
+  unsubscribers.push(onSnapshot(collection(db,'properties'), (snap)=>{
+    const arr = [];
+    snap.forEach(d=> arr.push({ id:d.id, ...d.data() }));
+    arr.sort((a,b)=> (a.name||'').localeCompare(b.name||''));
+    state.properties = arr;
+    if (state.loggedIn && shouldAutoRerender()) renderMain();
+  }, (err)=>{ console.error(err); showToast('Could not load property. Please try again.'); }));
+
+  unsubscribers.push(onSnapshot(collection(db,'propertyAssignments'), (snap)=>{
+    const arr = [];
+    snap.forEach(d=> arr.push({ id:d.id, ...d.data() }));
+    arr.sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+    state.propertyAssignments = arr;
+    if (state.loggedIn && shouldAutoRerender()) renderMain();
+  }, (err)=>{ console.error(err); showToast('Could not load property assignments. Please try again.'); }));
+
+  unsubscribers.push(onSnapshot(collection(db,'departments'), (snap)=>{
+    const arr = [];
+    snap.forEach(d=> arr.push({ id:d.id, ...d.data() }));
+    arr.sort((a,b)=> (a.name||'').localeCompare(b.name||''));
+    state.departments = arr;
+    if (state.loggedIn && shouldAutoRerender()) renderMain();
+  }, (err)=>{ console.error(err); showToast('Could not load departments. Please try again.'); }));
+
+  unsubscribers.push(onSnapshot(collection(db,'discussions'), (snap)=>{
+    const arr = [];
+    snap.forEach(d=> arr.push({ id:d.id, ...d.data() }));
+    arr.sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+    state.discussions = arr;
+    if (state.loggedIn && shouldAutoRerender()) renderMain();
+  }, (err)=>{ console.error(err); showToast('Could not load discussions. Please try again.'); }));
+
+  unsubscribers.push(onSnapshot(query(collection(db,'activityLog'), orderBy('at','desc'), limit(200)), (snap)=>{
+    const arr = [];
+    snap.forEach(d=> arr.push({ id:d.id, ...d.data() }));
+    state.activityLog = arr;
+    if (state.loggedIn && shouldAutoRerender()) renderMain();
+  }, (err)=>{ console.error(err); /* older data, non-critical, skip toast */ }));
+}
+
+function stopFirestoreSync(){
+  unsubscribers.forEach(u=>u());
+  unsubscribers = [];
+}
+
+/* ---------------- icons ---------------- */
+const ICONS = {
+  dashboard: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="9" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="14" width="8" height="7" rx="1.5"/></svg>',
+  hr: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.7-3.6 3.3-5.6 6.5-5.6s5.8 2 6.5 5.6"/><circle cx="17.5" cy="7.5" r="2.3"/><path d="M15.8 12.7c2.6.2 4.7 2 5.3 4.9"/></svg>',
+  property: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 8.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V8.5"/></svg>',
+  discussion: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5h16v10H9l-4 3.5v-3.5H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>',
+  plus: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>',
+  trash: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m-9 0 1 12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1l1-12"/></svg>',
+  edit: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
+  logout: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M9 21H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4M16 17l5-5-5-5M21 12H9"/></svg>',
+  file: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H7a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V8z"/><path d="M14 2v6h6"/></svg>',
+  empty: '<svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>',
+  search: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>',
+  people: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.7-3.6 3.3-5.6 6.5-5.6s5.8 2 6.5 5.6"/><circle cx="17.5" cy="7.5" r="2.3"/><path d="M15.8 12.7c2.6.2 4.7 2 5.3 4.9"/></svg>',
+  box: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 8.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V8.5"/></svg>',
+  chat: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5h16v10H9l-4 3.5v-3.5H4z"/></svg>',
+  link: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>',
+  building: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8h1M8 12h1M8 16h1M15 8h1M15 12h1M15 16h1"/></svg>',
+  bell: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>',
+  upload: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>',
+  activity: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>',
+  shield: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.6-3 8.4-7 9.5-4-1.1-7-4.9-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+  pin: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>',
+  phone: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C10.5 21 3 13.5 3 6a2 2 0 0 1 2-2z"/></svg>',
+  mail: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>',
+  clock: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>',
+  chevronLeft: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg>',
+  chevronRight: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg>',
+  home: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.5"/><path d="M9.5 21v-6h5v6"/></svg>',
+  grid: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="7" height="7" rx="1.3"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.3"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.3"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.3"/></svg>',
+};
+function iconEl(name){
+  const wrap = document.createElement('span');
+  wrap.innerHTML = ICONS[name] || '';
+  return wrap.firstChild;
+}
+
+function basketSVG(size){
+  size = size || 34; 
+  {
+  return `<img src="logo.png" alt="A-MESOB Logo" style="width:${size}px; height:${size}px; object-fit:contain; display:block;" />`;
+}
+ 
+}
+
+/* Renders logo.png (placed in the same folder as index.html) if it exists,
+   and automatically falls back to the built-in basket mark if it doesn't.
+   Used for BOTH the login page and the sidebar inside the app. */
+function logoMark(size, cssClass){
+  const wrap = document.createElement('span');
+  wrap.className = cssClass;
+  wrap.style.display = 'inline-flex';
+  wrap.style.alignItems = 'center';
+  wrap.style.justifyContent = 'center';
+  wrap.style.overflow = 'hidden';
+  wrap.style.borderRadius = '10px';
+  wrap.style.flex = 'none';
+  const img = document.createElement('img');
+  img.src = 'logo.png';
+  img.alt = 'Logo';
+  img.style.width = '100%';
+  img.style.height = '100%';
+  img.style.objectFit = 'contain';
+  img.onerror = ()=>{ wrap.innerHTML = basketSVG(size); };
+  wrap.appendChild(img);
+  return wrap;
+}
+
+function weavePatternSVG(id){
+  return '<div class="weave-bg" aria-hidden="true"></div>';
+}
+
+/* =========================================================
+   LOGIN VIEW
+   ========================================================= */
+function renderLogin(){
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+
+  const wrap = el('div',{class:'login-wrap'});
+  const card = el('div',{class:'login-card'});
+
+  const side = el('div',{class:'login-side'});
+  const lockup = el('div',{class:'logo-lockup'});
+  const mark = logoMark(84, 'basket-mark basket-mark-lg');
+  lockup.appendChild(mark);
+  lockup.appendChild(el('div',{class:'wordmark'},'A-MESOB'));
+  lockup.appendChild(el('div',{class:'wordmark-sub'},t('loginTagline1'), el('br',{}), t('loginTagline2')));
+  const copy = el('div',{class:'side-copy'},
+    el('div',{class:'eyebrow'},t('loginBranch')),
+    el('p',{},t('loginPrompt'))
+  );
+  const secBanner = el('div',{class:'sec-banner'},
+    el('div',{class:'sec-banner-icon'}, iconEl('shield')),
+    el('div',{},
+      el('div',{class:'sec-banner-title'}, t('secBannerTitle')),
+      el('div',{class:'sec-banner-text'}, t('secBannerText'))
+    )
+  );
+  const foot = el('div',{class:'side-foot'}, t('loginFooter'));
+  side.appendChild(lockup); side.appendChild(copy); side.appendChild(secBanner); side.appendChild(foot);
+
+  const formSide = el('div',{class:'login-form-side'});
+  formSide.appendChild(el('div',{class:'login-form-top', style:'display:flex;align-items:center;gap:10px;'}, siteLinks(false), topbarControls(true)));
+  const errorBox = el('div',{class:'error-msg'},'');
+  const infoBox = el('div',{class:'info-msg'},'');
+  const userField = el('div',{class:'field'},
+    el('label',{},t('emailLabel')),
+    el('input',{type:'email', id:'loginEmail', placeholder:'admin@yourdomain.com', autocomplete:'username'})
+  );
+  const passField = el('div',{class:'field'},
+    el('label',{},t('passwordLabel')),
+    el('input',{type:'password', id:'loginPass', placeholder:'••••••••', autocomplete:'current-password'})
+  );
+  const submitBtn = el('button',{class:'btn btn-primary btn-block', id:'loginSubmitBtn', onclick:doLogin},t('signIn'));
+  const forgotLink = el('button',{class:'link-btn', type:'button', onclick: openForgotPasswordModal}, t('forgotPasswordLink'));
+
+  formSide.appendChild(el('h2',{},t('loginHeading')));
+  formSide.appendChild(el('p',{class:'sub'},t('loginSub')));
+  formSide.appendChild(errorBox);
+  formSide.appendChild(infoBox);
+  formSide.appendChild(userField);
+  formSide.appendChild(passField);
+  formSide.appendChild(el('div',{style:'display:flex;justify-content:flex-end;margin:-8px 0 16px;'}, forgotLink));
+  formSide.appendChild(submitBtn);
+  formSide.appendChild(el('div',{class:'hint-msg'}, t('loginHint')));
+  formSide.appendChild(el('div',{class:'login-contact-hint'},
+    t('loginContactHint') + ' ',
+    el('button',{class:'link-btn', type:'button', onclick: openContactModal}, t('loginContactLink'))
+  ));
+
+  card.appendChild(side); card.appendChild(formSide);
+  wrap.appendChild(card);
+  app.appendChild(wrap);
+
+  document.getElementById('loginPass').addEventListener('keydown', (e)=>{ if(e.key==='Enter') doLogin(); });
+  document.getElementById('loginEmail').addEventListener('keydown', (e)=>{ if(e.key==='Enter') doLogin(); });
+
+  async function doLogin(){
+    const emailEl = document.getElementById('loginEmail');
+    const passEl = document.getElementById('loginPass');
+    const btn = document.getElementById('loginSubmitBtn');
+    const errBox = document.querySelector('.error-msg');
+    const emailV = emailEl.value.trim();
+    const passV = passEl.value;
+    if (!emailV || !passV){
+      errBox.textContent = t('errBoth');
+      errBox.style.display='block';
+      return;
+    }
+    errBox.style.display='none';
+    btn.disabled = true;
+    btn.textContent = t('signingIn');
+    try{
+      await signInWithEmailAndPassword(auth, emailV, passV);
+    }catch(e){
+      console.error(e);
+      let msg = t('errGeneric');
+      if (e.code === 'auth/invalid-credential' || e.code === 'auth/wrong-password' || e.code === 'auth/user-not-found'){
+        msg = t('errIncorrect');
+      } else if (e.code === 'auth/too-many-requests'){
+        msg = t('errTooMany');
+      }
+      errBox.textContent = msg;
+      errBox.style.display='block';
+      btn.disabled = false;
+      btn.textContent = t('signIn');
+    }
+  }
+}
+
+function openForgotPasswordModal(){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+  modal.appendChild(el('h3',{},t('forgotPasswordTitle')));
+  modal.appendChild(el('p',{style:'margin:0 0 18px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'}, t('forgotPasswordDesc')));
+
+  const resultBox = el('div',{class:'info-msg'},'');
+  const emailInput = el('input',{type:'email', id:'forgotEmailInput', placeholder:'admin@yourdomain.com', autocomplete:'email'});
+  modal.appendChild(resultBox);
+  modal.appendChild(el('div',{class:'field'}, el('label',{},t('emailLabel')), emailInput));
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeModal}, t('forgotPasswordBack')));
+  const sendBtn = el('button',{class:'btn btn-primary btn-sm', onclick: async ()=>{
+    const emailV = emailInput.value.trim();
+    if (!emailV){ resultBox.textContent = t('errBoth'); resultBox.style.display='block'; return; }
+    sendBtn.disabled = true;
+    try{
+      await sendPasswordResetEmail(auth, emailV);
+    }catch(e){ console.error(e); }
+    resultBox.textContent = t('forgotPasswordSent');
+    resultBox.style.display='block';
+    sendBtn.disabled = false;
+  }}, t('forgotPasswordSend'));
+  actions.appendChild(sendBtn);
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+
+function openContactModal(){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+  modal.appendChild(el('h3',{},t('contactTitle')));
+  modal.appendChild(el('p',{style:'margin:0 0 18px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'}, t('contactSub')));
+
+  const officeCard = el('div',{class:'contact-block'});
+  officeCard.appendChild(el('div',{class:'contact-office-name'}, t('contactOfficeName')));
+  officeCard.appendChild(contactRow('pin', t('contactAddressLabel'), t('contactAddress')));
+  officeCard.appendChild(contactRow('phone', t('contactPhoneLabel'), t('contactPhone'), 'tel:'+t('contactPhone').replace(/[^\d+]/g,'')));
+  officeCard.appendChild(contactRow('mail', t('contactEmailLabel'), t('contactEmail'), 'mailto:'+t('contactEmail')));
+  officeCard.appendChild(contactRow('clock', t('contactHoursLabel'), t('contactHours')));
+  modal.appendChild(officeCard);
+
+  modal.appendChild(el('div',{class:'contact-help-block'},
+    el('div',{class:'contact-office-name'}, t('contactHelpTitle')),
+    el('p',{style:'margin:6px 0 0;color:var(--ink-soft);font-size:13px;line-height:1.55;'}, t('contactHelpText'))
+  ));
+
+  if (t('contactEditNote')){
+    modal.appendChild(el('p',{style:'margin:14px 0 0;color:var(--ink-soft);font-size:11px;opacity:0.7;'}, t('contactEditNote')));
+  }
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-primary btn-sm', onclick:closeModal}, t('btnClose')));
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+function contactRow(icon, label, value, href){
+  const row = el('div',{class:'contact-row'});
+  row.appendChild(iconEl(icon));
+  const textWrap = el('div',{},
+    el('div',{class:'contact-row-label'}, label),
+    href ? el('a',{class:'contact-row-value', href}, value) : el('div',{class:'contact-row-value'}, value)
+  );
+  row.appendChild(textWrap);
+  return row;
+}
+
+/* =========================================================
+   DASHBOARD SHELL
+   ========================================================= */
+function renderShell(){
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+
+  const collapsed = state.sidebarCollapsed;
+  const shell = el('div',{class:'shell' + (collapsed ? ' shell-collapsed' : '')});
+
+  const sidebar = el('div',{class:'sidebar' + (collapsed ? ' collapsed' : '')});
+  sidebar.insertAdjacentHTML('afterbegin', weavePatternSVG('weaveSide'));
+
+  const collapseBtn = el('button',{class:'sidebar-collapse-btn', title: collapsed ? t('btnExpandSidebar') : t('btnCollapseSidebar'), onclick:()=>{
+    state.sidebarCollapsed = !state.sidebarCollapsed;
+    try{ localStorage.setItem('mesobSidebarCollapsed', state.sidebarCollapsed ? '1' : '0'); }catch(e){}
+    renderShell();
+  }});
+  collapseBtn.appendChild(iconEl(collapsed ? 'chevronRight' : 'chevronLeft'));
+  sidebar.appendChild(collapseBtn);
+
+  const brand = el('div',{class:'brand'});
+  const bm = logoMark(34, 'basket-mark');
+  brand.appendChild(bm);
+  if (!collapsed){
+    brand.appendChild(el('div',{class:'brand-text'},
+      el('div',{class:'b1'},'A-MESOB'),
+      el('div',{class:'b2'},t('branchName'))
+    ));
+  }
+  sidebar.appendChild(brand);
+
+  const nav = el('div',{class:'nav'});
+  const navItems = [
+    {key:'dashboard', label:t('navDashboard'), icon:'dashboard'},
+    {key:'hr', label:t('navHR'), icon:'hr'},
+    {key:'property', label:t('navProperty'), icon:'property'},
+    {key:'discussion', label:t('navDiscussion'), icon:'discussion'},
+    {key:'activity', label:t('navActivity'), icon:'activity'},
+  ];
+  navItems.forEach(it=>{
+    const btn = el('button',{class:'nav-item' + (state.view===it.key?' active':''), title: collapsed ? it.label : '', onclick:()=>{ state.view=it.key; renderMain(); }});
+    btn.appendChild(iconEl(it.icon));
+    if (!collapsed) btn.appendChild(el('span',{},it.label));
+    nav.appendChild(btn);
+  });
+  sidebar.appendChild(nav);
+  sidebar.appendChild(el('div',{class:'nav-divider'}));
+
+  if (!collapsed){
+    const foot = el('div',{class:'sidebar-foot'},
+      el('div',{class:'who'}, state.currentUser || 'admin'),
+      state.role==='viewer' ? el('div',{style:'color:var(--gold-soft);font-size:11px;margin-top:2px;'}, t('labelViewerBadge')) : null,
+      el('span',{class:'conn-dot'}),
+      t('liveStatus')
+    );
+    sidebar.appendChild(foot);
+  }
+  const contactBtn = el('button',{class:'btn contact-btn btn-sm', title: collapsed ? t('navContact') : '', onclick: openContactModal});
+  contactBtn.appendChild(iconEl('phone'));
+  if (!collapsed) contactBtn.appendChild(document.createTextNode(' ' + t('navContact')));
+  sidebar.appendChild(contactBtn);
+
+  const logoutBtn = el('button',{class:'btn logout-btn btn-sm', title: collapsed ? t('signOut') : '', onclick: async ()=>{ await signOut(auth); }});
+  logoutBtn.appendChild(iconEl('logout'));
+  if (!collapsed) logoutBtn.appendChild(document.createTextNode(' ' + t('signOut')));
+  sidebar.appendChild(logoutBtn);
+
+  const contentCol = el('div',{class:'content-col'});
+  const contentTop = el('div',{class:'content-topbar', style:'gap:10px;'});
+  if (!navigator.onLine){
+    contentTop.appendChild(el('span',{class:'tag', style:'color:var(--gold);border-color:var(--gold);background:var(--gold-soft);'}, t('offlineBadge')));
+  }
+  contentTop.appendChild(siteLinks(false));
+  contentTop.appendChild(topbarControls(true));
+  const main = el('div',{class:'main'});
+  main.id = 'mainArea';
+  contentCol.appendChild(contentTop);
+  contentCol.appendChild(main);
+
+  shell.appendChild(sidebar);
+  shell.appendChild(contentCol);
+  app.appendChild(shell);
+
+  renderMain();
+}
+
+function renderMain(){
+  const main = document.getElementById('mainArea');
+  if (!main) return;
+  main.innerHTML = '';
+  main.classList.remove('fade-in');
+  void main.offsetWidth; // restart animation
+  main.classList.add('fade-in');
+  if (state.view==='dashboard') renderDashboard(main);
+  else if (state.view==='hr') renderHR(main);
+  else if (state.view==='property') renderProperty(main);
+  else if (state.view==='discussion') renderDiscussion(main);
+  else if (state.view==='activity') renderActivity(main);
+}
+
+function renderActivity(main){
+  pageHeader(main, t('crumbActivity'), t('titleActivity'), t('subActivity'));
+  const card = el('div',{class:'card'});
+  card.appendChild(el('h3',{class:'card-title'}, t('activityListTitle')));
+  card.appendChild(el('p',{class:'card-desc'}, t('activityListDesc')));
+  if (state.activityLog.length===0){
+    card.appendChild(emptyState(t('emptyNoActivityTitle'), t('emptyNoActivityDesc')));
+  } else {
+    state.activityLog.forEach(entry=>{
+      card.appendChild(el('div',{class:'activity-row'},
+        el('div',{class:'activity-dot'}),
+        el('div',{},
+          el('div',{class:'activity-text'}, entry.text),
+          el('div',{class:'activity-meta'}, (entry.user||'') + ' · ' + (entry.at ? new Date(entry.at).toLocaleString() : ''))
+        )
+      ));
+    });
+  }
+  main.appendChild(card);
+}
+
+function pageHeader(main, crumb, title, sub, actionEl){
+  main.appendChild(el('div',{class:'crumb'},crumb));
+  const bar = el('div',{class:'topbar'}, el('h2',{class:'page-title'},title));
+  if (actionEl) bar.appendChild(actionEl);
+  main.appendChild(bar);
+  main.appendChild(el('div',{class:'page-sub'},sub));
+}
+function tabsBar(main, group, tabs){
+  const bar = el('div',{class:'tabs'});
+  tabs.forEach(tb=>{
+    const active = state.tab[group]===tb.key;
+    bar.appendChild(el('button',{class:'tab'+(active?' active':''), onclick:()=>{ state.tab[group]=tb.key; renderMain(); }}, tb.label));
+  });
+  main.appendChild(bar);
+}
+
+/* =========================================================
+   HUMAN RESOURCES
+   ========================================================= */
+/* =========================================================
+   DASHBOARD OVERVIEW
+   ========================================================= */
+function renderDashboard(main){
+  pageHeader(main, t('dashboardCrumb'), t('dashboardTitle'), t('dashboardSub'));
+
+  const totalUnits = state.properties.reduce((s,p)=>s+Number(p.quantity||0),0);
+  const assignedUnits = state.propertyAssignments.reduce((s,a)=>s+Number(a.quantity||0),0);
+  const deptCount = DEPT_KEYS.length + state.departments.length;
+
+  const kpis = el('div',{class:'kpi-row'},
+    kpiCard('people', state.employees.length, t('kpiEmployees')),
+    kpiCard('building', deptCount, t('dashDeptCountLabel')),
+    kpiCard('box', totalUnits, t('kpiPropertyUnits')),
+    kpiCard('box', assignedUnits, t('statAssignedToStaff')),
+    kpiCard('chat', state.discussions.length, t('kpiDiscussions'))
+  );
+  main.appendChild(kpis);
+
+  const grid = el('div',{class:'grid-3-dash'});
+  grid.appendChild(employeesByDeptChartCard());
+  grid.appendChild(categoryChartCard());
+  grid.appendChild(recentDiscussionsCard());
+  main.appendChild(grid);
+
+  if (state.employees.length>0){
+    main.appendChild(el('div',{class:'section-heading'}, t('empStatusChartTitle')));
+    main.appendChild(employeeStatusChartCard());
+  }
+
+  main.appendChild(el('div',{class:'section-heading'}, t('recentEmployeesTitle')));
+  main.appendChild(recentEmployeesCard());
+}
+
+function employeeStatusChartCard(){
+  const card = el('div',{class:'card'});
+  card.appendChild(el('p',{class:'card-desc', style:'margin:0 0 16px;'}, t('empStatusChartDesc')));
+  const counts = { active:0, onleave:0, resigned:0 };
+  state.employees.forEach(e=>{ const s = e.status || 'active'; if (counts[s]===undefined) counts[s]=0; counts[s]++; });
+  const labels = { active:t('statusActive'), onleave:t('statusOnLeave'), resigned:t('statusResigned') };
+  const entries = Object.entries(counts).filter(([,v])=>v>0 || true);
+  const max = Math.max(...entries.map(e=>e[1]), 1);
+  const bars = el('div',{class:'chart-bars'});
+  entries.forEach(([key,val])=>{
+    const heightPct = Math.max(6, Math.round((val/max)*100));
+    bars.appendChild(el('div',{class:'chart-bar-col'},
+      el('div',{class:'chart-bar-val'}, String(val)),
+      el('div',{class:'chart-bar', style:'height:'+heightPct+'%'}),
+      el('div',{class:'chart-bar-lbl'}, labels[key]||key)
+    ));
+  });
+  card.appendChild(bars);
+  return card;
+}
+
+function employeesByDeptChartCard(){
+  const card = el('div',{class:'card'});
+  card.appendChild(el('h3',{class:'card-title'},t('empByDeptTitle')));
+  card.appendChild(el('p',{class:'card-desc'},t('empByDeptDesc')));
+
+  if (state.employees.length===0){
+    card.appendChild(emptyState(t('empByDeptEmpty'), ''));
+    return card;
+  }
+
+  const byDept = {};
+  state.employees.forEach(e=>{
+    const label = deptLabel(e.department);
+    byDept[label] = (byDept[label]||0) + 1;
+  });
+  const entries = Object.entries(byDept).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  const max = Math.max(...entries.map(e=>e[1]), 1);
+
+  const bars = el('div',{class:'chart-bars'});
+  entries.forEach(([lbl, val])=>{
+    const heightPct = Math.max(6, Math.round((val/max)*100));
+    bars.appendChild(el('div',{class:'chart-bar-col'},
+      el('div',{class:'chart-bar-val'}, String(val)),
+      el('div',{class:'chart-bar', style:'height:'+heightPct+'%'}),
+      el('div',{class:'chart-bar-lbl'}, lbl)
+    ));
+  });
+  card.appendChild(bars);
+  return card;
+}
+
+function recentEmployeesCard(){
+  const card = el('div',{class:'card'});
+  if (state.employees.length===0){
+    card.appendChild(emptyState(t('recentEmployeesEmpty'), ''));
+    return card;
+  }
+  const recent = [...state.employees].sort((a,b)=> (b.joinDate||'').localeCompare(a.joinDate||'')).slice(0,5);
+  recent.forEach(emp=>{
+    card.appendChild(el('div',{class:'activity-row'},
+      el('div',{class:'activity-dot'}),
+      el('div',{},
+        el('div',{class:'activity-text'}, el('strong',{},emp.name) , ' \u2014 ' + (emp.position||'')),
+        el('div',{class:'activity-meta'}, deptLabel(emp.department) + (emp.joinDate ? ' \u00b7 ' + emp.joinDate : ''))
+      )
+    ));
+  });
+  return card;
+}
+
+function kpiCard(icon, num, label){
+  return el('div',{class:'kpi-card'},
+    el('div',{class:'kpi-icon'}, iconEl(icon)),
+    el('div',{},
+      el('div',{class:'kpi-num'}, String(num)),
+      el('div',{class:'kpi-lbl'}, label)
+    )
+  );
+}
+
+function categoryChartCard(){
+  const card = el('div',{class:'card'});
+  card.appendChild(el('h3',{class:'card-title'},t('chartTitle')));
+  card.appendChild(el('p',{class:'card-desc'},t('chartDesc')));
+
+  if (state.properties.length===0){
+    card.appendChild(emptyState(t('chartEmpty'), ''));
+    return card;
+  }
+
+  const byCat = {};
+  state.properties.forEach(p=>{
+    const cat = p.category || t('generalCategory');
+    byCat[cat] = (byCat[cat]||0) + Number(p.quantity||0);
+  });
+  const entries = Object.entries(byCat).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  const max = Math.max(...entries.map(e=>e[1]), 1);
+
+  const bars = el('div',{class:'chart-bars'});
+  entries.forEach(([cat, val])=>{
+    const heightPct = Math.max(6, Math.round((val/max)*100));
+    const col = el('div',{class:'chart-bar-col'},
+      el('div',{class:'chart-bar-val'}, String(val)),
+      el('div',{class:'chart-bar', style:'height:'+heightPct+'%'}),
+      el('div',{class:'chart-bar-lbl'}, cat)
+    );
+    bars.appendChild(col);
+  });
+  card.appendChild(bars);
+  return card;
+}
+
+function recentDiscussionsCard(){
+  const card = el('div',{class:'card'});
+  card.appendChild(el('h3',{class:'card-title'},t('recentTitle')));
+  card.appendChild(el('p',{class:'card-desc'},t('recentDesc')));
+
+  if (state.discussions.length===0){
+    card.appendChild(emptyState(t('recentEmpty'), ''));
+    return card;
+  }
+
+  state.discussions.slice(0,5).forEach(d=>{
+    const row = el('div',{class:'activity-row'},
+      el('div',{class:'activity-dot'}),
+      el('div',{},
+        el('div',{class:'activity-text'}, (()=>{ const txt = (state.lang==='am' && d.mainPointAm) ? d.mainPointAm : d.mainPoint; return txt.length>90 ? txt.slice(0,90)+'…' : txt; })()),
+        el('div',{class:'activity-meta'}, deptLabel(d.department) + ' · ' + d.date)
+      )
+    );
+    card.appendChild(row);
+  });
+  return card;
+}
+
+function renderHR(main){
+  let addLink = null;
+  if (canEdit()){
+    addLink = el('button',{class:'btn btn-primary btn-sm', onclick:()=> openAddEmployeeModal(state.hrDeptFilter)});
+    addLink.appendChild(iconEl('plus'));
+    addLink.appendChild(document.createTextNode(' ' + t('btnAddEmployee')));
+  }
+  pageHeader(main, t('crumbHR'), t('titleHR'), t('subHR'), addLink);
+
+  const hrTabs = [
+    {key:'list', label:t('tabAllEmployees')},
+    {key:'departments', label:t('hrTabDepartments')},
+  ];
+  if (canEdit()) hrTabs.push({key:'bulk', label:t('tabBulkImport')});
+  tabsBar(main, 'hr', hrTabs);
+
+  if (state.tab.hr==='list') main.appendChild(hrListCard());
+  if (state.tab.hr==='departments') main.appendChild(hrDepartmentsCard());
+  if (state.tab.hr==='bulk' && canEdit()) main.appendChild(bulkImportCard('employees'));
+
+  if (state.tab.hr==='list' && state.expandedEmployeeId){
+    const emp = state.employees.find(e=>e.id===state.expandedEmployeeId);
+    if (emp) main.appendChild(employeeDetailsCard(emp));
+  }
+}
+
+/* =========================================================
+   BULK CSV IMPORT (employees or properties)
+   ========================================================= */
+function bulkImportCard(type, insideModal){
+  const card = el('div',{class: insideModal ? '' : 'card'});
+  card.appendChild(el('h3',{class:'card-title'}, t('bulkImportTitle')));
+  card.appendChild(el('p',{class:'card-desc'}, type==='employees' ? t('bulkImportDescEmployees') : t('bulkImportDescProperty')));
+
+  if (state.bulkType !== type) { state.bulkPreview = null; state.bulkType = type; }
+
+  const inputId = 'bulkCsvInput_' + type;
+  const label = el('label',{class:'file-drop', for:inputId}, t('bulkImportChoose'));
+  const input = el('input',{type:'file', id:inputId, accept:'.csv,text/csv', style:'display:none'});
+  input.addEventListener('change', (e)=>{
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ()=>{
+      try{
+        const rows = parseCSV(String(reader.result));
+        const dataRows = rows.slice(1); // skip header row
+        let preview;
+        if (type==='employees'){
+          preview = dataRows.map(r=>({
+            name:(r[0]||'').trim(), position:(r[1]||'').trim(), phone:(r[2]||'').trim(),
+            email:(r[3]||'').trim(), joinDate:(r[4]||'').trim(),
+          })).filter(r=>r.name);
+        } else {
+          preview = dataRows.map(r=>({
+            name:(r[0]||'').trim(), category:(r[1]||'').trim(), quantity:Number(r[2]||0),
+          })).filter(r=>r.name);
+        }
+        if (preview.length===0){ showToast(t('bulkImportEmpty')); state.bulkPreview=null; }
+        else { state.bulkPreview = preview; }
+      }catch(err){ console.error(err); showToast(t('bulkImportParseFail')); state.bulkPreview=null; }
+      renderMain();
+    };
+    reader.onerror = ()=> showToast(t('bulkImportParseFail'));
+    reader.readAsText(file);
+  });
+  card.appendChild(el('div',{class:'field'}, label, input));
+
+  if (state.bulkPreview && state.bulkPreview.length>0 && state.bulkType===type){
+    card.appendChild(el('div',{style:'margin:14px 0;font-size:13px;color:var(--ink-soft);'}, t('bulkImportPreviewTitle', state.bulkPreview.length)));
+    const table = el('table');
+    const thead = el('thead');
+    if (type==='employees') thead.appendChild(el('tr',{}, el('th',{},t('colName')), el('th',{},t('colPosition')), el('th',{},t('colPhone'))));
+    else thead.appendChild(el('tr',{}, el('th',{},t('colItem')), el('th',{},t('colCategory')), el('th',{},t('colQuantity'))));
+    table.appendChild(thead);
+    const tbody = el('tbody');
+    state.bulkPreview.slice(0,20).forEach(r=>{
+      if (type==='employees') tbody.appendChild(el('tr',{}, el('td',{},r.name), el('td',{},r.position||''), el('td',{},r.phone||'')));
+      else tbody.appendChild(el('tr',{}, el('td',{},r.name), el('td',{},r.category||''), el('td',{},String(r.quantity||0))));
+    });
+    table.appendChild(tbody);
+    card.appendChild(el('div',{class:'table-scroll'}, table));
+
+    const confirmBtn = el('button',{class:'btn btn-primary btn-sm', style:'margin-top:14px;', onclick: async ()=>{
+      if (!canEdit()){ showToast(t('viewerNotice')); return; }
+      const rows = state.bulkPreview;
+      let ok = 0, fail = 0;
+      for (const r of rows){
+        try{
+          if (type==='employees'){
+            await addDoc(collection(db,'employees'), { name:r.name, position:r.position||'', phone:r.phone||'', email:r.email||'', joinDate:r.joinDate||'', status:'active' });
+          } else {
+            await addDoc(collection(db,'properties'), { name:r.name, category:r.category||'', quantity:Number(r.quantity||0), lowStockThreshold:0, addedDate:new Date().toISOString().slice(0,10) });
+          }
+          ok++;
+        }catch(err){ console.error(err); fail++; }
+      }
+      logActivity(t('actBulkImport', ok, type));
+      if (fail>0) showToast(t('bulkImportFail'));
+      else showToast(t('bulkImportSuccess', ok));
+      state.bulkPreview = null;
+      if (insideModal){ closeModal(); } else { renderMain(); }
+    }}, t('bulkImportConfirm'));
+    card.appendChild(confirmBtn);
+  }
+  return card;
+}
+
+function hrDepartmentsCard(){
+  const card = el('div',{class:'card'});
+  const head = el('div',{class:'discussion-head'},
+    el('div',{},
+      el('h3',{class:'card-title', style:'margin-bottom:2px;'},t('hrDeptGridTitle')),
+      el('p',{class:'card-desc', style:'margin:0;'},t('hrDeptGridDesc'))
+    ),
+    (()=>{
+      const btn = el('button',{class:'btn btn-outline btn-sm', onclick: openAddDepartmentModal});
+      btn.appendChild(iconEl('plus'));
+      btn.appendChild(document.createTextNode(' ' + t('hrAddDeptBtn')));
+      return btn;
+    })()
+  );
+  card.appendChild(head);
+
+  const grid = el('div',{class:'dept-grid'});
+  const opts = allDeptOptions();
+  opts.forEach((opt, i)=>{
+    const count = state.employees.filter(e=>e.department===opt.value).length;
+    const initials = opt.label.split(' ').map(w=>w[0]).filter(Boolean).slice(0,2).join('').toUpperCase();
+    const isCustom = opt.value.startsWith('custom:');
+    const deptCard = el('div',{class:'dept-card dept-card-'+(i%4), onclick:()=>{
+      state.hrDeptFilter = opt.value;
+      state.tab.hr = 'list';
+      renderMain();
+    }},
+      el('div',{class:'dept-icon-circle'}, initials),
+      el('div',{class:'dept-card-name'}, opt.label),
+      el('div',{class:'dept-card-count'}, count + ' ' + t('employeesCountLabel'))
+    );
+    const wrap = el('div',{class:'dept-card-wrap'}, deptCard);
+    if (isCustom){
+      const del = el('button',{class:'dept-card-del', title:t('btnRemove'), onclick:(e)=>{
+        e.stopPropagation();
+        confirmModal(t('removeDeptTitle'), t('removeDeptDesc', opt.label), async ()=>{
+          try{ await deleteDoc(doc(db,'departments', opt.value.slice(7))); showToast(t('toastDeptRemoved')); }
+          catch(err){ console.error(err); showToast(t('toastDeptRemoveFail')); }
+        });
+      }});
+      del.appendChild(iconEl('trash'));
+      wrap.appendChild(del);
+    }
+    grid.appendChild(wrap);
+  });
+  const addTile = el('div',{class:'dept-card dept-card-add', onclick: openAddDepartmentModal},
+    iconEl('plus'), el('div',{class:'dept-card-name'}, t('hrAddDeptBtn'))
+  );
+  grid.appendChild(addTile);
+  card.appendChild(grid);
+  return card;
+}
+
+function openAddDepartmentModal(){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.innerHTML = '';
+  modal.appendChild(el('h3',{},t('addDeptModalTitle')));
+  modal.appendChild(el('p',{},t('addDeptModalDesc')));
+  const nameField = fieldInput(t('labelDeptName'),'text','newDeptName',t('phDeptName'));
+  modal.appendChild(nameField);
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeModal},t('modalCancel')));
+  const saveBtn = el('button',{class:'btn btn-primary btn-sm', onclick: async ()=>{
+    const nameV = document.getElementById('newDeptName').value.trim();
+    if (!nameV){ showToast(t('errDeptNameReq')); return; }
+    try{
+      await addDoc(collection(db,'departments'), { name: nameV });
+      showToast(t('toastDeptAdded'));
+      closeModal();
+    }catch(e){ console.error(e); showToast(t('toastDeptSaveFail')); }
+  }});
+  saveBtn.appendChild(iconEl('plus'));
+  saveBtn.appendChild(document.createTextNode(' ' + t('btnSaveDepartment')));
+  actions.appendChild(saveBtn);
+  modal.appendChild(actions);
+  overlay.classList.add('show');
+}
+
+function statCard(num, label){
+  return el('div',{class:'stat-card'}, el('div',{class:'num'},String(num)), el('div',{class:'lbl'},label));
+}
+
+function employeeDetailsCard(emp){
+  const card = el('div',{class:'card'});
+  const head = el('div',{class:'discussion-head'},
+    el('div',{},
+      el('h3',{class:'card-title', style:'margin-bottom:2px;'}, emp.name),
+      el('p',{class:'card-desc', style:'margin:0;'}, t('labelEducation'))
+    ),
+    (()=>{
+      const btn = el('button',{class:'icon-btn', title:t('btnClose')||'Close', onclick:()=>{
+        state.expandedEmployeeId = null;
+        renderMain();
+      }});
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+      return btn;
+    })()
+  );
+  card.appendChild(head);
+
+  const eduId = 'empEduEdit_' + emp.id;
+  const eduField = el('div',{class:'field'}, el('label',{},t('labelEducation')));
+  const eduArea = el('textarea',{id:eduId, rows:3});
+  eduArea.value = emp.education || '';
+  eduField.appendChild(eduArea);
+  card.appendChild(eduField);
+  const eduSaveBtn = el('button',{class:'btn btn-primary btn-sm', onclick: async ()=>{
+    const val = document.getElementById(eduId).value.trim();
+    try{ await updateDoc(doc(db,'employees', emp.id), { education: val }); showToast(t('toastEducationSaved')); }
+    catch(e){ console.error(e); showToast(t('toastEducationSaveFail')); }
+  }}, t('btnSaveEducation'));
+  card.appendChild(el('div',{style:'margin-top:6px'}, eduSaveBtn));
+
+  const equipCount = getEmployeeAssignments(emp.id).length;
+  const equipBtn = el('button',{class:'btn btn-outline btn-sm', onclick:()=> openAssignMaterialsModal(emp)});
+  equipBtn.appendChild(iconEl('box'));
+  equipBtn.appendChild(document.createTextNode(' ' + t('btnAssignMaterials') + (equipCount ? ` (${equipCount})` : '')));
+  card.appendChild(el('div',{style:'margin-top:16px;padding-top:16px;border-top:1px solid var(--border);'}, equipBtn));
+
+  return card;
+}
+
+/* Materials assigned to an employee — this is now just a view onto the same
+   `propertyAssignments` collection used by Property Management > Assign to
+   Staff, filtered to this employee. Adding here deducts from the shared
+   store; there is only one assignment list, viewable from either page. */
+function getEmployeeAssignments(employeeId){
+  return state.propertyAssignments.filter(a=>a.employeeId===employeeId);
+}
+
+function openAssignMaterialsModal(emp){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.add('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeAssignMaterialsModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+const titleRow = el('div',{style:'display:flex;align-items:center;justify-content:space-between;gap:10px;margin-right:32px;'},
+    el('h3',{style:'margin:0;'}, t('employeeEquipmentTitle', emp.name)),
+    (()=>{
+      const btn = el('button',{class:'btn btn-outline btn-sm', onclick:()=> printEmployeeEquipment(emp)});
+      btn.appendChild(iconEl('file'));
+      btn.appendChild(document.createTextNode(' ' + t('btnPrint')));
+      return btn;
+    })()
+  );
+  modal.appendChild(titleRow);
+  modal.appendChild(el('p',{style:'margin:8px 0 6px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'}, t('employeeEquipmentDesc')));
+  modal.appendChild(el('p',{style:'margin:0 0 20px;color:var(--gold);font-size:12px;line-height:1.5;font-family:\'IBM Plex Mono\',monospace;'}, t('materialsClearanceNote')));
+
+  const assignments = getEmployeeAssignments(emp.id);
+  const listWrap = el('div',{style:'margin-bottom:18px;'});
+  if (assignments.length===0){
+    listWrap.appendChild(el('div',{class:'card-desc', style:'margin:0;'}, t('noEquipmentYet')));
+  } else {
+    assignments.forEach(a=>{
+      const row = el('div',{style:'display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);'},
+        el('div',{}, el('strong',{},a.propertyName), el('div',{class:'card-desc',style:'margin:2px 0 0'}, t('labelEquipmentQty')+': '+a.quantity), a.notes ? el('div',{style:'font-size:12px;color:var(--ink-soft);margin-top:2px;'}, a.notes) : null),
+        (()=>{
+          const btn = el('button',{class:'icon-btn', title:t('btnReturnToStore'), onclick:()=>{
+            confirmModal(t('returnAssignmentTitle'), t('returnAssignmentDesc', `${a.quantity} × ${a.propertyName}`), async ()=>{
+              try{
+                await deleteDoc(doc(db,'propertyAssignments', a.id));
+                showToast(t('toastAssignmentReturned'));
+                logActivity(t('actReturnProperty', a.propertyName, a.employeeName||emp.name));
+                openAssignMaterialsModal(emp);
+              }catch(e){ console.error(e); showToast(t('toastAssignmentReturnFail')); }
+            });
+          }});
+          btn.appendChild(iconEl('trash'));
+          return btn;
+        })()
+      );
+      listWrap.appendChild(row);
+    });
+  }
+  modal.appendChild(listWrap);
+
+  const assignableProps = state.properties.filter(p=> getAvailableQty(p) > 0);
+  if (assignableProps.length===0){
+    modal.appendChild(el('div',{class:'card-desc', style:'margin:0 0 16px;'}, t('noPropertyForAssign')));
+  } else {
+    const grid = el('div',{class:'grid-2'});
+    const propSelect = el('select',{id:'materialPropSelect'});
+    propSelect.appendChild(el('option',{value:''},t('selectPropertyPlaceholder')));
+    assignableProps.forEach(p=>{
+      propSelect.appendChild(el('option',{value:p.id}, `${p.name} — ${t('availableSuffix', getAvailableQty(p))}`));
+    });
+    grid.appendChild(el('div',{class:'field'}, el('label',{},t('labelSelectProperty')), propSelect));
+
+    const qtyInput = el('input',{type:'number', id:'materialQtyInput', placeholder:t('phAssignQty'), min:'1'});
+    grid.appendChild(el('div',{class:'field'}, el('label',{},t('labelAssignQty')), qtyInput));
+    modal.appendChild(grid);
+
+    const notesArea = el('textarea',{id:'materialNotesInput', rows:2, placeholder:t('phUniqueFeatures')});
+    modal.appendChild(el('div',{class:'field'}, el('label',{},t('labelUniqueFeatures')), notesArea));
+  }
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeAssignMaterialsModal},t('modalCancel')));
+  if (assignableProps.length>0){
+    const addBtn = el('button',{class:'btn btn-primary btn-sm', onclick:()=> addMaterialAssignment(emp)});
+    addBtn.appendChild(iconEl('plus'));
+    addBtn.appendChild(document.createTextNode(' ' + t('btnAssignProperty')));
+    actions.appendChild(addBtn);
+  }
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+
+function closeAssignMaterialsModal(){
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  closeModal();
+  renderMain();
+}
+
+async function addMaterialAssignment(emp){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const propId = document.getElementById('materialPropSelect').value;
+  const qtyV = document.getElementById('materialQtyInput').value;
+  const notesEl = document.getElementById('materialNotesInput');
+  const notesV = notesEl ? notesEl.value.trim() : '';
+  if (!propId){ showToast(t('errSelectPropertyReq')); return; }
+  const qtyNum = Number(qtyV);
+  if (qtyV==='' || !Number.isFinite(qtyNum) || qtyNum<=0){ showToast(t('errAssignQtyInvalid')); return; }
+
+  const prop = state.properties.find(p=>p.id===propId);
+  if (!prop) return;
+  const available = getAvailableQty(prop);
+  if (qtyNum > available){ showToast(t('errNotEnoughInStore', available)); return; }
+
+  const newAssignment = {
+    propertyId: prop.id,
+    propertyName: prop.name,
+    employeeId: emp.id,
+    employeeName: emp.name,
+    quantity: qtyNum,
+    notes: notesV,
+    date: new Date().toISOString().slice(0,10),
+  };
+  try{
+    await addDoc(collection(db,'propertyAssignments'), newAssignment);
+    showToast(t('toastPropertyAssigned'));
+    logActivity(t('actAssignProperty', prop.name, emp.name));
+    openAssignMaterialsModal(emp);
+  }catch(e){ console.error(e); showToast(t('toastPropertyAssignFail')); }
+}
+
+/* Print-friendly equipment clearance list for a single employee */
+function printEmployeeEquipment(emp){
+  const assignments = getEmployeeAssignments(emp.id);
+  const rows = assignments.map(a=>
+    `<tr><td>${escapeHtml(a.propertyName)}</td><td>${escapeHtml(String(a.quantity))}</td><td>${escapeHtml(a.notes||'')}</td></tr>`
+  ).join('');
+  const win = window.open('', '_blank');
+  if (!win) return;
+  win.document.write(`<!DOCTYPE html><html><head><title>${escapeHtml(t('printClearanceTitle', emp.name))}</title>
+    <style>body{font-family:Arial,sans-serif;padding:32px;color:#111;} h1{font-size:18px;margin-bottom:4px;}
+    p{color:#555;font-size:12px;margin-top:0;} table{width:100%;border-collapse:collapse;margin-top:16px;}
+    th,td{border:1px solid #ccc;padding:8px 10px;text-align:left;font-size:13px;} th{background:#f2f2f2;}</style>
+    </head><body>
+    <h1>${escapeHtml(t('printClearanceTitle', emp.name))}</h1>
+    <p>${escapeHtml(t('printGeneratedOn'))}: ${new Date().toISOString().slice(0,10)}</p>
+    <table><thead><tr><th>${escapeHtml(t('colItem'))}</th><th>${escapeHtml(t('colQuantity'))}</th><th>${escapeHtml(t('colNotes'))}</th></tr></thead>
+    <tbody>${rows || `<tr><td colspan="3">${escapeHtml(t('noEquipmentYet'))}</td></tr>`}</tbody></table>
+    </body></html>`);
+  win.document.close();
+  win.focus();
+  win.print();
+}
+function escapeHtml(s){
+  return String(s===undefined||s===null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function hrListCard(){
+  const card = el('div',{class:'card'});
+  const headRow = el('div',{style:'display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;'},
+    el('div',{}, el('h3',{class:'card-title'},t('hrListTitle')), el('p',{class:'card-desc'},t('hrListDesc'))),
+    el('div',{style:'display:flex;gap:8px;'},
+      exportBtn(()=>{
+        exportRowsToCSV('employees.csv',
+          [t('colId'),t('colName'),t('colPosition'),t('colPhone'),t('colEmail'),t('colJoined'),t('colStatus')],
+          state.employees.map(emp=>[emp.id, emp.name, emp.position||'', emp.phone||'', emp.email||'', emp.joinDate||'', emp.status||'active'])
+        );
+      }),
+      exportPdfBtn(()=>{
+        exportRowsToPDF(t('hrListTitle'),
+          [t('colName'),t('colPosition'),t('colPhone'),t('colEmail'),t('colJoined'),t('colStatus')],
+          state.employees.map(emp=>[emp.name, emp.position||'', emp.phone||'', emp.email||'', emp.joinDate||'', emp.status||'active'])
+        );
+      })
+    )
+  );
+  card.appendChild(headRow);
+
+  if (state.employees.length===0){
+    card.appendChild(emptyState(t('emptyNoEmployeesTitle'), t('emptyNoEmployeesAddDesc')));
+    return card;
+  }
+
+  if (state.hrDeptFilter){
+    const chip = el('span',{class:'tag', style:'cursor:pointer;margin-bottom:14px;display:inline-block;'});
+    chip.appendChild(document.createTextNode(deptLabel(state.hrDeptFilter) + '  ✕'));
+    chip.addEventListener('click', ()=>{ state.hrDeptFilter = null; renderMain(); });
+    card.appendChild(chip);
+  }
+
+  const filterRow = el('div',{style:'display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px;'});
+  const searchWrap = el('div',{class:'search-wrap', style:'flex:1;min-width:200px;'});
+  searchWrap.innerHTML = ICONS.search;
+  const searchInput = el('input',{type:'text', id:'hrSearchInput', placeholder:t('searchEmployeesPh'), value:state.hrSearch});
+  searchInput.addEventListener('input', (e)=>{
+    state.hrSearch = e.target.value;
+    const pos = e.target.selectionStart;
+    renderMain();
+    const ni = document.getElementById('hrSearchInput');
+    if (ni){ ni.focus(); ni.setSelectionRange(pos, pos); }
+  });
+  searchWrap.appendChild(searchInput);
+  filterRow.appendChild(searchWrap);
+
+  const statusSelect = el('select',{style:'max-width:200px;'});
+  statusSelect.appendChild(el('option',{value:''},t('labelStatusFilter')));
+  [['active',t('statusActive')],['onleave',t('statusOnLeave')],['resigned',t('statusResigned')]].forEach(([v,l])=> statusSelect.appendChild(el('option',{value:v},l)));
+  statusSelect.value = state.hrStatusFilter;
+  statusSelect.addEventListener('change', (e)=>{ state.hrStatusFilter = e.target.value; renderMain(); });
+  filterRow.appendChild(statusSelect);
+  card.appendChild(filterRow);
+
+  let base = state.hrDeptFilter ? state.employees.filter(e=>e.department===state.hrDeptFilter) : state.employees;
+  if (state.hrStatusFilter) base = base.filter(e=>(e.status||'active')===state.hrStatusFilter);
+  const q = state.hrSearch.trim().toLowerCase();
+  let filtered = q ? base.filter(emp=>
+    (emp.name||'').toLowerCase().includes(q) ||
+    (emp.position||'').toLowerCase().includes(q) ||
+    (emp.phone||'').toLowerCase().includes(q) ||
+    (emp.email||'').toLowerCase().includes(q)
+  ) : base;
+
+  if (filtered.length===0){
+    card.appendChild(emptyState(t('noSearchResultsTitle'), t('noSearchResultsDesc')));
+    return card;
+  }
+
+  filtered = sortRows(filtered, state.hrSort, {
+    name: e=>e.name||'', position: e=>e.position||'', phone: e=>e.phone||'',
+    email: e=>e.email||'', joined: e=>e.joinDate||'', status: e=>e.status||'active'
+  });
+
+  const doSort = ()=> renderMain();
+  const table = el('table',{},
+    el('thead',{}, el('tr',{},
+      sortableTh(t('colName'),'name',state.hrSort,doSort),
+      sortableTh(t('colPosition'),'position',state.hrSort,doSort),
+      sortableTh(t('colPhone'),'phone',state.hrSort,doSort),
+      sortableTh(t('colEmail'),'email',state.hrSort,doSort),
+      sortableTh(t('colJoined'),'joined',state.hrSort,doSort),
+      el('th',{},t('colStatus')),
+      el('th',{},'')
+    ))
+  );
+  const tbody = el('tbody',{});
+  const now = Date.now();
+  filtered.forEach(emp=>{
+    let isNew = false;
+    if (emp.joinDate){
+      const joined = new Date(emp.joinDate).getTime();
+      if (Number.isFinite(joined) && (now - joined) <= 30*24*60*60*1000 && joined <= now) isNew = true;
+    }
+    const avatar = emp.photoUrl
+      ? el('span',{style:'width:30px;height:30px;border-radius:50%;overflow:hidden;flex:none;display:inline-block;vertical-align:middle;margin-right:8px;'}, (()=>{ const img=document.createElement('img'); img.src=emp.photoUrl; img.style.width='100%'; img.style.height='100%'; img.style.objectFit='cover'; return img; })())
+      : el('span',{style:'display:inline-flex;padding:0;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;vertical-align:middle;margin-right:8px;background:var(--gold-soft);color:var(--gold);font-size:10.5px;font-weight:700;'}, emp.name.split(' ').map(w=>w[0]).filter(Boolean).slice(0,2).join('').toUpperCase());
+    const nameCell = el('td',{},
+      avatar,
+      el('strong',{},emp.name),
+      isNew ? el('span',{class:'tag', style:'margin-left:6px;color:var(--green);border-color:var(--green);background:var(--green-soft);'}, t('newBadge')) : null,
+      el('div',{style:'font-size:11px;color:var(--ink-soft);margin-top:2px;margin-left:38px;'}, deptLabel(emp.department)),
+      el('div',{style:'font-size:10.5px;color:var(--ink-soft);margin-top:2px;margin-left:38px;font-family:\'IBM Plex Mono\',monospace;'}, '#'+emp.id.slice(-6))
+    );
+    const tr = el('tr',{},
+      nameCell,
+      el('td',{}, el('span',{class:'tag'},emp.position||'—')),
+      el('td',{class:'mono'}, emp.phone ? el('span',{}, emp.phone, copyBtn(emp.phone)) : '—'),
+      el('td',{}, emp.email ? el('span',{}, emp.email, copyBtn(emp.email)) : '—'),
+      el('td',{},emp.joinDate||'—'),
+      el('td',{}, statusBadge(emp.status||'active')),
+      el('td',{},(()=>{
+        const actions = el('div',{class:'row-actions'});
+        const details = el('button',{class:'icon-btn', title:t('labelEducation'), onclick:()=>{
+          state.expandedEmployeeId = (state.expandedEmployeeId===emp.id) ? null : emp.id;
+          renderMain();
+        }});
+        details.appendChild(iconEl('box'));
+        const edit = el('button',{class:'icon-btn', title:t('btnEdit'), onclick:()=> openEditEmployeeModal(emp)});
+        edit.appendChild(iconEl('edit'));
+        const del = el('button',{class:'icon-btn', title:t('btnRemove'), onclick:()=>{
+          confirmModal(t('removeEmployeeTitle'), t('removeEmployeeDesc', emp.name), async ()=>{
+            try{ await deleteDoc(doc(db,'employees', emp.id)); showToast(t('toastEmployeeRemoved')); logActivity(t('actRemoveEmployee', emp.name)); }
+            catch(e){ console.error(e); showToast(t('toastEmployeeRemoveFail')); }
+          });
+        }});
+        del.appendChild(iconEl('trash'));
+        actions.appendChild(details);
+        actions.appendChild(edit);
+        actions.appendChild(del);
+        return actions;
+      })())
+    );
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  card.appendChild(el('div',{class:'table-scroll'}, table));
+  return card;
+}
+
+/* Add Employee is now a popup form (opened from the link next to the page
+   title on the Human Resources page, or from a department card) instead of
+   an inline tab. Employees are registered directly under a department, and
+   can optionally record their educational background here too. */
+function openAddEmployeeModal(prefillDept){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.add('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeAddEmployeeModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+  modal.appendChild(el('h3',{},t('hrAddTitle')));
+  modal.appendChild(el('p',{style:'margin:0 0 20px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'},t('hrAddDesc')));
+
+  const grid = el('div',{class:'grid-2'});
+  grid.appendChild(fieldInput(t('labelFullName'),'text','empName',t('phFullName')));
+  grid.appendChild(fieldInput(t('labelPosition'),'text','empPosition',t('phPosition')));
+  grid.appendChild(fieldInput(t('labelPhone'),'text','empPhone',t('phPhone')));
+  grid.appendChild(fieldInput(t('labelEmailOpt'),'email','empEmail',t('phEmail')));
+  modal.appendChild(grid);
+
+  const grid2 = el('div',{class:'grid-2'});
+  grid2.appendChild(fieldInput(t('labelJoinDate'),'date','empJoin',''));
+  const deptSelect = el('select',{id:'empDepartment'});
+  const deptOpts = allDeptOptions();
+  deptOpts.forEach(o=> deptSelect.appendChild(el('option',{value:o.value},o.label)));
+  const validValues = deptOpts.map(o=>o.value);
+  deptSelect.value = prefillDept && validValues.includes(prefillDept) ? prefillDept : deptOpts[0].value;
+  grid2.appendChild(el('div',{class:'field'}, el('label',{},t('labelDepartment')), deptSelect));
+  const statusSelect = el('select',{id:'empStatus'});
+  [['active',t('statusActive')],['onleave',t('statusOnLeave')],['resigned',t('statusResigned')]].forEach(([v,l])=> statusSelect.appendChild(el('option',{value:v},l)));
+  grid2.appendChild(el('div',{class:'field'}, el('label',{},t('labelEmployeeStatus')), statusSelect));
+  modal.appendChild(grid2);
+
+  const eduArea = el('textarea',{id:'empEducation', rows:3, placeholder:t('phEducation')});
+  modal.appendChild(el('div',{class:'field'}, el('label',{},t('labelEducation')), eduArea));
+
+  state.photoDraft = null;
+  modal.appendChild(photoUploadField('addEmpPhoto', (dataUrl)=>{ state.photoDraft = dataUrl; }));
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeAddEmployeeModal},t('modalCancel')));
+  const saveBtn = el('button',{class:'btn btn-primary btn-sm', onclick:saveNewEmployee});
+  saveBtn.appendChild(iconEl('plus'));
+  saveBtn.appendChild(document.createTextNode(' ' + t('btnAddEmployee')));
+  actions.appendChild(saveBtn);
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+
+/* Reusable photo picker: resizes any chosen image client-side to a small
+   square thumbnail and hands back a compact data URL via onChange —
+   keeps employee documents well under Firestore's size limit without
+   needing Firebase Storage rules configured. */
+function photoUploadField(inputId, onChange){
+  const wrap = el('div',{class:'field'}, el('label',{},t('labelEmployeePhoto')));
+  const preview = el('div',{style:'width:56px;height:56px;border-radius:50%;overflow:hidden;background:var(--paper-2);border:1px solid var(--border);margin-bottom:8px;display:flex;align-items:center;justify-content:center;'});
+  wrap.appendChild(preview);
+  const label = el('label',{class:'file-drop', for:inputId, style:'display:inline-block;padding:8px 14px;'}, t('photoChoose'));
+  const input = el('input',{type:'file', id:inputId, accept:'image/*', style:'display:none'});
+  input.addEventListener('change', (e)=>{
+    const file = e.target.files[0];
+    if (!file) return;
+    if (file.size > 3*1024*1024){ showToast(t('photoTooLarge')); e.target.value=''; return; }
+    const img = new Image();
+    const reader = new FileReader();
+    reader.onload = ()=>{
+      img.onload = ()=>{
+        const size = 160;
+        const canvas = document.createElement('canvas');
+        canvas.width = size; canvas.height = size;
+        const ctx = canvas.getContext('2d');
+        const scale = Math.max(size/img.width, size/img.height);
+        const w = img.width*scale, h = img.height*scale;
+        ctx.drawImage(img, (size-w)/2, (size-h)/2, w, h);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+        preview.innerHTML = `<img src="${dataUrl}" style="width:100%;height:100%;object-fit:cover;">`;
+        onChange(dataUrl);
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+  wrap.appendChild(label);
+  wrap.appendChild(input);
+  return wrap;
+}
+
+function closeAddEmployeeModal(){
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  closeModal();
+}
+
+async function saveNewEmployee(){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const nameV = document.getElementById('empName').value.trim();
+  if (!nameV){ showToast(t('errEmployeeNameReq')); return; }
+  const newEmp = {
+    name: nameV,
+    position: document.getElementById('empPosition').value.trim(),
+    phone: document.getElementById('empPhone').value.trim(),
+    email: document.getElementById('empEmail').value.trim(),
+    joinDate: document.getElementById('empJoin').value,
+    department: document.getElementById('empDepartment').value,
+    status: document.getElementById('empStatus').value,
+    education: document.getElementById('empEducation').value.trim(),
+    photoUrl: state.photoDraft || null,
+  };
+  try{
+    await addDoc(collection(db,'employees'), newEmp);
+    showToast(t('toastEmployeeAdded'));
+    logActivity(t('actAddEmployee', nameV));
+    state.photoDraft = null;
+    closeAddEmployeeModal();
+    state.tab.hr = 'list';
+    renderMain();
+  }catch(e){ console.error(e); showToast(t('toastEmployeeSaveFail')); }
+}
+
+function openEditEmployeeModal(emp){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.add('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeEditEmployeeModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+  modal.appendChild(el('h3',{},t('hrEditTitle')));
+  modal.appendChild(el('p',{style:'margin:0 0 20px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'},t('hrEditDesc')));
+
+  const grid = el('div',{class:'grid-2'});
+  grid.appendChild(fieldInput(t('labelFullName'),'text','empEditName',t('phFullName')));
+  grid.appendChild(fieldInput(t('labelPosition'),'text','empEditPosition',t('phPosition')));
+  grid.appendChild(fieldInput(t('labelPhone'),'text','empEditPhone',t('phPhone')));
+  grid.appendChild(fieldInput(t('labelEmailOpt'),'email','empEditEmail',t('phEmail')));
+  modal.appendChild(grid);
+
+  const grid2 = el('div',{class:'grid-2'});
+  grid2.appendChild(fieldInput(t('labelJoinDate'),'date','empEditJoin',''));
+  const deptSelect = el('select',{id:'empEditDepartment'});
+  const deptOpts = allDeptOptions();
+  deptOpts.forEach(o=> deptSelect.appendChild(el('option',{value:o.value},o.label)));
+  grid2.appendChild(el('div',{class:'field'}, el('label',{},t('labelDepartment')), deptSelect));
+  const statusEditSelect = el('select',{id:'empEditStatus'});
+  [['active',t('statusActive')],['onleave',t('statusOnLeave')],['resigned',t('statusResigned')]].forEach(([v,l])=> statusEditSelect.appendChild(el('option',{value:v},l)));
+  grid2.appendChild(el('div',{class:'field'}, el('label',{},t('labelEmployeeStatus')), statusEditSelect));
+  modal.appendChild(grid2);
+
+  const eduArea = el('textarea',{id:'empEditEducation', rows:3, placeholder:t('phEducation')});
+  modal.appendChild(el('div',{class:'field'}, el('label',{},t('labelEducation')), eduArea));
+
+  state.editPhotoDraft = emp.photoUrl || null;
+  const photoField = photoUploadField('editEmpPhoto', (dataUrl)=>{ state.editPhotoDraft = dataUrl; });
+  if (emp.photoUrl){ photoField.querySelector('div').innerHTML = `<img src="${emp.photoUrl}" style="width:100%;height:100%;object-fit:cover;">`; }
+  modal.appendChild(photoField);
+
+  document.getElementById('empEditName').value = emp.name || '';
+  document.getElementById('empEditPosition').value = emp.position || '';
+  document.getElementById('empEditPhone').value = emp.phone || '';
+  document.getElementById('empEditEmail').value = emp.email || '';
+  document.getElementById('empEditJoin').value = emp.joinDate || '';
+  const validValues = deptOpts.map(o=>o.value);
+  deptSelect.value = emp.department && validValues.includes(emp.department) ? emp.department : deptOpts[0].value;
+  statusEditSelect.value = emp.status || 'active';
+  eduArea.value = emp.education || '';
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeEditEmployeeModal},t('modalCancel')));
+  const saveBtn = el('button',{class:'btn btn-primary btn-sm', onclick:()=> saveEditEmployee(emp.id)});
+  saveBtn.appendChild(iconEl('edit'));
+  saveBtn.appendChild(document.createTextNode(' ' + t('btnSaveChanges')));
+  actions.appendChild(saveBtn);
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+
+function closeEditEmployeeModal(){
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  closeModal();
+}
+
+async function saveEditEmployee(empId){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const nameV = document.getElementById('empEditName').value.trim();
+  if (!nameV){ showToast(t('errEmployeeNameReq')); return; }
+  const updated = {
+    name: nameV,
+    position: document.getElementById('empEditPosition').value.trim(),
+    phone: document.getElementById('empEditPhone').value.trim(),
+    email: document.getElementById('empEditEmail').value.trim(),
+    joinDate: document.getElementById('empEditJoin').value,
+    department: document.getElementById('empEditDepartment').value,
+    status: document.getElementById('empEditStatus').value,
+    education: document.getElementById('empEditEducation').value.trim(),
+    photoUrl: state.editPhotoDraft || null,
+  };
+  try{
+    await updateDoc(doc(db,'employees', empId), updated);
+    showToast(t('toastEmployeeUpdated'));
+    logActivity(t('actUpdateEmployee', nameV));
+    closeEditEmployeeModal();
+    renderMain();
+  }catch(e){ console.error(e); showToast(t('toastEmployeeUpdateFail')); }
+}
+
+/* =========================================================
+   PROPERTY MANAGEMENT
+   ========================================================= */
+function renderProperty(main){
+  const actions = el('div',{style:'display:flex;gap:8px;flex-wrap:wrap;'});
+  if (canEdit()){
+    const assignLink = el('button',{class:'btn btn-outline btn-sm', onclick: openAssignToStaffModal});
+    assignLink.appendChild(iconEl('box'));
+    assignLink.appendChild(document.createTextNode(' ' + t('btnAssignToStaff')));
+    const bulkLink = el('button',{class:'btn btn-outline btn-sm', onclick: openBulkImportPropertyModal});
+    bulkLink.appendChild(iconEl('upload'));
+    bulkLink.appendChild(document.createTextNode(' ' + t('tabBulkImport')));
+    const addLink = el('button',{class:'btn btn-primary btn-sm', onclick: openAddPropertyModal});
+    addLink.appendChild(iconEl('plus'));
+    addLink.appendChild(document.createTextNode(' ' + t('btnAddProperty')));
+    actions.appendChild(assignLink);
+    actions.appendChild(bulkLink);
+    actions.appendChild(addLink);
+  }
+  pageHeader(main, t('crumbProperty'), t('titleProperty'), t('subProperty'), canEdit() ? actions : null);
+
+  main.appendChild(propListCard());
+  main.appendChild(assignedListCard());
+}
+function openBulkImportPropertyModal(){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.add('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+  modal.appendChild(bulkImportCard('properties', true));
+  overlay.classList.add('show');
+}
+
+/* ---- assignment helpers: track how much of each property is checked out
+   to staff, so the store always reflects true unassigned quantity ---- */
+function getAssignedQty(propertyId){
+  return state.propertyAssignments
+    .filter(a=>a.propertyId===propertyId)
+    .reduce((s,a)=>s+Number(a.quantity||0),0);
+}
+function getAvailableQty(prop){
+  const total = Number(prop.quantity||0);
+  const assigned = getAssignedQty(prop.id);
+  const avail = total - assigned;
+  return avail > 0 ? avail : 0;
+}
+
+function conditionTag(cond){
+  const map = {
+    new:      { label:t('condNew'),     color:'var(--cyan)',  soft:'var(--cyan-soft)' },
+    good:     { label:t('condGood'),    color:'var(--green)', soft:'var(--green-soft)' },
+    fair:     { label:t('condFair'),    color:'var(--gold)',  soft:'var(--gold-soft)' },
+    damaged:  { label:t('condDamaged'), color:'var(--red)',   soft:'var(--red-soft)' },
+  };
+  const c = map[cond] || null;
+  if (!c) return el('span',{},'—');
+  return el('span',{class:'tag', style:`color:${c.color};border-color:${c.color};background:${c.soft};`}, c.label);
+}
+function statusBadge(status){
+  const map = {
+    active:   { label:t('statusActive'),   color:'var(--green)', soft:'var(--green-soft)' },
+    onleave:  { label:t('statusOnLeave'),  color:'var(--gold)',  soft:'var(--gold-soft)' },
+    resigned: { label:t('statusResigned'), color:'var(--red)',   soft:'var(--red-soft)' },
+  };
+  const c = map[status] || map.active;
+  return el('span',{class:'tag', style:`color:${c.color};border-color:${c.color};background:${c.soft};`}, c.label);
+}
+
+function propListCard(){
+  const card = el('div',{class:'card'});
+  const headRow = el('div',{style:'display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;'},
+    el('div',{}, el('h3',{class:'card-title'},t('propListTitle')), el('p',{class:'card-desc'},t('propListDesc'))),
+    el('div',{style:'display:flex;gap:8px;'},
+      exportBtn(()=>{
+        exportRowsToCSV('property.csv',
+          [t('colId'),t('colItem'),t('colCategory'),t('colBrand'),t('colCondition'),t('colTotal'),t('colAvailable'),t('colAssignedQty'),t('colAdded')],
+          state.properties.map(p=>[p.id, p.name, p.category||'', p.brand||'', p.condition||'', p.quantity, getAvailableQty(p), getAssignedQty(p.id), p.addedDate||''])
+        );
+      }),
+      exportPdfBtn(()=>{
+        exportRowsToPDF(t('propListTitle'),
+          [t('colItem'),t('colCategory'),t('colBrand'),t('colCondition'),t('colTotal'),t('colAvailable'),t('colAdded')],
+          state.properties.map(p=>[p.name, p.category||'', p.brand||'', p.condition||'', p.quantity, getAvailableQty(p), p.addedDate||''])
+        );
+      })
+    )
+  );
+  card.appendChild(headRow);
+  if (state.properties.length===0){
+    card.appendChild(emptyState(t('emptyNoPropertyTitle'), t('emptyNoPropertyAddDesc')));
+    return card;
+  }
+
+  const filterRow = el('div',{style:'display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px;'});
+  const searchWrap = el('div',{class:'search-wrap', style:'flex:1;min-width:200px;'});
+  searchWrap.innerHTML = ICONS.search;
+  const searchInput = el('input',{type:'text', id:'propSearchInput', placeholder:t('searchPropertyPh'), value:state.propSearch});
+  searchInput.addEventListener('input', (e)=>{
+    state.propSearch = e.target.value;
+    const pos = e.target.selectionStart;
+    renderMain();
+    const ni = document.getElementById('propSearchInput');
+    if (ni){ ni.focus(); ni.setSelectionRange(pos, pos); }
+  });
+  searchWrap.appendChild(searchInput);
+  filterRow.appendChild(searchWrap);
+
+  const categories = Array.from(new Set(state.properties.map(p=>p.category).filter(Boolean)));
+  if (categories.length){
+    const catSelect = el('select',{style:'max-width:220px;'});
+    catSelect.appendChild(el('option',{value:''},t('labelCategoryFilter')));
+    categories.forEach(c=> catSelect.appendChild(el('option',{value:c},c)));
+    catSelect.value = state.propCategoryFilter;
+    catSelect.addEventListener('change',(e)=>{ state.propCategoryFilter = e.target.value; renderMain(); });
+    filterRow.appendChild(catSelect);
+  }
+  card.appendChild(filterRow);
+
+  let base = state.properties;
+  if (state.propCategoryFilter) base = base.filter(p=>p.category===state.propCategoryFilter);
+  const q = state.propSearch.trim().toLowerCase();
+  let filtered = q ? base.filter(p=>
+    (p.name||'').toLowerCase().includes(q) || (p.category||'').toLowerCase().includes(q) || (p.brand||'').toLowerCase().includes(q)
+  ) : base;
+
+  if (filtered.length===0){
+    card.appendChild(emptyState(t('noSearchResultsTitle'), t('noSearchResultsDesc')));
+    return card;
+  }
+
+  filtered = sortRows(filtered, state.propSort, {
+    name: p=>p.name||'', category: p=>p.category||'', brand: p=>p.brand||'',
+    quantity: p=>Number(p.quantity||0), available: p=>getAvailableQty(p), added: p=>p.addedDate||''
+  });
+
+  const doSort = ()=> renderMain();
+  const table = el('table',{},
+    el('thead',{}, el('tr',{},
+      sortableTh(t('colItem'),'name',state.propSort,doSort),
+      sortableTh(t('colCategory'),'category',state.propSort,doSort),
+      sortableTh(t('colBrand'),'brand',state.propSort,doSort),
+      el('th',{},t('colCondition')),
+      sortableTh(t('colTotal'),'quantity',state.propSort,doSort),
+      sortableTh(t('colAvailable'),'available',state.propSort,doSort),
+      el('th',{},t('colAssignedQty')),
+      sortableTh(t('colAdded'),'added',state.propSort,doSort),
+      el('th',{},'')
+    ))
+  );
+  const tbody = el('tbody',{});
+  filtered.forEach(p=>{
+    const assignedQty = getAssignedQty(p.id);
+    const availQty = getAvailableQty(p);
+    const threshold = Number(p.lowStockThreshold||0);
+    const isLow = threshold > 0 && availQty <= threshold;
+    const nameCell = el('td',{},
+      el('strong',{},p.name),
+      el('div',{style:'font-size:10.5px;color:var(--ink-soft);margin-top:2px;font-family:\'IBM Plex Mono\',monospace;'}, '#'+p.id.slice(-6))
+    );
+    tbody.appendChild(el('tr',{},
+      nameCell,
+      el('td',{}, el('span',{class:'tag'},p.category||t('generalCategory'))),
+      el('td',{},p.brand||'—'),
+      el('td',{}, conditionTag(p.condition)),
+      el('td',{class:'mono'},String(p.quantity)),
+      el('td',{class:'mono'},
+        el('span',{class:'tag', style:'color:var(--cyan);border-color:rgba(51,240,216,.3);'}, String(availQty)),
+        isLow ? el('span',{class:'tag', style:'color:var(--red);border-color:var(--red);background:var(--red-soft);margin-left:6px;'}, t('tagLowStock')) : null
+      ),
+      el('td',{class:'mono'}, assignedQty>0 ? el('span',{class:'tag', style:'color:var(--gold);border-color:rgba(245,185,61,.3);background:var(--gold-soft);'}, String(assignedQty)) : el('span',{class:'mono'},'0')),
+      el('td',{},p.addedDate||'—'),
+      el('td',{},(()=>{
+        const actions = el('div',{class:'row-actions'});
+        const edit = el('button',{class:'icon-btn', title:t('btnEdit'), onclick:()=> openEditPropertyModal(p)});
+        edit.appendChild(iconEl('edit'));
+        const del = el('button',{class:'icon-btn', title:t('btnRemove'), onclick:()=>{
+          if (getAssignedQty(p.id) > 0){ showToast(t('errCannotRemoveAssigned')); return; }
+          confirmModal(t('removePropertyTitle'), t('removePropertyDesc', p.name), async ()=>{
+            try{ await deleteDoc(doc(db,'properties', p.id)); showToast(t('toastPropertyRemoved')); logActivity(t('actRemoveProperty', p.name)); }
+            catch(e){ console.error(e); showToast(t('toastPropertyRemoveFail')); }
+          });
+        }});
+        del.appendChild(iconEl('trash'));
+        actions.appendChild(edit);
+        actions.appendChild(del);
+        return actions;
+      })())
+    ));
+  });
+  table.appendChild(tbody);
+  card.appendChild(el('div',{class:'table-scroll'}, table));
+  return card;
+}
+
+function openAssignToStaffModal(){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.add('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeAssignToStaffModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+  modal.appendChild(el('h3',{},t('assignTitle')));
+  modal.appendChild(el('p',{style:'margin:0 0 20px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'},t('assignDesc')));
+
+  const assignableProps = state.properties.filter(p=> getAvailableQty(p) > 0);
+
+  if (assignableProps.length===0){
+    modal.appendChild(el('div',{class:'card-desc', style:'margin:0 0 16px;'}, t('noPropertyForAssign')));
+  } else if (state.employees.length===0){
+    modal.appendChild(el('div',{class:'card-desc', style:'margin:0 0 16px;'}, t('noEmployeesForAssign')));
+  } else {
+    const grid = el('div',{class:'grid-2'});
+    const propSelect = el('select',{id:'assignPropSelect'});
+    propSelect.appendChild(el('option',{value:''},t('selectPropertyPlaceholder')));
+    assignableProps.forEach(p=>{
+      propSelect.appendChild(el('option',{value:p.id}, `${p.name} — ${t('availableSuffix', getAvailableQty(p))}`));
+    });
+    grid.appendChild(el('div',{class:'field'}, el('label',{},t('labelSelectProperty')), propSelect));
+
+    const empSelect = el('select',{id:'assignEmpSelect'});
+    empSelect.appendChild(el('option',{value:''},t('selectEmployeePlaceholder')));
+    state.employees.forEach(emp=> empSelect.appendChild(el('option',{value:emp.id}, emp.name)));
+    grid.appendChild(el('div',{class:'field'}, el('label',{},t('labelSelectEmployee')), empSelect));
+
+    const qtyInput = el('input',{type:'number', id:'assignQtyInput', placeholder:t('phAssignQty'), min:'1'});
+    grid.appendChild(el('div',{class:'field'}, el('label',{},t('labelAssignQty')), qtyInput));
+    modal.appendChild(grid);
+
+    const notesArea = el('textarea',{id:'assignNotesInput', rows:2, placeholder:t('phUniqueFeatures')});
+    modal.appendChild(el('div',{class:'field'}, el('label',{},t('labelUniqueFeatures')), notesArea));
+  }
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeAssignToStaffModal},t('modalCancel')));
+  if (assignableProps.length>0 && state.employees.length>0){
+    const saveBtn = el('button',{class:'btn btn-primary btn-sm', onclick:saveAssignment});
+    saveBtn.appendChild(iconEl('plus'));
+    saveBtn.appendChild(document.createTextNode(' ' + t('btnAssignProperty')));
+    actions.appendChild(saveBtn);
+  }
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+
+function closeAssignToStaffModal(){
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  closeModal();
+}
+
+async function saveAssignment(){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const propId = document.getElementById('assignPropSelect').value;
+  const empId = document.getElementById('assignEmpSelect').value;
+  const qtyV = document.getElementById('assignQtyInput').value;
+  const notesV = document.getElementById('assignNotesInput').value.trim();
+
+  if (!propId){ showToast(t('errSelectPropertyReq')); return; }
+  if (!empId){ showToast(t('errSelectEmployeeReq')); return; }
+  const qtyNum = Number(qtyV);
+  if (qtyV==='' || !Number.isFinite(qtyNum) || qtyNum<=0){ showToast(t('errAssignQtyInvalid')); return; }
+
+  const prop = state.properties.find(p=>p.id===propId);
+  const emp = state.employees.find(e=>e.id===empId);
+  if (!prop || !emp) return;
+
+  const available = getAvailableQty(prop);
+  if (qtyNum > available){ showToast(t('errNotEnoughInStore', available)); return; }
+
+  const newAssignment = {
+    propertyId: prop.id,
+    propertyName: prop.name,
+    employeeId: emp.id,
+    employeeName: emp.name,
+    quantity: qtyNum,
+    notes: notesV,
+    date: new Date().toISOString().slice(0,10),
+  };
+  try{
+    await addDoc(collection(db,'propertyAssignments'), newAssignment);
+    showToast(t('toastPropertyAssigned'));
+    logActivity(t('actAssignProperty', prop.name, emp.name));
+    closeAssignToStaffModal();
+    renderMain();
+  }catch(e){ console.error(e); showToast(t('toastPropertyAssignFail')); }
+}
+
+function assignedListCard(){
+  const card = el('div',{class:'card'});
+  const headRow = el('div',{style:'display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;'},
+    el('div',{}, el('h3',{class:'card-title'},t('assignedListTitle')), el('p',{class:'card-desc'},t('assignedListDesc'))),
+    exportBtn(()=>{
+      exportRowsToCSV('assignments.csv',
+        [t('colItem'),t('colAssignedTo'),t('colQuantity'),t('colNotes'),t('colAdded')],
+        state.propertyAssignments.map(a=>[a.propertyName, a.employeeName, a.quantity, a.notes||'', a.date||''])
+      );
+    })
+  );
+  card.appendChild(headRow);
+
+  if (state.propertyAssignments.length===0){
+    card.appendChild(emptyState(t('emptyNoAssignmentsTitle'), t('emptyNoAssignmentsDesc')));
+    return card;
+  }
+
+  const table = el('table',{},
+    el('thead',{}, el('tr',{}, el('th',{},t('colItem')), el('th',{},t('colAssignedTo')), el('th',{},t('colQuantity')), el('th',{},t('colNotes')), el('th',{},t('colAdded')), el('th',{},'')))
+  );
+  const tbody = el('tbody',{});
+  state.propertyAssignments.forEach(a=>{
+    tbody.appendChild(el('tr',{},
+      el('td',{},el('strong',{},a.propertyName)),
+      el('td',{}, el('span',{class:'tag'},a.employeeName)),
+      el('td',{class:'mono'},String(a.quantity)),
+      el('td',{style:'max-width:220px;font-size:12.5px;color:var(--ink-soft);'}, a.notes || t('noNotes')),
+      el('td',{},a.date||'—'),
+      el('td',{},(()=>{
+        const actions = el('div',{class:'row-actions'});
+        const del = el('button',{class:'icon-btn', title:t('btnReturnToStore'), onclick:()=>{
+          confirmModal(t('returnAssignmentTitle'), t('returnAssignmentDesc', `${a.quantity} × ${a.propertyName}`), async ()=>{
+            try{ await deleteDoc(doc(db,'propertyAssignments', a.id)); showToast(t('toastAssignmentReturned')); logActivity(t('actReturnProperty', a.propertyName, a.employeeName)); }
+            catch(e){ console.error(e); showToast(t('toastAssignmentReturnFail')); }
+          });
+        }});
+        del.appendChild(iconEl('trash'));
+        actions.appendChild(del);
+        return actions;
+      })())
+    ));
+  });
+  table.appendChild(tbody);
+  card.appendChild(table);
+  return card;
+}
+
+function openAddPropertyModal(){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.add('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeAddPropertyModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+  modal.appendChild(el('h3',{},t('propAddTitle')));
+  modal.appendChild(el('p',{style:'margin:0 0 20px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'},t('propAddDesc')));
+
+  const grid = el('div',{class:'grid-2'});
+  grid.appendChild(fieldInput(t('labelItemName'),'text','propName',t('phItemName')));
+  grid.appendChild(fieldInput(t('labelCategory'),'text','propCategory',t('phCategory')));
+  grid.appendChild(fieldInput(t('labelBrand'),'text','propBrand',t('phBrand')));
+  grid.appendChild(fieldInput(t('labelQuantity'),'number','propQty',t('phQuantity')));
+  modal.appendChild(grid);
+
+  const grid1b = el('div',{class:'grid-2'});
+  const condSelect = el('select',{id:'propCondition'});
+  [['new',t('condNew')],['good',t('condGood')],['fair',t('condFair')],['damaged',t('condDamaged')]].forEach(([v,l])=> condSelect.appendChild(el('option',{value:v},l)));
+  condSelect.value = 'good';
+  grid1b.appendChild(el('div',{class:'field'}, el('label',{},t('labelCondition')), condSelect));
+  grid1b.appendChild(fieldInput(t('labelLowStockThreshold'),'number','propLowStock',t('phLowStockThreshold')));
+  modal.appendChild(grid1b);
+
+  const grid2b = el('div',{class:'grid-2'});
+  grid2b.appendChild(fieldInput(t('labelDateAdded'),'date','propDate',''));
+  modal.appendChild(grid2b);
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeAddPropertyModal},t('modalCancel')));
+  const saveBtn = el('button',{class:'btn btn-primary btn-sm', onclick:saveNewProperty});
+  saveBtn.appendChild(iconEl('plus'));
+  saveBtn.appendChild(document.createTextNode(' ' + t('btnAddProperty')));
+  actions.appendChild(saveBtn);
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+
+function closeAddPropertyModal(){
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  closeModal();
+}
+
+async function saveNewProperty(){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const nameV = document.getElementById('propName').value.trim();
+  const qtyV = document.getElementById('propQty').value;
+  if (!nameV){ showToast(t('errPropertyNameReq')); return; }
+  if (qtyV==='' || Number(qtyV)<0){ showToast(t('errValidQty')); return; }
+  const newProp = {
+    name: nameV,
+    category: document.getElementById('propCategory').value.trim(),
+    brand: document.getElementById('propBrand').value.trim(),
+    condition: document.getElementById('propCondition').value,
+    lowStockThreshold: document.getElementById('propLowStock').value===''? 0 : Number(document.getElementById('propLowStock').value),
+    quantity: Number(qtyV),
+    addedDate: document.getElementById('propDate').value,
+  };
+  try{
+    await addDoc(collection(db,'properties'), newProp);
+    showToast(t('toastPropertyAdded'));
+    logActivity(t('actAddProperty', nameV));
+    closeAddPropertyModal();
+    state.tab.property='list';
+    renderMain();
+  }catch(e){ console.error(e); showToast(t('toastPropertySaveFail')); }
+}
+
+function openEditPropertyModal(p){
+  const overlay = document.getElementById('modalOverlay');
+  const modal = document.getElementById('modalBody');
+  modal.classList.add('modal-wide');
+  modal.style.position = 'relative';
+  modal.innerHTML = '';
+
+  const closeBtn = el('button',{class:'icon-btn', style:'position:absolute;top:16px;right:16px;', onclick:closeEditPropertyModal});
+  closeBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  modal.appendChild(closeBtn);
+
+  modal.appendChild(el('h3',{},t('propEditTitle')));
+  modal.appendChild(el('p',{style:'margin:0 0 20px;color:var(--ink-soft);font-size:13.5px;line-height:1.5;'},t('propEditDesc')));
+
+  const grid = el('div',{class:'grid-2'});
+  grid.appendChild(fieldInput(t('labelItemName'),'text','propEditName',t('phItemName')));
+  grid.appendChild(fieldInput(t('labelCategory'),'text','propEditCategory',t('phCategory')));
+  grid.appendChild(fieldInput(t('labelBrand'),'text','propEditBrand',t('phBrand')));
+  grid.appendChild(fieldInput(t('labelQuantity'),'number','propEditQty',t('phQuantity')));
+  modal.appendChild(grid);
+
+  const gridEb = el('div',{class:'grid-2'});
+  const condEditSelect = el('select',{id:'propEditCondition'});
+  [['new',t('condNew')],['good',t('condGood')],['fair',t('condFair')],['damaged',t('condDamaged')]].forEach(([v,l])=> condEditSelect.appendChild(el('option',{value:v},l)));
+  gridEb.appendChild(el('div',{class:'field'}, el('label',{},t('labelCondition')), condEditSelect));
+  gridEb.appendChild(fieldInput(t('labelLowStockThreshold'),'number','propEditLowStock',t('phLowStockThreshold')));
+  modal.appendChild(gridEb);
+
+  const gridEc = el('div',{class:'grid-2'});
+  gridEc.appendChild(fieldInput(t('labelDateAdded'),'date','propEditDate',''));
+  modal.appendChild(gridEc);
+
+  document.getElementById('propEditName').value = p.name || '';
+  document.getElementById('propEditCategory').value = p.category || '';
+  document.getElementById('propEditBrand').value = p.brand || '';
+  condEditSelect.value = p.condition || 'good';
+  document.getElementById('propEditLowStock').value = (p.lowStockThreshold===undefined || p.lowStockThreshold===null) ? '' : p.lowStockThreshold;
+  document.getElementById('propEditQty').value = (p.quantity===undefined || p.quantity===null) ? '' : p.quantity;
+  document.getElementById('propEditDate').value = p.addedDate || '';
+
+  const actions = el('div',{class:'modal-actions'});
+  actions.appendChild(el('button',{class:'btn btn-outline btn-sm', onclick:closeEditPropertyModal},t('modalCancel')));
+  const saveBtn = el('button',{class:'btn btn-primary btn-sm', onclick:()=> saveEditProperty(p.id)});
+  saveBtn.appendChild(iconEl('edit'));
+  saveBtn.appendChild(document.createTextNode(' ' + t('btnSaveChanges')));
+  actions.appendChild(saveBtn);
+  modal.appendChild(actions);
+
+  overlay.classList.add('show');
+}
+
+function closeEditPropertyModal(){
+  const modal = document.getElementById('modalBody');
+  modal.classList.remove('modal-wide');
+  closeModal();
+}
+
+async function saveEditProperty(propId){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const nameV = document.getElementById('propEditName').value.trim();
+  const qtyV = document.getElementById('propEditQty').value;
+  if (!nameV){ showToast(t('errPropertyNameReq')); return; }
+  if (qtyV==='' || Number(qtyV)<0){ showToast(t('errValidQty')); return; }
+  const assignedQty = getAssignedQty(propId);
+  if (Number(qtyV) < assignedQty){ showToast(t('errQtyBelowAssigned', assignedQty)); return; }
+  const updated = {
+    name: nameV,
+    category: document.getElementById('propEditCategory').value.trim(),
+    brand: document.getElementById('propEditBrand').value.trim(),
+    condition: document.getElementById('propEditCondition').value,
+    lowStockThreshold: document.getElementById('propEditLowStock').value===''? 0 : Number(document.getElementById('propEditLowStock').value),
+    quantity: Number(qtyV),
+    addedDate: document.getElementById('propEditDate').value,
+  };
+  try{
+    await updateDoc(doc(db,'properties', propId), updated);
+    showToast(t('toastPropertyUpdated'));
+    logActivity(t('actUpdateProperty', nameV));
+    closeEditPropertyModal();
+    renderMain();
+  }catch(e){ console.error(e); showToast(t('toastPropertyUpdateFail')); }
+}
+
+/* =========================================================
+   RECORD OF DISCUSSION
+   ========================================================= */
+function renderDiscussion(main){
+  pageHeader(main, t('crumbDiscussion'), t('titleDiscussion'), t('subDiscussion'));
+  tabsBar(main, 'discussion', [
+    {key:'import', label:t('tabImportDiscussion')},
+    {key:'delete', label:t('tabAllDiscussions')},
+  ]);
+
+  if (state.tab.discussion==='import') main.appendChild(discussionImportCard());
+  if (state.tab.discussion==='delete') main.appendChild(discussionListCard());
+}
+
+function discussionImportCard(){
+  const card = el('div',{class:'card'});
+  card.appendChild(el('h3',{class:'card-title'},t('discImportTitle')));
+  card.appendChild(el('p',{class:'card-desc'},t('discImportDesc')));
+
+  const pointArea = el('textarea',{id:'discPoint', rows:4, placeholder:t('phMainPoint')});
+  pointArea.value = state.discDraft.point;
+  pointArea.addEventListener('input', (e)=>{ state.discDraft.point = e.target.value; });
+  card.appendChild(el('div',{class:'field'}, el('label',{},t('labelMainPoint')), pointArea));
+  card.appendChild(translateAssist('discPoint', state.discDraft, 'pointAm', 'discPointAmPreview'));
+
+  /* Single dropdown covering every department, Siket Bank, Commercial Bank of
+     Ethiopia, Digitalization and Others — plus a "None" option. */
+  const deptSelect = el('select',{id:'discDept'});
+  deptSelect.appendChild(el('option',{value:''},t('deptTypeNone')));
+  allDeptOptions().forEach(o=> deptSelect.appendChild(el('option',{value:o.value},o.label)));
+  deptSelect.value = state.discDraft.dept || '';
+  deptSelect.addEventListener('change', (e)=>{ state.discDraft.dept = e.target.value; });
+  card.appendChild(el('div',{class:'field'}, el('label',{},t('labelDiscussionRelatesTo')), deptSelect));
+
+  /* Participants: pick a name from the dropdown and add it, instead of a click-to-toggle grid */
+  card.appendChild(el('div',{class:'field'}, el('label',{},t('labelParticipants'))));
+  if (state.employees.length===0){
+    card.appendChild(el('div',{class:'card-desc'},t('noEmployeesForParticipants')));
+  } else {
+    const addRow = el('div',{style:'display:flex;gap:8px;margin-bottom:10px;'});
+    const empSelect = el('select',{id:'discParticipantSelect', style:'flex:1;'});
+    empSelect.appendChild(el('option',{value:''},t('selectEmployeePlaceholder')));
+    state.employees.forEach(emp=>{
+      if (!state.participantsDraft.includes(emp.id)) empSelect.appendChild(el('option',{value:emp.id}, emp.name));
+    });
+    const addPartBtn = el('button',{class:'btn btn-outline btn-sm', onclick:()=>{
+      const sel = document.getElementById('discParticipantSelect');
+      if (sel && sel.value){ state.participantsDraft.push(sel.value); renderMain(); }
+    }}, t('btnAddParticipant'));
+    addRow.appendChild(empSelect); addRow.appendChild(addPartBtn);
+    card.appendChild(addRow);
+
+    const chipWrap = el('div',{class:'participant-list', id:'participantChips'});
+    if (state.participantsDraft.length===0){
+      chipWrap.appendChild(el('div',{class:'card-desc', style:'margin:0;'}, t('noParticipantsAddedYet')));
+    } else {
+      state.participantsDraft.forEach(pid=>{
+        const emp = state.employees.find(e=>e.id===pid);
+        if (!emp) return;
+        const removeBtn = el('button',{class:'chip-remove', onclick:()=>{
+          const idx = state.participantsDraft.indexOf(pid);
+          if (idx>-1) state.participantsDraft.splice(idx,1);
+          renderMain();
+        }}, '×');
+        const chip = el('div',{class:'participant-chip selected'},
+          el('span',{class:'dot'}, emp.name.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase()),
+          emp.name,
+          removeBtn
+        );
+        chipWrap.appendChild(chip);
+      });
+    }
+    card.appendChild(chipWrap);
+  }
+  card.appendChild(el('div',{style:'height:8px'}));
+
+  const dropId = 'discFileInput';
+  const fileLabel = state.fileDraft ? (t('fileAttachedPrefix') + state.fileDraft.name) : t('fileDropDefault');
+  const drop = el('label',{class:'file-drop'+(state.fileDraft?' has-file':''), for:dropId}, fileLabel);
+  const fileInput = el('input',{type:'file', id:dropId, style:'display:none', onchange:handleFileSelect});
+  card.appendChild(el('div',{class:'field'}, el('label',{},t('labelAttachFile')), drop, fileInput));
+
+  const saveBtn = el('button',{class:'btn btn-primary', onclick:saveDiscussion});
+  saveBtn.appendChild(iconEl('plus'));
+  saveBtn.appendChild(document.createTextNode(' ' + t('btnImportDiscussion')));
+  card.appendChild(el('div',{style:'margin-top:8px'},saveBtn));
+  return card;
+}
+
+function handleFileSelect(e){
+  const file = e.target.files[0];
+  if (!file) return;
+  if (file.size > 700*1024){
+    showToast(t('errFileTooLarge'));
+    e.target.value='';
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = ()=>{
+    state.fileDraft = { name:file.name, size:file.size, dataUrl:reader.result };
+    renderMain();
+  };
+  reader.onerror = ()=> showToast(t('errFileReadFail'));
+  reader.readAsDataURL(file);
+}
+
+async function saveDiscussion(){
+  if (!canEdit()){ showToast(t('viewerNotice')); return; }
+  const point = state.discDraft.point.trim();
+  if (!point){ showToast(t('errMainPointReq')); return; }
+  const dept = state.discDraft.dept || null;
+  const newDisc = {
+    mainPoint: point,
+    mainPointAm: state.discDraft.pointAm || null,
+    department: dept,
+    participants: [...state.participantsDraft],
+    file: state.fileDraft ? { name:state.fileDraft.name, dataUrl:state.fileDraft.dataUrl } : null,
+    date: new Date().toISOString().slice(0,10),
+  };
+  try{
+    await addDoc(collection(db,'discussions'), newDisc);
+    state.participantsDraft = [];
+    state.fileDraft = null;
+    state.discDraft = { point:'', dept:'' };
+    showToast(t('toastDiscussionImported'));
+    logActivity(t('actAddDiscussion'));
+    state.tab.discussion='delete';
+    renderMain();
+  }catch(e){
+    console.error(e);
+    showToast(t('toastDiscussionSaveFail'));
+  }
+}
+
+function discussionListCard(){
+  const card = el('div',{class:'card'});
+  const headRow = el('div',{style:'display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;'},
+    el('div',{}, el('h3',{class:'card-title'},t('discListTitle')), el('p',{class:'card-desc'},t('discListDesc'))),
+    el('div',{style:'display:flex;gap:8px;'},
+      exportBtn(()=>{
+        exportRowsToCSV('discussions.csv',
+          [t('labelWhichDept'),t('labelMainPoint'),t('labelParticipants'),t('colAdded')],
+          filteredDiscussions().map(d=>{
+            const names = (d.participants||[]).map(pid=>{
+              const e = state.employees.find(x=>x.id===pid);
+              return e ? e.name : null;
+            }).filter(Boolean);
+            return [deptLabel(d.department), d.mainPoint||'', names.join('; '), d.date||''];
+          })
+        );
+      }),
+      exportPdfBtn(()=>{
+        exportRowsToPDF(t('discListTitle'),
+          [t('labelWhichDept'),t('labelMainPoint'),t('labelParticipants'),t('colAdded')],
+          filteredDiscussions().map(d=>{
+            const names = (d.participants||[]).map(pid=>{
+              const e = state.employees.find(x=>x.id===pid);
+              return e ? e.name : null;
+            }).filter(Boolean);
+            return [deptLabel(d.department), d.mainPoint||'', names.join('; '), d.date||''];
+          })
+        );
+      })
+    )
+  );
+  card.appendChild(headRow);
+
+  if (state.discussions.length===0){
+    card.appendChild(emptyState(t('emptyNoDiscussionsTitle'), t('emptyNoDiscussionsDesc')));
+    return card;
+  }
+
+  const searchWrap = el('div',{class:'search-wrap', style:'margin-bottom:16px;'});
+  searchWrap.innerHTML = ICONS.search;
+  const searchInput = el('input',{type:'text', id:'discSearchInput', placeholder:t('searchDiscussionsPh'), value:state.discSearch});
+  searchInput.addEventListener('input', (e)=>{ state.discSearch = e.target.value; renderMain(); });
+  searchWrap.appendChild(searchInput);
+  card.appendChild(searchWrap);
+
+  const list = filteredDiscussions();
+  if (list.length===0){
+    card.appendChild(emptyState(t('emptyNoDiscussionsTitle'), t('emptyNoDiscussionsDesc')));
+    return card;
+  }
+
+  list.forEach(d=>{
+    const names = (d.participants||[]).map(pid=>{
+      const e = state.employees.find(x=>x.id===pid);
+      return e ? e.name : null;
+    }).filter(Boolean);
+
+    const dcard = el('div',{class:'discussion-card'});
+    const head = el('div',{class:'discussion-head'},
+      el('span',{class:'tag'}, deptLabel(d.department)),
+      (()=>{
+        const btn = el('button',{class:'icon-btn', title:t('modalRemove'), onclick:()=>{
+          confirmModal(t('deleteDiscussionTitle'), t('deleteDiscussionDesc'), async ()=>{
+            try{ await deleteDoc(doc(db,'discussions', d.id)); showToast(t('toastDiscussionDeleted')); logActivity(t('actRemoveDiscussion')); }
+            catch(e){ console.error(e); showToast(t('toastDiscussionDeleteFail')); }
+          });
+        }});
+        btn.appendChild(iconEl('trash'));
+        return btn;
+      })()
+    );
+    dcard.appendChild(head);
+    dcard.appendChild(el('p',{class:'discussion-point'}, (state.lang==='am' && d.mainPointAm) ? d.mainPointAm : d.mainPoint));
+    const meta = el('div',{class:'discussion-meta'},
+      el('span',{}, '📅 ' + d.date),
+      names.length ? el('span',{}, '👥 ' + names.join(', ')) : el('span',{}, '👥 ' + t('noParticipantsTagged'))
+    );
+    dcard.appendChild(meta);
+    if (d.file){
+      const link = el('a',{class:'file-chip', href:d.file.dataUrl, download:d.file.name});
+      link.appendChild(iconEl('file'));
+      link.appendChild(document.createTextNode(' ' + d.file.name));
+      dcard.appendChild(el('div',{style:'margin-top:10px'}, link));
+    }
+    card.appendChild(dcard);
+  });
+  return card;
+}
+function filteredDiscussions(){
+  const q = (state.discSearch||'').trim().toLowerCase();
+  if (!q) return state.discussions;
+  return state.discussions.filter(d=>{
+    const names = (d.participants||[]).map(pid=>{
+      const e = state.employees.find(x=>x.id===pid);
+      return e ? e.name : '';
+    }).join(' ').toLowerCase();
+    return (d.mainPoint||'').toLowerCase().includes(q)
+      || (d.mainPointAm||'').toLowerCase().includes(q)
+      || deptLabel(d.department).toLowerCase().includes(q)
+      || names.includes(q);
+  });
+}
+
+function fieldInput(label, type, id, placeholder){
+  return el('div',{class:'field'}, el('label',{},label), el('input',{type, id, placeholder}));
+}
+function emptyState(title, sub){
+  const wrap = el('div',{class:'empty-state'});
+  wrap.appendChild(iconEl('empty'));
+  wrap.appendChild(el('div',{class:'et'},title));
+  wrap.appendChild(el('div',{class:'es'},sub));
+  return wrap;
+}
+
+/* =========================================================
+   AUTH STATE / ROOT RENDER
+   ========================================================= */
+function render(){
+  if (state.loggedIn) renderShell();
+  else renderLogin();
+}
+
+onAuthStateChanged(auth, async (user)=>{
+  if (user){
+    state.loggedIn = true;
+    state.currentUser = user.email;
+    state.role = 'admin';
+    try{
+      const roleSnap = await getDoc(doc(db,'roles', user.uid));
+      if (roleSnap.exists() && roleSnap.data().role === 'viewer') state.role = 'viewer';
+    }catch(e){ console.warn('Could not read role (defaulting to admin):', e); }
+    startFirestoreSync();
+    state.view='dashboard'; state.tab={ hr:'list', property:'list', discussion:'import' };
+    renderShell();
+  } else {
+    state.loggedIn = false;
+    state.currentUser = null;
+    stopFirestoreSync();
+    state.employees=[]; state.properties=[]; state.propertyAssignments=[]; state.discussions=[]; state.departments=[];
+    renderLogin();
+  }
+});
+
+document.getElementById('app').innerHTML = '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#05070F;color:#7C87AC;font-family:\'IBM Plex Mono\',monospace;font-size:13px;letter-spacing:0.04em;">Connecting to Akaki Kality Mesob…</div>';
+</script>
+</body>
+</html>

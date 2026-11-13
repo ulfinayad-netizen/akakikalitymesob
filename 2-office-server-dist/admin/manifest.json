@@ -1,0 +1,14 @@
+{
+  "name": "Akaki Kality Mesob — Akaki Kality",
+  "short_name": "A-MESOB",
+  "description": "Akaki Kality MESOB One Center Digital admin dashboard",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05070f",
+  "theme_color": "#16224a",
+  "icons": [
+    { "src": "logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

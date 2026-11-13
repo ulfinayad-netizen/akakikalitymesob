@@ -1,0 +1,112 @@
+rules_version = '2';
+
+// Firestore rules for the ADMIN project ONLY — project id
+// "addismesob-akaki-kaliti" (see client/src/lib/firebase.admin.js).
+// This is a completely separate Firebase project/Auth pool/database from
+// the employee/Social Committee project — see firestore.employee.rules
+// for that one. Deploy this file against the admin project specifically:
+//
+//   firebase deploy --only firestore:rules --project addismesob-akaki-kaliti
+//
+// (using a firebase.json with two named project targets, or by running
+// `firebase use addismesob-akaki-kaliti` first — see README.md.)
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // The signed-in user's role in THIS project: 'admin' (default, no
+    // roles/{uid} doc) or 'viewer' (Admin dashboard, read-only). The
+    // Social Committee / employee project has its own, separate roles
+    // collection — see firestore.employee.rules — an account here has
+    // no bearing on that project and vice versa.
+    function role() {
+      return exists(/databases/$(database)/documents/roles/$(request.auth.uid))
+        ? get(/databases/$(database)/documents/roles/$(request.auth.uid)).data.role
+        : 'admin';
+    }
+    function isSuperAdmin() { return request.auth != null && role() == 'superadmin'; }
+    function isAdmin() { return request.auth != null && (role() == 'admin' || role() == 'superadmin'); }
+    function isAdminOrViewer() { return request.auth != null && (role() == 'admin' || role() == 'viewer' || role() == 'superadmin'); }
+
+    // ONLY the Super Admin may change role assignments. (Before, any admin
+    // could write here and so promote themselves.) The first Super Admin is
+    // created with server/scripts/grant-super-admin.js. 'blocked' accounts
+    // fail every check above, so they lose all access.
+    match /roles/{uid} {
+      allow read: if request.auth != null;
+      allow write: if isSuperAdmin();
+    }
+
+    // Directory of accounts that have signed in to the dashboard. Each user
+    // may write only their own entry (and only these fields); the Super
+    // Admin can read the whole list.
+    match /adminUsers/{uid} {
+      allow read: if request.auth != null && (request.auth.uid == uid || isSuperAdmin());
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['email', 'name', 'lastLoginAt']);
+      allow delete: if isSuperAdmin();
+    }
+
+    // Public website content (hero text, announcement, section toggles).
+    // Anyone may read it — it is rendered on the public site — but only the
+    // Super Admin can change it.
+    match /siteSettings/{docId} {
+      allow read: if true;
+      allow write: if isSuperAdmin();
+    }
+
+    // HR directory. Read for any signed-in admin-project account
+    // (admin or viewer); only full admins can create/update/delete.
+    match /employees/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Rest of the Admin dashboard data (properties, propertyAssignments,
+    // discussions, departments). Admins and viewers can read; only
+    // admins can create/update/delete.
+    match /properties/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+    match /propertyAssignments/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+    // Stock ledger (daily IN/OUT book) and floor fixed-asset control
+    // cards (UC). Same split as the property collections above.
+    match /stockItems/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+    match /stockLog/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create: if isAdmin();
+      allow update, delete: if false; // the log is append-only
+    }
+    match /assetCards/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+    match /discussions/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+    match /departments/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+    // Discussion categories (Qale Gubae, Werkama Segno, and any custom
+    // ones added from the Discussions page). Kept as its own collection,
+    // separate from `departments` above, so it never mixes with the
+    // HR/Property government-bureau list.
+    match /discussionCategories/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create, update, delete: if isAdmin();
+    }
+    match /activityLog/{docId} {
+      allow read: if isAdminOrViewer();
+      allow create: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+  }
+}
